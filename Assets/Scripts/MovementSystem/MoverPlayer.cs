@@ -1,33 +1,36 @@
+using System;
 using UnityEngine;
+using UnityEngine.Splines;
 
-[RequireComponent(typeof(Rigidbody))]
 public class MoverPlayer : MonoBehaviour
 {
-    [SerializeField] private float _speed = 200f;
+    [SerializeField] private SplineContainer _spline;
+    [SerializeField] private float _speed = 10f;
 
-    private Rigidbody _rigidbody;
+    private float _normalizedDistance = 0f;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        if (_spline == null)
+            throw new ArgumentException(nameof(_spline));
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            MoveForward();   
-        
-        if(Input.GetMouseButtonUp(0))
-            Stop();
+        if (Input.GetMouseButton(0))
+            MoveAlongSpline();       
     }
 
-    private void Stop()
+    private void MoveAlongSpline()
     {
-        _rigidbody.velocity = Vector3.zero;
-    }
+        //if (_spline == null)  не знаю, где лучше проверять на наличие сплайна???
+        //    return;
 
-    private void MoveForward()
-    {
-        _rigidbody.AddForce(transform.right * _speed, ForceMode.Force);
+        _normalizedDistance += (_speed / _spline.Spline.GetLength()) * Time.deltaTime;
+        _normalizedDistance = Mathf.Clamp01(_normalizedDistance);
+
+        Vector3 position = _spline.Spline.EvaluatePosition(_normalizedDistance);
+        transform.position = position;
+        transform.right = _spline.Spline.EvaluateTangent(_normalizedDistance);
     }
 }

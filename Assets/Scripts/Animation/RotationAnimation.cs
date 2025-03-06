@@ -8,7 +8,7 @@ public class RotationAnimation : MonoBehaviour
     [SerializeField] private bool _loop = true;
 
     private readonly float _rotationAngle = 360f;
-
+    // при уничтожении объекта нужно анимацию тоже отключать (_animation.Kill() || _animation.Complete())
     private void Start()
     {
         transform.DORotate(_rotationAxis * _rotationAngle, _duration, RotateMode.FastBeyond360)

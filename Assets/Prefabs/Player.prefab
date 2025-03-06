@@ -102,9 +102,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7195065652749845137}
   - component: {fileID: 7863700321024280869}
-  - component: {fileID: 954339053728687404}
-  - component: {fileID: 4777843332007520383}
   - component: {fileID: 8709545839867078924}
+  - component: {fileID: 954339053728687404}
+  - component: {fileID: 5173047764944382545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -141,6 +141,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9680da0f8d3c13d4f81a6195b3e2d296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &8709545839867078924
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587942699917752462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5253973
+  m_Height: 3.403839
+  m_Direction: 2
+  m_Center: {x: -0.092839, y: -0.39999998, z: 0.020170927}
 --- !u!54 &954339053728687404
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +191,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &4777843332007520383
+--- !u!114 &5173047764944382545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,33 +200,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4587942699917752462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5fc9fd77cdb8804e8d924d99a64aff7, type: 3}
+  m_Script: {fileID: 11500000, guid: fb071ae394146dc42bc25c82ce72cbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
---- !u!136 &8709545839867078924
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4587942699917752462}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.5253973
-  m_Height: 3.403839
-  m_Direction: 2
-  m_Center: {x: -0.092839, y: -0.39999998, z: 0.020170927}
+  _spline: {fileID: 0}
+  _speed: 10
 --- !u!1001 &2024532242846512372
 PrefabInstance:
   m_ObjectHideFlags: 0
