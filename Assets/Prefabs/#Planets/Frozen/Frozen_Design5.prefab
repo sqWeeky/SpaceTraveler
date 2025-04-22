@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 352331385791025240}
   - component: {fileID: 6331835590727724193}
   - component: {fileID: 9080277981944990625}
-  - component: {fileID: 123079557185549195}
   - component: {fileID: 7407644588487740986}
   m_Layer: 0
   m_Name: Frozen_Design5
@@ -103,21 +102,6 @@ MonoBehaviour:
   _rotationAxis: {x: 0, y: 1, z: 0}
   _duration: 4
   _loop: 1
---- !u!114 &123079557185549195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756696402320316541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef7024ac35d35747a83704436bd05a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _radius: 0.07
-  _speed: 0.8
-  _positionCenter: {fileID: 8770968323652627054}
 --- !u!135 &7407644588487740986
 SphereCollider:
   m_ObjectHideFlags: 0

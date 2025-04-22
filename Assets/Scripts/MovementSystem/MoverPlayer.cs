@@ -9,7 +9,7 @@ public class MoverPlayer : MonoBehaviour
 
     private float _normalizedDistance = 0f;
 
-    private void Awake()
+    private void Start()
     {
         if (_spline == null)
             throw new ArgumentException(nameof(_spline));
@@ -23,9 +23,6 @@ public class MoverPlayer : MonoBehaviour
 
     private void MoveAlongSpline()
     {
-        //if (_spline == null)  не знаю, где лучше проверять на наличие сплайна???
-        //    return;
-
         _normalizedDistance += (_speed / _spline.Spline.GetLength()) * Time.deltaTime;
         _normalizedDistance = Mathf.Clamp01(_normalizedDistance);
 

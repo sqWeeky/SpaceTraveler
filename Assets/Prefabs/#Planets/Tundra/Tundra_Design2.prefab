@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8098597158450618245}
   - component: {fileID: 2548886061634036604}
   - component: {fileID: 4032837056279107338}
-  - component: {fileID: 4071220657006355375}
   - component: {fileID: 935535243878564554}
   m_Layer: 0
   m_Name: Tundra_Design2
@@ -103,21 +102,6 @@ MonoBehaviour:
   _rotationAxis: {x: 0, y: 1, z: 0}
   _duration: 5
   _loop: 1
---- !u!114 &4071220657006355375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4279440348758284192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef7024ac35d35747a83704436bd05a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _radius: 0.09
-  _speed: 1
-  _positionCenter: {fileID: 952785692535088563}
 --- !u!135 &935535243878564554
 SphereCollider:
   m_ObjectHideFlags: 0
