@@ -1,18 +1,21 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class RotationAnimation : MonoBehaviour
+namespace Animation
 {
-    [SerializeField] private Vector3 _rotationAxis = Vector3.up;
-    [SerializeField] private float _duration = 5f;
-    [SerializeField] private bool _loop = true;
-
-    private readonly float _rotationAngle = 360f;
-    // при уничтожении объекта нужно анимацию тоже отключать (_animation.Kill() || _animation.Complete())
-    private void Start()
+    public class RotationAnimation : MonoBehaviour
     {
-        transform.DORotate(_rotationAxis * _rotationAngle, _duration, RotateMode.FastBeyond360)
-            .SetEase(Ease.Linear)
-            .SetLoops(_loop ? -1 : 0);
+        [SerializeField] private Vector3 _rotationAxis = Vector3.up;
+        [SerializeField] private float _duration = 5f;
+        [SerializeField] private bool _loop = true;
+
+        private readonly float _rotationAngle = 360f;
+        // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (_animation.Kill() || _animation.Complete())
+        private void Start()
+        {
+            transform.DORotate(_rotationAxis * _rotationAngle, _duration, RotateMode.FastBeyond360)
+                .SetEase(Ease.Linear)
+                .SetLoops(_loop ? -1 : 0);
+        }
     }
 }

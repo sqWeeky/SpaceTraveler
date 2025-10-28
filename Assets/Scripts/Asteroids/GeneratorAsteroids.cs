@@ -1,38 +1,41 @@
 using System.Collections;
 using UnityEngine;
 
-public class GeneratorAsteroids : MonoBehaviour
+namespace Asteroids
 {
-    [SerializeField] private float _delay;
-    [SerializeField] private float _upperBound;
-    [SerializeField] private float _lowerBound;
-    [SerializeField] private PoolAsteroids _pool;
-
-    private void Start()
+    public class GeneratorAsteroids : MonoBehaviour
     {
-        StartCoroutine(GenerateObject());
-    }
+        [SerializeField] private float _delay;
+        [SerializeField] private float _upperBound;
+        [SerializeField] private float _lowerBound;
+        [SerializeField] private PoolAsteroids _pool;
 
-    private IEnumerator GenerateObject()
-    {
-        var wait = new WaitForSeconds(_delay);
+        private void Start()
+        {
+            StartCoroutine(GenerateObject());
+        }
 
-        Spawn();
+        private IEnumerator GenerateObject()
+        {
+            var wait = new WaitForSeconds(_delay);
 
-        yield return wait;
+            Spawn();
 
-        StartCoroutine(GenerateObject());
-    }
+            yield return wait;
+
+            StartCoroutine(GenerateObject());
+        }
 
 
-    private void Spawn()
-    {
-        float spawnPositionX = Random.Range(transform.position.x + _upperBound, transform.position.x + _lowerBound);
-        float spawnPositionZ = Random.Range(transform.position.z + _upperBound, transform.position.z + _lowerBound);
-        Vector3 spawnPoint = new Vector3(spawnPositionX, transform.position.y, spawnPositionZ);
+        private void Spawn()
+        {
+            float spawnPositionX = Random.Range(transform.position.x + _upperBound, transform.position.x + _lowerBound);
+            float spawnPositionZ = Random.Range(transform.position.z + _upperBound, transform.position.z + _lowerBound);
+            Vector3 spawnPoint = new Vector3(spawnPositionX, transform.position.y, spawnPositionZ);
 
-        var newObject = _pool.Get();
+            var newObject = _pool.Get();
 
-        newObject.transform.position = spawnPoint;
+            newObject.transform.position = spawnPoint;
+        }
     }
 }
