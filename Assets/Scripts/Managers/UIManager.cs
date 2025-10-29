@@ -1,6 +1,8 @@
+using GameRoot;
+
 namespace Managers
 {
-    public class UIManager
+    public class UIManager : BaseManager
     {
         public void ShowMenuScreen()
         {

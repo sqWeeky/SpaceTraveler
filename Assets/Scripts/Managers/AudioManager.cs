@@ -1,8 +1,9 @@
+using GameRoot;
 using UnityEngine;
 
 namespace Managers
 {
-    public class AudioManager
+    public class AudioManager: BaseManager
     {
         public void PlayMusic(AudioClip clip)
         {

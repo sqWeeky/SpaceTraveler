@@ -8,25 +8,21 @@ namespace StateMachine
 {
     public class GameStateMachine : MonoBehaviour, IGameStateMachine
     {
-        [SerializeField] private GameConfig _config;
-
         private Dictionary<Type, GameState> _states;
         private GameState _currentState;
         private GameState _previousState;
 
-        private void Awake()
+        public void Initialize(GameConfig config)
         {
             _states = new Dictionary<Type, GameState>
             {
-                { typeof(MenuState), new MenuState(this, _config) },
-                { typeof(PlayingState), new PlayingState(this, _config) },
-                { typeof(PausedState), new PausedState(this, _config) },
-                { typeof(GameOverState), new GameOverState(this, _config) },
-                { typeof(LevelCompleteState), new LevelCompleteState(this, _config) },
-                { typeof(LoadingState), new LoadingState(this, _config) }
+                { typeof(MenuState), new MenuState(this, config) },
+                { typeof(PlayingState), new PlayingState(this, config) },
+                { typeof(PausedState), new PausedState(this, config) },
+                { typeof(GameOverState), new GameOverState(this, config) },
+                { typeof(LevelCompleteState), new LevelCompleteState(this, config) },
+                { typeof(LoadingState), new LoadingState(this, config) }
             };
-
-            GameRoot.GameRoot.Current.RegisterService<IGameStateMachine>(this);
         }
 
         private void Start()

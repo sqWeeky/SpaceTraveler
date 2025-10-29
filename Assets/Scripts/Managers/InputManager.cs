@@ -1,6 +1,6 @@
 namespace Managers
 {
-    public class InputManager
+    public class InputManager : BaseManager
     {
         private bool _wasPausePressed;
         private bool _wasResumePressed;
