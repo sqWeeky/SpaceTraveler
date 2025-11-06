@@ -2,6 +2,7 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -10,15 +11,7 @@ namespace StateMachine.States
     {
         private float _timer;
 
-        public GameOverState(
-            GameStateMachine stateMachine,
-            GameConfig config,
-            UIManager uiManager,
-            AudioManager audioManager,
-            InputManager inputManager,
-            LevelManager levelManager,
-            Player player) :
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public GameOverState(Container container) : base(container)
         {
         }
 
@@ -26,7 +19,8 @@ namespace StateMachine.States
         {
             //GameRoot.Instance.GetManager<UIManager>().ShowGameOverScreen();
             //_context.AudioManager.PlaySFX(AudioType.GameOver);
-            Config.TriggerGameEnd();
+            
+           Container.Resolve<GameConfig>().TriggerGameEnd();
 
             _timer = 0f;
             Debug.Log("Entered GameOver State");
@@ -37,7 +31,7 @@ namespace StateMachine.States
             _timer += Time.unscaledDeltaTime;
 
             // Автоматический возврат в меню через 3 секунды
-            if (_timer >= 3f && GameRoot.Instance.GetManager<InputManager>().AnyInput)
+            if (_timer >= 3f && Container.Resolve<InputManager>().AnyInput)
             {
                 ChangeState<MenuState>();
             }

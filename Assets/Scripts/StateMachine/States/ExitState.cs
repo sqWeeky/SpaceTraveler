@@ -1,21 +1,14 @@
 using Configs;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEditor;
 
 namespace StateMachine.States
 {
     public class ExitState : GameState
     {
-        public ExitState(
-            GameStateMachine stateMachine, 
-            GameConfig config, 
-            UIManager uiManager,
-            AudioManager audioManager, 
-            InputManager inputManager, 
-            LevelManager levelManager, 
-            Player player) : 
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public ExitState(Container container) : base(container)
         {
         }
 

@@ -2,32 +2,25 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     public class MenuState : GameState
     {
-        public MenuState(
-            GameStateMachine stateMachine,
-            GameConfig config,
-            UIManager uiManager,
-            AudioManager audioManager,
-            InputManager inputManager,
-            LevelManager levelManager,
-            Player player)
-            : base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public MenuState(Container container) : base(container)
         {
         }
 
         public override void Enter()
         {
-            UIManager.CloseAllWindows();
-            UIManager.OpenWindow<MainMenuWindow>();
+            Container.Resolve<UIManager>().CloseAllWindows();
+            Container.Resolve<UIManager>().OpenWindow<MainMenuWindow>();
             //AudioManager.PlayMusic(AudioType.MenuMusic);
 
             // Освобождаем ресурсы игрового уровня
-            LevelManager.UnloadCurrentLevel();
+            Container.Resolve<LevelManager>().UnloadCurrentLevel();
             Debug.Log("MenuState entered with full DI support!");
             Debug.Log("Entered Menu State");
         }

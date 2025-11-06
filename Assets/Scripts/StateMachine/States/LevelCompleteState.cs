@@ -2,21 +2,14 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     public class LevelCompleteState : GameState
     {
-        public LevelCompleteState(
-            GameStateMachine stateMachine,
-            GameConfig config,
-            UIManager uiManager,
-            AudioManager audioManager,
-            InputManager inputManager,
-            LevelManager levelManager,
-            Player player) :
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public LevelCompleteState(Container container) : base(container)
         {
         }
 
@@ -34,10 +27,10 @@ namespace StateMachine.States
 
         public override void Update()
         {
-            if (InputManager.WasContinuePressed)
+            if (Container.Resolve<InputManager>().WasContinuePressed)
             {
                 // Загружаем следующий уровень или возвращаем в меню
-                if (LevelManager.HasNextLevel)
+                if (Container.Resolve<LevelManager>().HasNextLevel)
                 {
                     ChangeState<LoadingState>();
                 }

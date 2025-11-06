@@ -2,42 +2,35 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     public class PausedState : GameState
     {
-        public PausedState(
-            GameStateMachine stateMachine, 
-            GameConfig config, 
-            UIManager uiManager, 
-            AudioManager audioManager, 
-            InputManager inputManager, 
-            LevelManager levelManager, 
-            Player player) : 
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public PausedState(Container container) : base(container)
         {
         }
 
         public override void Enter()
         {
             Time.timeScale = 0f;
-            UIManager.OpenWindow<PauseWindow>();
-            AudioManager.PauseGameplayMusic();
-            Config.TriggerGamePause();
+            Container.Resolve<UIManager>().OpenWindow<PauseWindow>();
+            Container.Resolve<AudioManager>().PauseGameplayMusic();
+            Container.Resolve<GameConfig>().TriggerGamePause();
 
             Debug.Log("Entered Paused State");
         }
 
         public override void Update()
         {
-            if (InputManager.WasPausePressed || InputManager.WasResumePressed)
+            if (Container.Resolve<InputManager>().WasPausePressed || Container.Resolve<InputManager>().WasResumePressed)
             {
                 ChangeState<PlayingState>();
             }
 
-            if (InputManager.WasMenuRequested)
+            if (Container.Resolve<InputManager>().WasMenuRequested)
             {
                 ChangeState<MenuState>();
             }
@@ -46,9 +39,9 @@ namespace StateMachine.States
         public override void Exit()
         {
             Time.timeScale = 1f;
-            UIManager.CloseWindow<PauseWindow>();
-            AudioManager.ResumeGameplayMusic();
-            Config.TriggerGameResume();
+            Container.Resolve<UIManager>().CloseWindow<PauseWindow>();
+            Container.Resolve<AudioManager>().ResumeGameplayMusic();
+            Container.Resolve<GameConfig>().TriggerGameResume();
 
             Debug.Log("Exited Paused State");
         }

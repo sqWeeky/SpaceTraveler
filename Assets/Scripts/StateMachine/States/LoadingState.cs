@@ -2,6 +2,7 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -10,15 +11,7 @@ namespace StateMachine.States
     {
         private AsyncOperation _loadingOperation;
 
-        public LoadingState(
-            GameStateMachine stateMachine, 
-            GameConfig config, 
-            UIManager uiManager, 
-            AudioManager audioManager, 
-            InputManager inputManager, 
-            LevelManager levelManager, 
-            Player player) : 
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public LoadingState(Container container) : base(container)
         {
         }
 
