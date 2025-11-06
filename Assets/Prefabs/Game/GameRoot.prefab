@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292138447764512162}
+  - component: {fileID: 5183369822592399934}
+  - component: {fileID: 7196627878014787700}
   m_Layer: 0
   m_Name: GameRoot
   m_TagString: Untagged
@@ -31,3 +33,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5183369822592399934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091450394680783681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f020a1ae8a43e7ac2bd5736e892c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameStateMachine: {fileID: 7196627878014787700}
+  _startManagers:
+  - {fileID: -5942446214936105077, guid: eeb6f4a3dc4c1c248b1fbb1ce94d0098, type: 3}
+  - {fileID: 6616651424207935174, guid: 6e21e648df30915409953886601f8a86, type: 3}
+  - {fileID: 8949688925427270492, guid: 36bdbb6c23562a04d8dd0074a792552b, type: 3}
+  - {fileID: 4854196838982103959, guid: 8fc79932991590e4d951d861340a1169, type: 3}
+--- !u!114 &7196627878014787700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091450394680783681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fafa9d7e4f4b36babf976cba4f723e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _config:
+    Player: {fileID: 0}
+    UIManager: {fileID: 0}
+    LevelManager: {fileID: 0}
+    InputManager: {fileID: 0}
+    AudioManager: {fileID: 0}

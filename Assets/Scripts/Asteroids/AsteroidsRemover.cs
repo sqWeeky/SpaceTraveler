@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class AsteroidsRemover : MonoBehaviour
+namespace Asteroids
 {
-    [SerializeField] private PoolAsteroids _poolAsteroids;
-
-    private void OnCollisionEnter(Collision collision)
+    public class AsteroidsRemover : MonoBehaviour
     {
-        if (collision.collider.TryGetComponent(out Asteroid asteroid))
-            _poolAsteroids.Put(asteroid);
+        [SerializeField] private PoolAsteroids _poolAsteroids;
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.collider.TryGetComponent(out Asteroid asteroid))
+                _poolAsteroids.Put(asteroid);
+        }
     }
 }

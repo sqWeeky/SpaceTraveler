@@ -1,40 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolAsteroids : MonoBehaviour
+namespace Asteroids
 {
-    [SerializeField] private Transform _container;
-    [SerializeField] private List<Asteroid> _prefabs;
-
-    private Queue<Asteroid> _poolAsteroids;
-
-    public IEnumerable<Asteroid> PooledEnemes => _poolAsteroids;
-
-    private void Awake()
+    public class PoolAsteroids : MonoBehaviour
     {
-        _poolAsteroids = new Queue<Asteroid>();
-    }
+        [SerializeField] private Transform _container;
+        [SerializeField] private List<Asteroid> _prefabs;
 
-    public Asteroid Get()
-    {
-        if (_poolAsteroids.Count == 0)
+        private Queue<Asteroid> _poolAsteroids;
+
+        public IEnumerable<Asteroid> PooledEnemes => _poolAsteroids;
+
+        private void Awake()
         {
-            var asteroid = Instantiate(_prefabs[Random.Range(0, _prefabs.Count - 1)]);
-            asteroid.transform.parent = _container;
-            asteroid.gameObject.SetActive(true);
-            return asteroid;
+            _poolAsteroids = new Queue<Asteroid>();
         }
 
-        var asteroid_2 = _poolAsteroids.Dequeue();
-        asteroid_2.gameObject.SetActive(true);
-        return asteroid_2;
-    }
+        public Asteroid Get()
+        {
+            if (_poolAsteroids.Count == 0)
+            {
+                var asteroid = Instantiate(_prefabs[Random.Range(0, _prefabs.Count - 1)]);
+                asteroid.transform.parent = _container;
+                asteroid.gameObject.SetActive(true);
+                return asteroid;
+            }
 
-    public void Put(Asteroid asteroid)
-    {
-        _poolAsteroids.Enqueue(asteroid);
-        asteroid.gameObject.SetActive(false);
-    }
+            var asteroid_2 = _poolAsteroids.Dequeue();
+            asteroid_2.gameObject.SetActive(true);
+            return asteroid_2;
+        }
 
-    public void Reset() => _poolAsteroids.Clear();
+        public void Put(Asteroid asteroid)
+        {
+            _poolAsteroids.Enqueue(asteroid);
+            asteroid.gameObject.SetActive(false);
+        }
+
+        public void Reset() => _poolAsteroids.Clear();
+    }
 }
