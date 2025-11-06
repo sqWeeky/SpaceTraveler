@@ -44,3 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5429c9e8aae34fba96c45e8576284a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _windows:
+  - {fileID: 976098073172966831, guid: 0f91d6bfabc38bf498c3dbf86a8b60b0, type: 3}
+  - {fileID: -4982865367608275336, guid: 17bba94f539bba443aa969ddc9c9ad52, type: 3}
+  - {fileID: 3099356924358862305, guid: 480a56247d9bcd0429723135457d93bc, type: 3}
+  - {fileID: 3454370759968712823, guid: f54854f47b5576542a212d36077f7041, type: 3}
+  - {fileID: 869020046421623301, guid: 734608d5b2633c948a2ce0f501f8b44d, type: 3}
+  - {fileID: 6383976400207528775, guid: 6b04ec80dd3d42542b58800aacef2866, type: 3}
+  _mainCanvas: {fileID: 0}

@@ -1,4 +1,7 @@
 using Configs;
+using Game;
+using Managers;
+using Players;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -6,13 +9,22 @@ namespace StateMachine.States
     public class LoadingState : GameState
     {
         private AsyncOperation _loadingOperation;
-    
-        public LoadingState(GameStateMachine stateMachine, GameConfig config) 
-            : base(stateMachine, config) { }
+
+        public LoadingState(
+            GameStateMachine stateMachine, 
+            GameConfig config, 
+            UIManager uiManager, 
+            AudioManager audioManager, 
+            InputManager inputManager, 
+            LevelManager levelManager, 
+            Player player) : 
+            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        {
+        }
 
         public override void Enter()
         {
-            Config.UIManager.ShowLoadingScreen();
+            //GameRoot.Instance.GetManager<UIManager>().ShowLoadingScreen();
         
             // Запускаем асинхронную загрузку
             //_loadingOperation = _context.LevelManager.LoadNextLevelAsync();
@@ -31,7 +43,7 @@ namespace StateMachine.States
 
         public override void Exit()
         {
-            Config.UIManager.HideLoadingScreen();
+            //GameRoot.Instance.GetManager<UIManager>().HideLoadingScreen();
             Debug.Log("Exited Loading State");
         }
     }

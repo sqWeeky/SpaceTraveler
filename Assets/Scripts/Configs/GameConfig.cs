@@ -1,17 +1,15 @@
 using System;
-using Managers;
-using Players;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Configs
 {
-    [Serializable]
-    public class GameConfig
+    [CreateAssetMenu(menuName = nameof(GameConfig))]
+    public class GameConfig : ScriptableObject
     {
-        public Player Player;
-        public UIManager UIManager;
-        public LevelManager LevelManager;
-        public InputManager InputManager;
-        public AudioManager AudioManager;
+        [SerializeField] private List<LevelConfig> _levels;
+        
+        public List<LevelConfig> Levels => _levels;
 
         public event Action OnGameStarted;
         public event Action OnGamePaused;

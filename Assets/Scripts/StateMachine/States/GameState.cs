@@ -1,16 +1,36 @@
 using Configs;
+using Managers;
+using Players;
 
 namespace StateMachine.States
 {
     public abstract class GameState : IGameState
     {
-        private GameStateMachine _stateMachine;
-        protected GameConfig Config;
-
-        protected GameState(GameStateMachine stateMachine, GameConfig config)
+        protected GameStateMachine StateMachine { get; }
+        protected GameConfig Config { get; }
+        
+        protected UIManager UIManager { get; }
+        protected AudioManager AudioManager { get; }
+        protected InputManager InputManager { get; }
+        protected LevelManager LevelManager { get; }
+        protected Player Player { get; }
+        
+        protected GameState(
+            GameStateMachine stateMachine,
+            GameConfig config,
+            UIManager uiManager,
+            AudioManager audioManager, 
+            InputManager inputManager,
+            LevelManager levelManager,
+            Player player)
         {
-            _stateMachine = stateMachine;
+            StateMachine = stateMachine;
             Config = config;
+            UIManager = uiManager;
+            AudioManager = audioManager;
+            InputManager = inputManager;
+            LevelManager = levelManager;
+            Player = player;
         }
 
         public virtual void Enter() { }
@@ -19,7 +39,7 @@ namespace StateMachine.States
     
         protected void ChangeState<T>() where T : GameState
         {
-            _stateMachine.ChangeState<T>();
+            StateMachine.ChangeState<T>();
         }
     }
 }
