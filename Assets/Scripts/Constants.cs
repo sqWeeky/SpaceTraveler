@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Constants : MonoBehaviour
+public static class Constants
 {
-    // Start is called before the first frame update
-    void Start()
+    public static class GameTags
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public static string MainCanvasTag = "MainCanvas";
+        public static string PlayerTag = "Player";
     }
 }

@@ -1,4 +1,7 @@
 using Configs;
+using Game;
+using Managers;
+using Players;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -6,16 +9,25 @@ namespace StateMachine.States
     public class GameOverState : GameState
     {
         private float _timer;
-    
-        public GameOverState(GameStateMachine stateMachine, GameConfig config) 
-            : base(stateMachine, config) { }
+
+        public GameOverState(
+            GameStateMachine stateMachine,
+            GameConfig config,
+            UIManager uiManager,
+            AudioManager audioManager,
+            InputManager inputManager,
+            LevelManager levelManager,
+            Player player) :
+            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        {
+        }
 
         public override void Enter()
         {
-            Config.UIManager.ShowGameOverScreen();
+            //GameRoot.Instance.GetManager<UIManager>().ShowGameOverScreen();
             //_context.AudioManager.PlaySFX(AudioType.GameOver);
             Config.TriggerGameEnd();
-        
+
             _timer = 0f;
             Debug.Log("Entered GameOver State");
         }
@@ -23,9 +35,9 @@ namespace StateMachine.States
         public override void Update()
         {
             _timer += Time.unscaledDeltaTime;
-        
+
             // Автоматический возврат в меню через 3 секунды
-            if (_timer >= 3f && Config.InputManager.AnyInput)
+            if (_timer >= 3f && GameRoot.Instance.GetManager<InputManager>().AnyInput)
             {
                 ChangeState<MenuState>();
             }
@@ -33,7 +45,7 @@ namespace StateMachine.States
 
         public override void Exit()
         {
-            Config.UIManager.HideGameOverScreen();
+            //GameRoot.Instance.GetManager<UIManager>().HideGameOverScreen();
             Debug.Log("Exited GameOver State");
         }
     }

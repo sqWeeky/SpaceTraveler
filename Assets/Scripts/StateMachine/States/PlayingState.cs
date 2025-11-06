@@ -1,4 +1,7 @@
 using Configs;
+using Game;
+using Managers;
+using Players;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -6,52 +9,65 @@ namespace StateMachine.States
     public class PlayingState : GameState
     {
         private float _gameTime;
-    
-        public PlayingState(GameStateMachine stateMachine, GameConfig config) 
-            : base(stateMachine, config) { }
+        private PlayingWindow _playingWindow;
+
+        public PlayingState(
+            GameStateMachine stateMachine, 
+            GameConfig config, 
+            UIManager uiManager, 
+            AudioManager audioManager, 
+            InputManager inputManager, 
+            LevelManager levelManager, 
+            Player player) : 
+            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        {
+        }
 
         public override void Enter()
         {
-            Config.UIManager.ShowGameHUD();
-            Config.InputManager.EnableGameplayInput();
-            //_context.AudioManager.PlayMusic(AudioType.GameplayMusic);
-        
-            // Подписываемся на события
-            Config.Player.OnPlayerDied += OnPlayerDied;
-            Config.Player.OnLevelComplete += OnLevelComplete;
-        
+            //GameRoot.Instance.GetManager<UIManager>().OpenWindow<PlayingWindow>();
+            UIManager.CloseAllWindows();
+            _playingWindow = (PlayingWindow)UIManager.OpenWindow<PlayingWindow>();
+            InputManager.EnableGameplayInput();
+            //AudioManager.PlayMusic(AudioType.GameplayMusic);
+            
+            
+            // Player.OnPlayerDied += OnPlayerDied;
+            // Player.OnLevelComplete += OnLevelComplete;
+
             _gameTime = 0f;
             Config.TriggerGameStart();
-        
+
             Debug.Log("Entered Playing State");
         }
 
         public override void Update()
         {
             _gameTime += Time.deltaTime;
-            Config.UIManager.UpdateGameTimer(_gameTime);
-        
+            //_playingWindow.UpdateGameTimer(_gameTime);
+
             // Проверка паузы
-            if (Config.InputManager.WasPausePressed)
-            {
-                ChangeState<PausedState>();
-            }
+            // if (GameRoot.Instance.GetManager<InputManager>().WasPausePressed)
+            // {
+            //     ChangeState<PausedState>();
+            // }
         }
 
         public override void Exit()
         {
-            Config.InputManager.DisableGameplayInput();
-            Config.Player.OnPlayerDied -= OnPlayerDied;
-            Config.Player.OnLevelComplete -= OnLevelComplete;
-        
+            UIManager.CloseWindow<PlayingWindow>();
+            InputManager.DisableGameplayInput();
+            // Player.OnPlayerDied -= OnPlayerDied;
+            // Player.OnLevelComplete -= OnLevelComplete;
+
             Debug.Log("Exited Playing State");
         }
-    
+
         private void OnPlayerDied()
         {
             ChangeState<GameOverState>();
         }
-    
+
         private void OnLevelComplete()
         {
             ChangeState<LevelCompleteState>();
