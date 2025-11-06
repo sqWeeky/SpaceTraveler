@@ -2,6 +2,7 @@ using Configs;
 using Game;
 using Managers;
 using Players;
+using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -11,32 +12,24 @@ namespace StateMachine.States
         private float _gameTime;
         private PlayingWindow _playingWindow;
 
-        public PlayingState(
-            GameStateMachine stateMachine, 
-            GameConfig config, 
-            UIManager uiManager, 
-            AudioManager audioManager, 
-            InputManager inputManager, 
-            LevelManager levelManager, 
-            Player player) : 
-            base(stateMachine, config, uiManager, audioManager, inputManager, levelManager, player)
+        public PlayingState(Container container) : base(container)
         {
         }
 
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().OpenWindow<PlayingWindow>();
-            UIManager.CloseAllWindows();
-            _playingWindow = (PlayingWindow)UIManager.OpenWindow<PlayingWindow>();
-            InputManager.EnableGameplayInput();
+            //Container.Resolve<UIManager>().CloseAllWindows();
+            _playingWindow = (PlayingWindow)Container.Resolve<UIManager>().OpenWindow<PlayingWindow>();
+            Container.Resolve<InputManager>().EnableGameplayInput();
             //AudioManager.PlayMusic(AudioType.GameplayMusic);
-            
-            
+
+
             // Player.OnPlayerDied += OnPlayerDied;
             // Player.OnLevelComplete += OnLevelComplete;
 
             _gameTime = 0f;
-            Config.TriggerGameStart();
+            Container.Resolve<GameConfig>().TriggerGameStart();
 
             Debug.Log("Entered Playing State");
         }
@@ -55,8 +48,8 @@ namespace StateMachine.States
 
         public override void Exit()
         {
-            UIManager.CloseWindow<PlayingWindow>();
-            InputManager.DisableGameplayInput();
+            Container.Resolve<UIManager>().CloseWindow<PlayingWindow>();
+            Container.Resolve<InputManager>().DisableGameplayInput();
             // Player.OnPlayerDied -= OnPlayerDied;
             // Player.OnLevelComplete -= OnLevelComplete;
 
