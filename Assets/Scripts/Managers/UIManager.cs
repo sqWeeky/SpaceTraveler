@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Configs;
 using Reflex.Attributes;
 using Reflex.Core;
 using StateMachine;
@@ -15,7 +16,8 @@ namespace Managers
         private readonly List<BaseWindow> _openedWindows = new();
         private readonly Dictionary<Type, BaseWindow> _cachedWindows = new();
 
-        [Inject] private Container _container;
+        // private GameStateMachine _gameStateMachine;
+        // private AudioManager _audioManager;
 
         public BaseWindow OpenWindow<T>() where T : BaseWindow
         {
@@ -27,33 +29,25 @@ namespace Managers
             BaseWindow window = GetOrCreateWindow<T>();
 
             if (window == null) return null;
-            
+
             if (_container == null)
             {
                 Debug.LogError("Container is null in UIManager! DI not initialized properly.");
                 return window;
             }
-            
-            var stateMachine = _container.Resolve<IGameStateMachine>();
-            var audioManager = _container.Resolve<AudioManager>();
-    
-            if (stateMachine == null || audioManager == null)
-            {
-                Debug.LogError($"Failed to resolve dependencies: StateMachine: {stateMachine != null}, AudioManager: {audioManager != null}");
-                return window;
-            }
-            
+
             window.InjectDependencies(
-                _container.Resolve<IGameStateMachine>(),
-                this, // UIManager сам является зависимостью
-                _container.Resolve<AudioManager>()
-            );
-            
+                _container.Resolve<GameStateMachine>(), 
+                this, 
+                _container.Resolve<AudioManager>());
+
             if (!_openedWindows.Contains(window))
             {
                 window.gameObject.SetActive(true);
                 _openedWindows.Add(window);
             }
+
+            Debug.Log($"Opened window: {typeof(T).Name}");
 
             return window;
         }

@@ -9,9 +9,9 @@ namespace StateMachine.States
 {
     public class LevelCompleteState : GameState
     {
-        public LevelCompleteState(Container container) : base(container)
-        {
-        }
+        // public LevelCompleteState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {
@@ -27,18 +27,18 @@ namespace StateMachine.States
 
         public override void Update()
         {
-            if (Container.Resolve<InputManager>().WasContinuePressed)
-            {
-                // Загружаем следующий уровень или возвращаем в меню
-                if (Container.Resolve<LevelManager>().HasNextLevel)
-                {
-                    ChangeState<LoadingState>();
-                }
-                else
-                {
-                    ChangeState<MenuState>();
-                }
-            }
+            // if (Container.Resolve<InputManager>().WasContinuePressed)
+            // {
+            //     // Загружаем следующий уровень или возвращаем в меню
+            //     if (Container.Resolve<LevelManager>().HasNextLevel)
+            //     {
+            //         ChangeState<LoadingState>();
+            //     }
+            //     else
+            //     {
+            //         ChangeState<MenuState>();
+            //     }
+            // }
         }
 
         public override void Exit()

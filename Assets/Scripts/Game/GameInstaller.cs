@@ -5,6 +5,7 @@ using UnityEngine;
 using Reflex.Core;
 using StateMachine;
 using StateMachine.States;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -45,6 +46,7 @@ namespace Game
             builder.AddTransient<ExitState>(container => CreateState<ExitState>(container));
 
             Debug.Log("GameInstaller: All bindings registered");
+            SceneManager.LoadScene("MainMenu");
         }
 
         private T CreateState<T>(Container container) where T : GameState

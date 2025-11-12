@@ -12,16 +12,16 @@ namespace StateMachine.States
         private float _gameTime;
         private PlayingWindow _playingWindow;
 
-        public PlayingState(Container container) : base(container)
-        {
-        }
+        // public PlayingState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().OpenWindow<PlayingWindow>();
             //Container.Resolve<UIManager>().CloseAllWindows();
-            _playingWindow = (PlayingWindow)Container.Resolve<UIManager>().OpenWindow<PlayingWindow>();
-            Container.Resolve<InputManager>().EnableGameplayInput();
+            // _playingWindow = (PlayingWindow)Container.Resolve<UIManager>().OpenWindow<PlayingWindow>();
+            // Container.Resolve<InputManager>().EnableGameplayInput();
             //AudioManager.PlayMusic(AudioType.GameplayMusic);
 
 
@@ -29,7 +29,7 @@ namespace StateMachine.States
             // Player.OnLevelComplete += OnLevelComplete;
 
             _gameTime = 0f;
-            Container.Resolve<GameConfig>().TriggerGameStart();
+            //Container.Resolve<GameConfig>().TriggerGameStart();
 
             Debug.Log("Entered Playing State");
         }
@@ -48,8 +48,8 @@ namespace StateMachine.States
 
         public override void Exit()
         {
-            Container.Resolve<UIManager>().CloseWindow<PlayingWindow>();
-            Container.Resolve<InputManager>().DisableGameplayInput();
+            // Container.Resolve<UIManager>().CloseWindow<PlayingWindow>();
+            // Container.Resolve<InputManager>().DisableGameplayInput();
             // Player.OnPlayerDied -= OnPlayerDied;
             // Player.OnLevelComplete -= OnLevelComplete;
 

@@ -11,9 +11,9 @@ namespace StateMachine.States
     {
         private AsyncOperation _loadingOperation;
 
-        public LoadingState(Container container) : base(container)
-        {
-        }
+        // public LoadingState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {

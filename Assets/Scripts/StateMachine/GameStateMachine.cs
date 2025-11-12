@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Configs;
 using Managers;
+using Reflex.Attributes;
 using Reflex.Core;
 using StateMachine.States;
 using UnityEngine;
@@ -10,22 +12,38 @@ namespace StateMachine
 {
     public class GameStateMachine : MonoBehaviour, IGameStateMachine
     {
-        private Dictionary<Type, GameState> _states;
+        private Dictionary<Type, GameState> _states = new();
         private GameState _currentState;
         private GameState _previousState;
+            
+        [Inject]private Container _container;
 
-        private Container _container;
-
-        public void Initialize(GameConfig config, Container container)
+        [Inject]
+        private void Construct(Container container)
         {
-            _container = container;
+            //_container = container;
             InitializeStates();
-            ChangeState<MenuState>();
         }
 
-        private void InitializeStates()
+        // private void Start()
+        // {
+        //     InitializeStates();
+        // }
+
+        public void InitializeStates()
         {
+            Debug.LogError("Инициализация состояний в машине состояний");
             _states = new Dictionary<Type, GameState>();
+
+            // _states = new Dictionary<Type, GameState>()
+            // {
+            //     { typeof(MenuState), new MenuState() },
+            //     { typeof(PlayingState), new PlayingState() },
+            //     { typeof(PausedState), new PausedState() },
+            //     { typeof(GameOverState), new GameOverState() },
+            //     { typeof(LevelCompleteState), new LevelCompleteState() },
+            //     { typeof(LoadingState), new LoadingState() }
+            // };
 
             // Создаем все состояния через DI контейнер
             CreateState<MenuState>();
@@ -38,12 +56,7 @@ namespace StateMachine
 
             Debug.Log($"GameStateMachine: {_states.Count} states initialized with DI");
         }
-        
-        private void Start()
-        {
-            ChangeState<MenuState>();
-        }
-       
+
         private void Update()
         {
             _currentState?.Update();
@@ -53,7 +66,7 @@ namespace StateMachine
         {
             ChangeState(typeof(T));
         }
-        
+
         public void ReturnToPreviousState()
         {
             if (_previousState != null)
@@ -69,7 +82,7 @@ namespace StateMachine
         }
 
         public Type CurrentStateType => _currentState?.GetType();
-        
+
         private void CreateState<T>() where T : GameState
         {
             var stateType = typeof(T);
@@ -85,9 +98,10 @@ namespace StateMachine
                 Debug.LogError($"Failed to create state {stateType.Name}: {ex.Message}");
             }
         }
-        
+
         private void ChangeState(Type stateType)
         {
+            Debug.Log(_states.Count);
             if (!_states.TryGetValue(stateType, out var newState))
             {
                 Debug.LogError($"State {stateType.Name} not found!");
@@ -105,7 +119,7 @@ namespace StateMachine
             _currentState = newState;
             _container.Resolve<UIManager>().CloseAllWindows();
             _currentState.Enter();
-            
+
             Debug.Log($"State changed to: {stateType.Name}");
         }
 

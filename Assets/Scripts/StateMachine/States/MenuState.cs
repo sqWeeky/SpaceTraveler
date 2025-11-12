@@ -9,18 +9,19 @@ namespace StateMachine.States
 {
     public class MenuState : GameState
     {
-        public MenuState(Container container) : base(container)
-        {
-        }
+        // public MenuState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {
-            Container.Resolve<UIManager>().CloseAllWindows();
-            Container.Resolve<UIManager>().OpenWindow<MainMenuWindow>();
+            // Container.Resolve<UIManager>().CloseAllWindows();
+             Container.ProjectContainer.Resolve<UIManager>().OpenWindow<MainMenuWindow>();
+            //UIManager.OpenWindow<MainMenuWindow>();
             //AudioManager.PlayMusic(AudioType.MenuMusic);
 
             // Освобождаем ресурсы игрового уровня
-            Container.Resolve<LevelManager>().UnloadCurrentLevel();
+            //Container.Resolve<LevelManager>().UnloadCurrentLevel();
             Debug.Log("MenuState entered with full DI support!");
             Debug.Log("Entered Menu State");
         }

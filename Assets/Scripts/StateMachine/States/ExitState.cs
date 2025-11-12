@@ -8,9 +8,9 @@ namespace StateMachine.States
 {
     public class ExitState : GameState
     {
-        public ExitState(Container container) : base(container)
-        {
-        }
+        // public ExitState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {

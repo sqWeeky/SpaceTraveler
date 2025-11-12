@@ -5,19 +5,21 @@ namespace Managers
 {
     public abstract class BaseWindow : MonoBehaviour
     {
-        protected IGameStateMachine GameStateMachine { get; private set; }
+        protected GameStateMachine GameStateMachine { get; private set; }
         protected UIManager UIManager { get; private set; }
         protected AudioManager AudioManager { get; private set; }
 
-        public virtual void InjectDependencies(IGameStateMachine stateMachine,
-            UIManager uiManager, 
+        public void InjectDependencies(GameStateMachine stateMachine,
+            UIManager uiManager,
             AudioManager audioManager)
         {
             GameStateMachine = stateMachine;
             UIManager = uiManager;
             AudioManager = audioManager;
         }
-        
-        public virtual void CloseWindow() { }
+
+        public virtual void CloseWindow()
+        {
+        }
     }
 }

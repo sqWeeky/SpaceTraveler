@@ -44,7 +44,7 @@ namespace Game
             var stateMachine = container.Resolve<GameStateMachine>();
             var config = container.Resolve<GameConfig>();
 
-            stateMachine.Initialize(config, container);
+            //stateMachine.Initialize(config, container);
 
             InitializeManagers(container);
 
@@ -75,10 +75,10 @@ namespace Game
 
         private void InitializeManagers(Container container)
         {
-            container.Resolve<UIManager>().Construct(container);
-            container.Resolve<AudioManager>().Construct(container);
-            container.Resolve<InputManager>().Construct(container);
-            container.Resolve<LevelManager>().Construct(container);
+            // container.Resolve<UIManager>().Construct(container);
+            // container.Resolve<AudioManager>().Construct(container);
+            // container.Resolve<InputManager>().Construct(container);
+            // container.Resolve<LevelManager>().Construct(container);
             //container.Resolve<LevelManager>().InitManager();
 
             Debug.Log("SceneBootstrap: All managers initialized");

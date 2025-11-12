@@ -11,16 +11,16 @@ namespace StateMachine.States
     {
         private float _timer;
 
-        public GameOverState(Container container) : base(container)
-        {
-        }
+        // public GameOverState(Container container) : base(container)
+        // {
+        // }
 
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().ShowGameOverScreen();
             //_context.AudioManager.PlaySFX(AudioType.GameOver);
             
-           Container.Resolve<GameConfig>().TriggerGameEnd();
+           //Container.Resolve<GameConfig>().TriggerGameEnd();
 
             _timer = 0f;
             Debug.Log("Entered GameOver State");
@@ -31,10 +31,10 @@ namespace StateMachine.States
             _timer += Time.unscaledDeltaTime;
 
             // Автоматический возврат в меню через 3 секунды
-            if (_timer >= 3f && Container.Resolve<InputManager>().AnyInput)
-            {
-                ChangeState<MenuState>();
-            }
+            // if (_timer >= 3f && Container.Resolve<InputManager>().AnyInput)
+            // {
+            //     ChangeState<MenuState>();
+            // }
         }
 
         public override void Exit()

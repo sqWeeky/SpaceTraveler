@@ -6,13 +6,13 @@ namespace Managers
 {
     public class BaseManager : MonoBehaviour, IManager, IInjectContainer
     {
-        protected Container _container;
+        [Inject] protected Container _container;
 
-        [Inject]
-        public void Construct(Container container)
-        {
-            _container = container;
-        }
+        // [Inject]
+        // public void Construct(Container container)
+        // {
+        //     _container = container;
+        // }
 
         public virtual void InitManager()
         {
@@ -21,7 +21,6 @@ namespace Managers
 
         public void SetContainer(Container container)
         {
-            _container = container;
         }
     }
 }
