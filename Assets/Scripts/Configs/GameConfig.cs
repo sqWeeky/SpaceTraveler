@@ -7,10 +7,10 @@ namespace Configs
     [CreateAssetMenu(menuName = nameof(GameConfig))]
     public class GameConfig : ScriptableObject
     {
-        [SerializeField] private List<LevelConfig> _levels;
+        [SerializeField] private List<LevelsConfig> _levels;
         
-        public List<LevelConfig> Levels => _levels;
-
+        public List<LevelsConfig> Levels => _levels;
+        
         public event Action OnGameStarted;
         public event Action OnGamePaused;
         public event Action OnGameResumed;

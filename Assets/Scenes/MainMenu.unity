@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684593424}
   - component: {fileID: 684593423}
+  - component: {fileID: 684593425}
   m_Layer: 0
   m_Name: SceneScope
   m_TagString: Untagged
@@ -167,6 +168,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684593425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684593422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a3654456324d2a9467eb5c394c9342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1373848710
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +191,7 @@ GameObject:
   - component: {fileID: 1373848713}
   - component: {fileID: 1373848712}
   - component: {fileID: 1373848711}
+  - component: {fileID: 1373848714}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -259,6 +273,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1373848714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373848710}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa255f6db4e5ee449231d0ec3ce8932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!1 &1609386453
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +355,8 @@ Canvas:
   m_GameObject: {fileID: 1609386453}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1373848712}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -336,7 +364,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

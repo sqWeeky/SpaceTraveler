@@ -1,17 +1,15 @@
-using Configs;
-using Game;
 using Managers;
-using Players;
-using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     public class LevelCompleteState : GameState
     {
-        // public LevelCompleteState(Container container) : base(container)
-        // {
-        // }
+        public LevelCompleteState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
+            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
+            inputManager, levelManager)
+        {
+        }
 
         public override void Enter()
         {

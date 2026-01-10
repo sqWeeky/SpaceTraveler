@@ -1,16 +1,16 @@
 using Managers;
-using Reflex.Core;
-using StateMachine;
 using StateMachine.States;
-using UnityEngine.SceneManagement;
 
 public class LevelsMenuWindow : BaseWindow
 {
-    public void OnStartGame()
+    public void OnStartGame(string sceneName)
     {
-        SceneManager.LoadScene("TestLevel");
-        Container.ProjectContainer.Resolve<GameStateMachine>().ChangeState<PlayingState>();
+        LevelManager.LoadLevel(sceneName); // Загружаем конкретный уровень
+        GameStateMachine.ChangeState<LoadingState>(); // Переходим в состояние загрузки
     }
 
-    public void OnBack() => UIManager.CloseWindow<LevelsMenuWindow>();
+    public void OnBack()
+    {
+        UIManager.CloseWindow<LevelsMenuWindow>();
+    }
 }

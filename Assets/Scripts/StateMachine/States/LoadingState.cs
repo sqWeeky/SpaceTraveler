@@ -1,43 +1,78 @@
-using Configs;
-using Game;
+using Cysharp.Threading.Tasks;
 using Managers;
-using Players;
-using Reflex.Core;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace StateMachine.States
 {
     public class LoadingState : GameState
     {
-        private AsyncOperation _loadingOperation;
+        private bool _isLoading;
+        private string _sceneToLoad;
+        private LoadingWindow _loadingWindow;
 
-        // public LoadingState(Container container) : base(container)
-        // {
-        // }
+        public LoadingState(
+            GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
+            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
+            inputManager, levelManager)
+        {
+        }
 
         public override void Enter()
         {
-            //GameRoot.Instance.GetManager<UIManager>().ShowLoadingScreen();
-        
-            // Запускаем асинхронную загрузку
-            //_loadingOperation = _context.LevelManager.LoadNextLevelAsync();
-        
             Debug.Log("Entered Loading State");
-        }
+            _isLoading = true;
 
-        public override void Update()
-        {
-            if (_loadingOperation != null && _loadingOperation.isDone)
-            {
-                // Переходим в игровое состояние после загрузки
-                ChangeState<PlayingState>();
-            }
+            UIManager.CloseAllWindows();
+            UIManager.OpenWindow<LoadingWindow>();
+
+            LoadSceneAsync().Forget();
         }
 
         public override void Exit()
         {
-            //GameRoot.Instance.GetManager<UIManager>().HideLoadingScreen();
+            _isLoading = false;
+            UIManager.CloseWindow<LoadingWindow>();
             Debug.Log("Exited Loading State");
+        }
+
+        private async UniTaskVoid LoadSceneAsync()
+        {
+            await UniTask.NextFrame();
+
+            string sceneToLoad = LevelManager.GetSceneToLoad();
+            Debug.Log($"LoadingState: Loading scene {sceneToLoad}");
+
+            AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+
+            if (loadOperation != null)
+            {
+                loadOperation.allowSceneActivation = false;
+
+                await UniTask.Delay(1200);
+
+                loadOperation.allowSceneActivation = true;
+                await UniTask.WaitUntil(() => loadOperation.isDone);
+
+                Debug.Log($"LoadingState: Scene {sceneToLoad} loaded successfully");
+            }
+
+            if (_isLoading)
+            {
+                DetermineNextState(sceneToLoad);
+            }
+        }
+
+        private void DetermineNextState(string loadedScene)
+        {
+            if (loadedScene.Contains("Level") || loadedScene.Contains("Game"))
+            {
+                ChangeState<PlayingState>();
+            }
+            else
+            {
+                ChangeState<MenuState>();
+            }
         }
     }
 }

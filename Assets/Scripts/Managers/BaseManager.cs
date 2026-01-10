@@ -1,26 +1,21 @@
-using Reflex.Attributes;
-using Reflex.Core;
 using UnityEngine;
 
 namespace Managers
 {
-    public class BaseManager : MonoBehaviour, IManager, IInjectContainer
+    public abstract class BaseManager<T> : MonoBehaviour, IManager
+        where T : BaseManager<T>
     {
-        [Inject] protected Container _container;
+        public static T Create()
+        {
+            var manager = new GameObject(typeof(T).Name).AddComponent<T>();
+            DontDestroyOnLoad(manager.gameObject);
 
-        // [Inject]
-        // public void Construct(Container container)
-        // {
-        //     _container = container;
-        // }
+           return manager;
+        }
 
         public virtual void InitManager()
         {
             return;
-        }
-
-        public void SetContainer(Container container)
-        {
         }
     }
 }

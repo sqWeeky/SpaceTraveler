@@ -1,8 +1,4 @@
-using Configs;
-using Game;
 using Managers;
-using Players;
-using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -11,16 +7,18 @@ namespace StateMachine.States
     {
         private float _timer;
 
-        // public GameOverState(Container container) : base(container)
-        // {
-        // }
+        public GameOverState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
+            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
+            inputManager, levelManager)
+        {
+        }
 
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().ShowGameOverScreen();
             //_context.AudioManager.PlaySFX(AudioType.GameOver);
-            
-           //Container.Resolve<GameConfig>().TriggerGameEnd();
+
+            //Container.Resolve<GameConfig>().TriggerGameEnd();
 
             _timer = 0f;
             Debug.Log("Entered GameOver State");

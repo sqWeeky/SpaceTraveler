@@ -1,9 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using Configs;
-using Managers;
-using Reflex.Attributes;
 using Reflex.Core;
 using StateMachine.States;
 using UnityEngine;
@@ -12,214 +7,86 @@ namespace StateMachine
 {
     public class GameStateMachine : MonoBehaviour, IGameStateMachine
     {
-        private Dictionary<Type, GameState> _states = new();
+        private Container _container;
         private GameState _currentState;
         private GameState _previousState;
-            
-        [Inject]private Container _container;
 
-        [Inject]
-        private void Construct(Container container)
+        public Type CurrentStateType => _currentState?.GetType();
+
+        private Container Container
         {
-            //_container = container;
-            InitializeStates();
+            get
+            {
+                if (_container == null)
+                {
+                    CreateStates();
+                }
+
+                return _container;
+            }
         }
 
-        // private void Start()
-        // {
-        //     InitializeStates();
-        // }
-
-        public void InitializeStates()
+        public static GameStateMachine Create()
         {
-            Debug.LogError("Инициализация состояний в машине состояний");
-            _states = new Dictionary<Type, GameState>();
+            var gameStateMachine = new GameObject(nameof(GameStateMachine)).AddComponent<GameStateMachine>();
+            DontDestroyOnLoad(gameStateMachine.gameObject);
 
-            // _states = new Dictionary<Type, GameState>()
-            // {
-            //     { typeof(MenuState), new MenuState() },
-            //     { typeof(PlayingState), new PlayingState() },
-            //     { typeof(PausedState), new PausedState() },
-            //     { typeof(GameOverState), new GameOverState() },
-            //     { typeof(LevelCompleteState), new LevelCompleteState() },
-            //     { typeof(LoadingState), new LoadingState() }
-            // };
-
-            // Создаем все состояния через DI контейнер
-            CreateState<MenuState>();
-            CreateState<PlayingState>();
-            CreateState<PausedState>();
-            CreateState<GameOverState>();
-            CreateState<LevelCompleteState>();
-            CreateState<LoadingState>();
-            CreateState<ExitState>();
-
-            Debug.Log($"GameStateMachine: {_states.Count} states initialized with DI");
+            return gameStateMachine;
         }
 
-        private void Update()
+        private void OnDestroy()
         {
-            _currentState?.Update();
+            _currentState?.Exit();
+            _container?.Dispose();
         }
 
         public void ChangeState<T>() where T : GameState
         {
-            ChangeState(typeof(T));
+            var state = Container.Resolve<T>();
+            
+            ChangeState(state);
         }
 
         public void ReturnToPreviousState()
         {
             if (_previousState != null)
             {
-                ChangeState(_previousState.GetType());
+                ChangeState(_previousState);
             }
         }
 
-        public T GetState<T>() where T : GameState
+        private void ChangeState(GameState state)
         {
-            var type = typeof(T);
-            return _states.TryGetValue(type, out var state) ? state as T : null;
-        }
-
-        public Type CurrentStateType => _currentState?.GetType();
-
-        private void CreateState<T>() where T : GameState
-        {
-            var stateType = typeof(T);
-
-            try
-            {
-                var state = _container.Resolve<T>();
-                _states[stateType] = state;
-                Debug.Log($"State created: {stateType.Name}");
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"Failed to create state {stateType.Name}: {ex.Message}");
-            }
-        }
-
-        private void ChangeState(Type stateType)
-        {
-            Debug.Log(_states.Count);
-            if (!_states.TryGetValue(stateType, out var newState))
-            {
-                Debug.LogError($"State {stateType.Name} not found!");
-                return;
-            }
-
             if (_currentState != null)
             {
-                if (_currentState == newState) return;
+                if (_currentState == state) return;
 
                 _previousState = _currentState;
                 _currentState.Exit();
             }
 
-            _currentState = newState;
-            _container.Resolve<UIManager>().CloseAllWindows();
+            _currentState = state;
             _currentState.Enter();
 
-            Debug.Log($"State changed to: {stateType.Name}");
+            Debug.Log($"State changed to: {state.GetType().Name}");
         }
 
-        private void OnDestroy()
+
+        private void CreateStates()
         {
-            // Очищаем состояния при уничтожении
-            _currentState?.Exit();
-            _states?.Clear();
-        }
+            var fsmContainer = new ContainerBuilder();
 
-        // private Dictionary<Type, GameState> _states;
-        // private GameState _currentState;
-        // private GameState _previousState;
-        //
-        // private Container _container;
-        // public Type CurrentStateType => _currentState?.GetType();
-        //
-        // public void Initialize(GameConfig config, Container container)
-        // {
-        //     _container = container;
-        //     _states = new Dictionary<Type, GameState>();
-        // }
-        //
-        // private void Start()
-        // {
-        //     ChangeState<PlayingState>();
-        // }
-        //
-        // private void Update()
-        // {
-        //     _currentState?.Update();
-        // }
-        //
-        // public void ChangeState<T>() where T : GameState
-        // {
-        //     var newState = GetOrCreateState<T>();
-        //
-        //     if (_currentState != null)
-        //     {
-        //         if (_currentState == newState) return;
-        //
-        //         _previousState = _currentState;
-        //         _currentState.Exit();
-        //     }
-        //
-        //     _currentState = newState;
-        //     _currentState.Enter();
-        //
-        //     Debug.Log($"State changed to: {typeof(T).Name}");
-        // }
-        //
-        // public void ReturnToPreviousState()
-        // {
-        //     if (_previousState != null)
-        //     {
-        //         ChangeState(_previousState.GetType());
-        //     }
-        // }
-        //
-        // public T GetState<T>() where T : GameState
-        // {
-        //     var type = typeof(T);
-        //     return _states.TryGetValue(type, out var state) ? state as T : null;
-        // }
-        //
-        // private T GetOrCreateState<T>() where T : GameState
-        // {
-        //     var stateType = typeof(T);
-        //
-        //     if (!_states.TryGetValue(stateType, out var state))
-        //     {
-        //         // Создаем состояние лениво при первом использовании
-        //         state = _container.Resolve<T>();
-        //         _states[stateType] = state;
-        //         Debug.Log($"State created lazily: {stateType.Name}");
-        //     }
-        //
-        //     return state as T;
-        // }
-        //
-        // private void ChangeState(Type stateType)
-        // {
-        //     if (!_states.TryGetValue(stateType, out var newState))
-        //     {
-        //         Debug.LogError($"State {stateType.Name} not registered!");
-        //         return;
-        //     }
-        //
-        //     if (_currentState != null)
-        //     {
-        //         if (_currentState == newState) return;
-        //
-        //         _previousState = _currentState;
-        //         _currentState.Exit();
-        //     }
-        //
-        //     _currentState = newState;
-        //     _currentState.Enter();
-        //
-        //     Debug.Log($"State changed to: {stateType.Name}");
-        // }
+            fsmContainer.SetParent(Container.ProjectContainer);
+
+            fsmContainer.AddSingleton(typeof(MenuState));
+            fsmContainer.AddSingleton(typeof(PlayingState));
+            fsmContainer.AddSingleton(typeof(PausedState));
+            fsmContainer.AddSingleton(typeof(GameOverState));
+            fsmContainer.AddSingleton(typeof(LevelCompleteState));
+            fsmContainer.AddSingleton(typeof(LoadingState));
+            fsmContainer.AddSingleton(typeof(ExitState));
+
+            _container = fsmContainer.Build();
+        }
     }
 }

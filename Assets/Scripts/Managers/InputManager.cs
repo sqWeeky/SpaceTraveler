@@ -1,6 +1,8 @@
+using Configs;
+
 namespace Managers
 {
-    public class InputManager : BaseManager
+    public class InputManager : BaseManager<InputManager>
     {
         private bool _wasPausePressed;
         private bool _wasResumePressed;
@@ -8,7 +10,7 @@ namespace Managers
         private bool _wasMenuRequested;
         private bool _wasContinuePressed;
 
-        public bool WasPausePressed => _wasPausePressed;
+       public bool WasPausePressed => _wasPausePressed;
         public bool WasResumePressed => _wasResumePressed;
         public bool AnyInput => _anyInput;
         public bool WasMenuRequested => _wasMenuRequested;
