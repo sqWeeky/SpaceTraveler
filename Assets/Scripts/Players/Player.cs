@@ -29,7 +29,10 @@ namespace Players
             }
         }
 
-
+        private void Awake()
+        {
+            
+        }
         // public static Player Instance { get; private set; }
         //
         // private void Awake()
