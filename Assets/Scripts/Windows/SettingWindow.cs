@@ -1,6 +1,13 @@
 using Managers;
+using StateMachine.States;
 
 public class SettingWindow : BaseWindow
 {
-    public void OnCloseSettingWindow() => UIManager.CloseWindow<SettingWindow>();
+    public void OnCloseSettingWindow()
+    {
+        if (GameStateMachine.CurrentStateType == typeof(PausedState))
+            UIManager.OpenWindow<PauseWindow>();
+
+        UIManager.CloseWindow<SettingWindow>();
+    }
 }

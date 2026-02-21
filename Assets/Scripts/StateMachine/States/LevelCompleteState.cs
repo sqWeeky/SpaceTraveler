@@ -1,15 +1,13 @@
-using Configs;
-using Game;
 using Managers;
-using Players;
-using Reflex.Core;
 using UnityEngine;
 
 namespace StateMachine.States
 {
     public class LevelCompleteState : GameState
     {
-        public LevelCompleteState(Container container) : base(container)
+        public LevelCompleteState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
+            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
+            inputManager, levelManager)
         {
         }
 
@@ -27,18 +25,18 @@ namespace StateMachine.States
 
         public override void Update()
         {
-            if (Container.Resolve<InputManager>().WasContinuePressed)
-            {
-                // Загружаем следующий уровень или возвращаем в меню
-                if (Container.Resolve<LevelManager>().HasNextLevel)
-                {
-                    ChangeState<LoadingState>();
-                }
-                else
-                {
-                    ChangeState<MenuState>();
-                }
-            }
+            // if (Container.Resolve<InputManager>().WasContinuePressed)
+            // {
+            //     // Загружаем следующий уровень или возвращаем в меню
+            //     if (Container.Resolve<LevelManager>().HasNextLevel)
+            //     {
+            //         ChangeState<LoadingState>();
+            //     }
+            //     else
+            //     {
+            //         ChangeState<MenuState>();
+            //     }
+            // }
         }
 
         public override void Exit()

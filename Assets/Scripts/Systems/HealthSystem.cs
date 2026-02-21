@@ -1,5 +1,3 @@
-using Game;
-using StateMachine.States;
 using UnityEngine;
 
 namespace Systems
@@ -21,7 +19,7 @@ namespace Systems
 
         private void Die()
         {
-            GameRoot.GameStateMachine.ChangeState<GameOverState>();
+            
         }
     }
 }

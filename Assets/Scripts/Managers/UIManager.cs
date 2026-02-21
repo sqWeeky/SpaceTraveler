@@ -1,21 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Reflex.Attributes;
+using Configs;
 using Reflex.Core;
-using StateMachine;
+using Reflex.Extensions;
+using Reflex.Injectors;
 
 namespace Managers
 {
-    public class UIManager : BaseManager
+    public class UIManager : BaseManager<UIManager>
     {
-        [SerializeField] private List<BaseWindow> _windows;
-        [SerializeField] private Canvas _mainCanvas;
+        private List<BaseWindow> _openedWindows;
+        private Dictionary<Type, BaseWindow> _cachedWindows;
 
-        private readonly List<BaseWindow> _openedWindows = new();
-        private readonly Dictionary<Type, BaseWindow> _cachedWindows = new();
+        private Canvas _mainCanvas;
+        private List<BaseWindow> _windows;
+        
+        private void Awake()
+        {
+            _openedWindows = new List<BaseWindow>();
+            _cachedWindows = new Dictionary<Type, BaseWindow>();
+        }
 
-        [Inject] private Container _container;
+        public void Init(UIManagerConfig config)
+        {
+            _windows = new List<BaseWindow>();
+            
+            foreach (BaseWindow window in config.BaseWindows)
+                _windows.Add(window);
+        }
 
         public BaseWindow OpenWindow<T>() where T : BaseWindow
         {
@@ -27,33 +40,14 @@ namespace Managers
             BaseWindow window = GetOrCreateWindow<T>();
 
             if (window == null) return null;
-            
-            if (_container == null)
-            {
-                Debug.LogError("Container is null in UIManager! DI not initialized properly.");
-                return window;
-            }
-            
-            var stateMachine = _container.Resolve<IGameStateMachine>();
-            var audioManager = _container.Resolve<AudioManager>();
-    
-            if (stateMachine == null || audioManager == null)
-            {
-                Debug.LogError($"Failed to resolve dependencies: StateMachine: {stateMachine != null}, AudioManager: {audioManager != null}");
-                return window;
-            }
-            
-            window.InjectDependencies(
-                _container.Resolve<IGameStateMachine>(),
-                this, // UIManager сам является зависимостью
-                _container.Resolve<AudioManager>()
-            );
-            
+
             if (!_openedWindows.Contains(window))
             {
                 window.gameObject.SetActive(true);
                 _openedWindows.Add(window);
             }
+
+            Debug.Log($"Opened window: {typeof(T).Name}");
 
             return window;
         }
@@ -91,7 +85,7 @@ namespace Managers
             _cachedWindows[window.GetType()] = window;
         }
 
-        private BaseWindow GetOrCreateWindow<T>() where T : BaseWindow
+        public BaseWindow GetOrCreateWindow<T>() where T : BaseWindow
         {
             T window = GetWindowByType<T>();
 
@@ -103,6 +97,7 @@ namespace Managers
 
         private T CreateWindow<T>() where T : BaseWindow
         {
+            Debug.Log($"IUManager create => {typeof(T).Name}");
             GameObject prefab = FindWindowPrefab<T>();
 
             if (prefab == null)
@@ -118,6 +113,8 @@ namespace Managers
             {
                 windowComponent.gameObject.SetActive(false);
                 RegisterWindow(windowComponent);
+
+                AttributeInjector.Inject(windowComponent, gameObject.scene.GetSceneContainer());
             }
 
             return windowComponent;
@@ -134,13 +131,15 @@ namespace Managers
                 return (T)cachedWindow;
 
             BaseWindow windowPrefab = _windows.Find(w => w.GetType() == type);
+
             if (windowPrefab == null)
             {
                 Debug.LogError($"Window of type '{type}' not found.");
                 return null;
             }
 
-            var newWindow = Instantiate(windowPrefab, _mainCanvas.transform);
+            BaseWindow newWindow = Instantiate(windowPrefab, _mainCanvas.transform);
+            AttributeInjector.Inject(newWindow, Container.ProjectContainer);
             newWindow.gameObject.SetActive(false);
             _cachedWindows[type] = newWindow;
 

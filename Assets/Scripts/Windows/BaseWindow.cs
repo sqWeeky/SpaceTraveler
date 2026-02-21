@@ -1,3 +1,4 @@
+using Reflex.Attributes;
 using StateMachine;
 using UnityEngine;
 
@@ -5,19 +6,26 @@ namespace Managers
 {
     public abstract class BaseWindow : MonoBehaviour
     {
-        protected IGameStateMachine GameStateMachine { get; private set; }
+        protected GameStateMachine GameStateMachine { get; private set; }
         protected UIManager UIManager { get; private set; }
         protected AudioManager AudioManager { get; private set; }
+        protected LevelManager LevelManager { get; private set; }
 
-        public virtual void InjectDependencies(IGameStateMachine stateMachine,
-            UIManager uiManager, 
-            AudioManager audioManager)
+        [Inject]
+        public void Inject(
+            GameStateMachine stateMachine,
+            UIManager uiManager,
+            AudioManager audioManager, 
+            LevelManager levelManager)
         {
             GameStateMachine = stateMachine;
             UIManager = uiManager;
             AudioManager = audioManager;
+            LevelManager = levelManager;
         }
-        
-        public virtual void CloseWindow() { }
+
+        public virtual void CloseWindow()
+        {
+        }
     }
 }

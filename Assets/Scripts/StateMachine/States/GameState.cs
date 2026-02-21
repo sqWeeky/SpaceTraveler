@@ -1,13 +1,28 @@
-using Reflex.Core;
+using Managers;
 
 namespace StateMachine.States
 {
     public abstract class GameState : IGameState
     {
-        protected Container Container { get; }
+        protected GameStateMachine GameStateMachine { get; private set; }
+        protected UIManager UIManager { get; private set; }
+        protected AudioManager AudioManager { get; private set; }
+        protected InputManager InputManager { get; private set; }
+        protected LevelManager LevelManager { get; private set; }
 
-        protected GameState(Container container) =>
-            Container = container;
+        protected GameState(
+            GameStateMachine gameStateMachine,
+            UIManager uiManager,
+            AudioManager audioManager,
+            InputManager inputManager,
+            LevelManager levelManager)
+        {
+            GameStateMachine = gameStateMachine;
+            UIManager = uiManager;
+            AudioManager = audioManager;
+            InputManager = inputManager;
+            LevelManager = levelManager;
+        }
 
         public virtual void Enter()
         {
@@ -23,7 +38,7 @@ namespace StateMachine.States
 
         protected void ChangeState<T>() where T : GameState
         {
-            Container.Resolve<IGameStateMachine>().ChangeState<T>();
+            GameStateMachine.ChangeState<T>();
         }
     }
 }

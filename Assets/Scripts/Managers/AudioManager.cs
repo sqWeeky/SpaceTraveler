@@ -1,8 +1,9 @@
+using Configs;
 using UnityEngine;
 
 namespace Managers
 {
-    public class AudioManager: BaseManager
+    public class AudioManager: BaseManager<AudioManager>
     {
         public void PlayMusic(AudioClip clip)
         {
