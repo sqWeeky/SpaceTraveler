@@ -5,367 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ffedb16-485c-48be-89de-c12911bff639" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceTraveler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceTraveler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/LICENSE.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/Notices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/Notices.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/background.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/index.html.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/logo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/style.css.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/thumbnail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/WebGLTemplates/PluginYG/thumbnail.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Prefabs/DebuggingModeYG.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Prefabs/DebuggingModeYG.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Scripts/DebuggingModeYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/DebuggingMode/Scripts/DebuggingModeYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Materials/DebugViewing.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Materials/DebugViewing.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Textures/DebugViewing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Textures/DebugViewing.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Textures/DebugViewingRender.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Content/Textures/DebugViewingRender.renderTexture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG_Two.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG_Two.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG_Two.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG_Two/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/ExampleYG_Two/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/LightingSettingsYGExample.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scenes/LightingSettingsYGExample.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/DebugViewing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/DebugViewing.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/GetPlayerData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/GetPlayerData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/InitExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/InitExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/LanguageExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/LanguageExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/NewResultLBExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/NewResultLBExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/OpenAuthorizationDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/OpenAuthorizationDialog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/ReceivingPurchaseExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/ReceivingPurchaseExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/RewardedAd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/RewardedAd.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/SaverTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/SaverTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/SwitchSceneTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/SwitchSceneTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/YandexMetricaExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Example/Scripts/YandexMetricaExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Fonts/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Fonts/LICENSE.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Fonts/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Fonts/Roboto-Regular.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/LICENSE.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Manual EN PluginYG.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Manual EN PluginYG.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Manual RU PluginYG.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Manual RU PluginYG.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Plugins/YandexProvider.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Plugins/YandexProvider.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Ads.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Ads/Ad Notification.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Ads/Ad Notification.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Ads/Timer Before Ads.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Ads/Timer Before Ads.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/DesktopShortcut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/DesktopShortcut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/GetPlayerYG.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/GetPlayerYG.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/GraphicsSettings.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/GraphicsSettings.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/Advanced LB Example.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/Advanced LB Example.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/LBPlayerData.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/LBPlayerData.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/Simple LB Example.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Leaderboards/Simple LB Example.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Payments.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Payments/Payments Catalog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Payments/Payments Catalog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Payments/Purchase.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Payments/Purchase.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Review.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/Review.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/YandexGame.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Prefabs/YandexGame.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ActivityOnAuthorizationYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ActivityOnAuthorizationYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/AdNotificationYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/AdNotificationYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Auth_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Auth_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Editor/Auth_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Editor/Auth_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Editor/Auth_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Editor/Auth_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Plugins/Auth.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Authorization/Plugins/Auth.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/CreateYandexGameEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/CreateYandexGameEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/DocumentationEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/DocumentationEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Ad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Ad.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_DebuggingYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_DebuggingYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_GetPlayerYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_GetPlayerYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ImageLoadYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ImageLoadYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_InfoYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_InfoYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_LanguageYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_LanguageYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_LeaderboardYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_LeaderboardYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_PaymentsYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_PaymentsYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_PromptYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_PromptYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ReviewYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ReviewYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ScriptYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ScriptYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ViewingAdsYG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_ViewingAdsYG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_YandexGame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Icons/Icon_YandexGame.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ArchivingBuild.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ArchivingBuild.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/BuildLog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/BuildLog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/AdWhenLoadingGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/AdWhenLoadingGame.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BackgroundFormat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BackgroundFormat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/LogoFormat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/LogoFormat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/MetricaCounterID.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/MetricaCounterID.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/MetricaDonor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/MetricaDonor.html.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/ModifyBuildManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/ModifyBuildManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/PixelRatioMobile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/PixelRatioMobile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/SaveQuitGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/SaveQuitGame.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/SaveQuitGame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/SaveQuitGame.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/PostProcessBuild.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/PostProcessBuild/PostProcessBuild.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Utils/DefineSymbols.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Utils/DefineSymbols.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Utils/PackageDownloader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Editor/Utils/PackageDownloader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Editor/EnvirData_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Editor/EnvirData_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Editor/EnvirData_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Editor/EnvirData_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/EnvirData_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/EnvirData_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Plugins/EnvirData.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/EnvironmentData/Plugins/EnvirData.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ForVisualScriptYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ForVisualScriptYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI/GRA_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI/GRA_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI/Plugins/GameReadyAPI.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GameReadyAPI/Plugins/GameReadyAPI.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GetPlayerYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GetPlayerYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GraphicSettingsYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/GraphicSettingsYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ImageLoadYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ImageLoadYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG/Editor/InfoYGEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG/Editor/InfoYGEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG/InfoYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/InfoYG/InfoYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Initialization.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Initialization/InitYGAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Initialization/InitYGAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Inside.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Inside/CallingAnEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Inside/CallingAnEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Inside/ConfigYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Inside/ConfigYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/AutoLocalizationMasseWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/AutoLocalizationMasseWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/CSVFileEditorWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/CSVFileEditorWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/CSVManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/CSVManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/FontMasseInstallEditorWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/FontMasseInstallEditorWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/LanguageYGEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/LanguageYGEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/TranslationTableEditorWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Editor/TranslationTableEditorWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/LangYGAdditionalText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/LangYGAdditionalText.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Lang_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Lang_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/LanguageYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/LanguageYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Plugins/Language.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/Plugins/Language.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/UtilsLang.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Language/UtilsLang.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Editor/Leaderboards_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Editor/Leaderboards_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Editor/Leaderboards_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Editor/Leaderboards_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/InternalScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/InternalScripts/Leaderboards_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/InternalScripts/Leaderboards_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/InternalScripts/UtilsLB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/InternalScripts/UtilsLB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/LBPlayerDataYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/LBPlayerDataYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/LeaderboardYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/LeaderboardYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Plugins/Leaderboards.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Leaderboards/Plugins/Leaderboards.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage/LocalStorage_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage/LocalStorage_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage/Plugins/LocalStorage.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/LocalStorage/Plugins/LocalStorage.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/ConsumePurchasesYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/ConsumePurchasesYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Editor/Payments_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Editor/Payments_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Editor/Payments_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Editor/Payments_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/InternalScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/InternalScripts/Payments_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/InternalScripts/Payments_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/InternalScripts/UtilsPayments.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/InternalScripts/UtilsPayments.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/PaymentsCatalogYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/PaymentsCatalogYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Plugins/Payments.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/Plugins/Payments.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/PurchaseYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Payments/PurchaseYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/PromptYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/PromptYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ReviewYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ReviewYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Editor/CloudStorage_build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Editor/CloudStorage_build.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Editor/CloudStorage_js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Editor/CloudStorage_js.js.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Plugins/CloudStorage.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Plugins/CloudStorage.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Storage_yg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/Storage/Storage_yg.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/TimerBeforeAdsYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/TimerBeforeAdsYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Editor/ConditionallyVisiblePropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Editor/ConditionallyVisiblePropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Runtime/ConditionallyVisibleAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Runtime/ConditionallyVisibleAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/LICENSE.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/Notices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/UnityToolbag-main/Notices.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ViewingAdsYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/ViewingAdsYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexGame.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/JsonUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/JsonUtils.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/Plugins.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/Plugins/YandexMetricaPlugin.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/Plugins/YandexMetricaPlugin.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/YandexMetrica.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/ScriptsYG/YandexMetrica/YandexMetrica.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Third-Party Notices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/Third-Party Notices.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/WorkingData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/WorkingData/InfoYG.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/WorkingData/InfoYG.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/WorkingData/SavesYG.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SDK/YandexGame/WorkingData/SavesYG.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/RotationAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/RotationAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Players/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ExitState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ExitState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/GameOverState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/GameOverState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/LevelCompleteState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/LevelCompleteState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/LoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/LoadingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/MenuState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/MenuState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PausedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PausedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/PlayingState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,11 +25,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/ef/b73d5cbe/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/01/d7b665c3/AudioType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/ec/a510b6e6/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/!_Test/TestButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configs/UIManagerConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infastracture/InitialSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MapLevels/DragMap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/GameModeWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/PauseWindow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -395,7 +37,7 @@
     </changedPaths>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -409,23 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Reflex__DI__Container&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Reflex__DI__Container",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\Versions\2022.3.62f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\Unity\Projects\SpaceTraveler -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity\Projects\SpaceTraveler" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -433,7 +74,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\Versions\2022.3.62f2\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Unity\Projects\SpaceTraveler -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity\Projects\SpaceTraveler" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -495,44 +136,19 @@
       <workItem from="1762419584851" duration="3116000" />
       <workItem from="1762427211034" duration="1095000" />
       <workItem from="1762432221988" duration="652000" />
-      <workItem from="1762877698915" duration="6585000" />
-      <workItem from="1762921731420" duration="1776000" />
-      <workItem from="1762945245687" duration="1413000" />
-      <workItem from="1763008092603" duration="7430000" />
-      <workItem from="1763038782796" duration="6104000" />
-      <workItem from="1763177490616" duration="7694000" />
-      <workItem from="1763206848014" duration="2315000" />
-      <workItem from="1763219005833" duration="2834000" />
-      <workItem from="1763622757064" duration="2508000" />
-      <workItem from="1764224274807" duration="4178000" />
-      <workItem from="1765444959466" duration="1170000" />
-      <workItem from="1770368801459" duration="42000" />
-      <workItem from="1770368873676" duration="1380000" />
-      <workItem from="1771519897614" duration="201000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
