@@ -8,13 +8,20 @@ namespace Players
     public class Player : MonoBehaviour
     {
         [SerializeField] private HealthSystem _health;
-        
+        [SerializeField] private GameObject _skin;
+
         private int _scoreStars;
-        
+
         public int ScoreStars => _scoreStars;
 
         public event Action OnPlayerDied;
         public event Action OnLevelComplete;
+
+        public void Init(int scoreStars,int healthPoint, GameObject skin)
+        {
+            _scoreStars = scoreStars;
+            _skin = skin;
+        }
 
         public void AddStars(int amount)
         {
@@ -29,10 +36,6 @@ namespace Players
             }
         }
 
-        private void Awake()
-        {
-            
-        }
         // public static Player Instance { get; private set; }
         //
         // private void Awake()

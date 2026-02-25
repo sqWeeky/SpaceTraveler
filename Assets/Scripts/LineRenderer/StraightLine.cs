@@ -3,7 +3,7 @@ using UnityEngine;
 namespace LineRenderer
 {
     [RequireComponent(typeof(UnityEngine.LineRenderer))]
-    public class Line : MonoBehaviour
+    public class StraightLine : MonoBehaviour
     {
         [SerializeField] private Vector3 _endPoint;
 
