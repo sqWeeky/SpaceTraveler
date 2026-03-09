@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Asteroids
+namespace Enemies.Asteroids
 {
     [RequireComponent(typeof(Rigidbody))]
     public class Asteroid : MonoBehaviour

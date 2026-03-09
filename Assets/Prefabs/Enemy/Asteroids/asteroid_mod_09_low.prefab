@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7416766543782622771}
   - component: {fileID: 4897647741601291217}
   - component: {fileID: 2447306057866539963}
+  - component: {fileID: -3702642630890733803}
   m_Layer: 0
   m_Name: asteroid_mod_09_low
   m_TagString: Untagged
@@ -147,6 +148,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.141531
   m_Center: {x: 0, y: 0, z: -0.013763413}
+--- !u!114 &-3702642630890733803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469761300915823152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06a5781e2ae4da5bddf0069a0a8b93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
 --- !u!1001 &1720931576682245837
 PrefabInstance:
   m_ObjectHideFlags: 0

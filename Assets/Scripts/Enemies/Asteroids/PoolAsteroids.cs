@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Asteroids
+namespace Enemies.Asteroids
 {
     public class PoolAsteroids : MonoBehaviour
     {

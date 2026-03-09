@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Asteroids
+namespace Enemies.Asteroids
 {
     public class AsteroidsRemover : MonoBehaviour
     {
