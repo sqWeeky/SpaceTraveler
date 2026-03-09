@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141477f1f601991458ca8d25b1083776, type: 3}
+  m_Name: 3_IronCliff
+  m_EditorClassIdentifier: 
+  _name: Iron Cliff
+  _materials:
+  - {fileID: 3019328958093459533, guid: 759dff70eb5bd9248bb05b82a5e93cc6, type: 3}
+  - {fileID: 2548192833292267791, guid: 951c81cd67c4d914abf2cb48f85ac47f, type: 3}
+  - {fileID: 7586892716499349071, guid: 8116cd1d77578a54eb458577fb1fe746, type: 3}
+  - {fileID: -5899411458460818414, guid: 1abf518f34308ee438853f9754b5c5dd, type: 3}
+  - {fileID: -6982889559908280907, guid: 6cc686c6703558c408423db7f69fcd30, type: 3}
