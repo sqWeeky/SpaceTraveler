@@ -1,14 +1,17 @@
 using Players;
 using UnityEngine;
 
-public class Star : MonoBehaviour
+namespace Enviroment
 {
-    private void OnTriggerEnter(Collider other)
+    public class Star : MonoBehaviour
     {
-        if (other.TryGetComponent(out Player player))
+        private void OnTriggerEnter(Collider other)
         {
-            player.AddStars(1);
-            Destroy(gameObject);
+            if (other.TryGetComponent(out Player player))
+            {
+                player.AddStars(1);
+                Destroy(gameObject);
+            }
         }
     }
 }

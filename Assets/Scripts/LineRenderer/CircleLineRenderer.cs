@@ -1,22 +1,33 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 namespace LineRenderer
 {
     [RequireComponent(typeof(UnityEngine.LineRenderer))]
-    public class CicrleLineRenderer : MonoBehaviour
+    public class CircleLineRenderer : MonoBehaviour
     {
         [SerializeField] private float _radius = 5f;
         [SerializeField] private int _segments = 30;
         [SerializeField] private Transform _positionCenter;
+        [SerializeField] private Material _roadColor;
 
         private UnityEngine.LineRenderer _lineRenderer;
         private Vector3 _startPosition;
-        private float _width = 0.1f;
+        private readonly float _width = 0.1f;
 
         private void Awake()
         {
             _lineRenderer = GetComponent<UnityEngine.LineRenderer>();
             _startPosition = transform.position;
+            DrawLine();
+        }
+
+        [Button]
+        private void OnDraw()
+        {
+            if (_lineRenderer == null) 
+                _lineRenderer = GetComponent<UnityEngine.LineRenderer>();
+            
             DrawLine();
         }
 
@@ -27,7 +38,7 @@ namespace LineRenderer
             _lineRenderer.endWidth = _lineRenderer.startWidth;
             _lineRenderer.loop = false;
             _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-            _lineRenderer.startColor = GetColorLine();
+            _lineRenderer.startColor = _roadColor.color;
             _lineRenderer.endColor = _lineRenderer.startColor;
 
             for (int i = 0; i <= _segments; i++)
@@ -38,7 +49,5 @@ namespace LineRenderer
                 _lineRenderer.SetPosition(i, new Vector3(x + _startPosition.x, _startPosition.y, z + _startPosition.z));
             }
         }
-
-        private Color GetColorLine() => new(Random.value, Random.value, Random.value, 0.3f);
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace MovementSystem
 {
     [RequireComponent(typeof(UnityEngine.LineRenderer))]
-    public class MoverEnviroment : MonoBehaviour
+    public class MoverEnvironment : MonoBehaviour
     {
         [SerializeField] private UnityEngine.LineRenderer _lineRenderer;
         [SerializeField] private float _speed = 10f;
@@ -24,8 +24,7 @@ namespace MovementSystem
 
             if (_lineRenderer.positionCount < 2)
             {
-                Debug.LogError("LineRenderer ������ ��������� ������� 2 �����!");
-                enabled = false;
+               enabled = false;
                 return;
             }
 

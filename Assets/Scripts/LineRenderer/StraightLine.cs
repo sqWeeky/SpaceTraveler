@@ -6,6 +6,7 @@ namespace LineRenderer
     public class StraightLine : MonoBehaviour
     {
         [SerializeField] private Vector3 _endPoint;
+        [SerializeField] private Material _roadColor;
 
         private UnityEngine.LineRenderer _lineRenderer;
         private Vector3 _startPoint;
@@ -25,11 +26,9 @@ namespace LineRenderer
             _lineRenderer.endWidth = _lineRenderer.startWidth;
             _lineRenderer.loop = false;
             _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-            _lineRenderer.startColor = GetColorLine();
+            _lineRenderer.startColor = _roadColor.color;
             _lineRenderer.endColor = _lineRenderer.startColor;
             _lineRenderer.SetPositions(new Vector3[] { _startPoint, _endPoint });
         }
-
-        private Color GetColorLine() => new(Random.value, Random.value, Random.value, 0.3f);
     }
 }

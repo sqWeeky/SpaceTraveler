@@ -8,6 +8,7 @@ namespace LineRenderer
         [SerializeField] private float _radius = 5f;
         [SerializeField] private bool _isHorizontal = true;
         [SerializeField] private int _segments = 30;
+        [SerializeField] private Material _roadMaterial;
 
         private UnityEngine.LineRenderer _lineRenderer;
         private Vector3 _startPosition;
@@ -23,11 +24,9 @@ namespace LineRenderer
         private void DrawLine()
         {
             _lineRenderer.positionCount = _segments + 1;
-            _lineRenderer.startWidth = _width;
-            _lineRenderer.endWidth = _lineRenderer.startWidth;
-            _lineRenderer.loop = false;
-            _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-            _lineRenderer.startColor = GetColorLine();
+            // _lineRenderer.startWidth = _width;
+            // _lineRenderer.endWidth = _lineRenderer.startWidth;
+            _lineRenderer.startColor = _roadMaterial.color;
             _lineRenderer.endColor = _lineRenderer.startColor;
 
             for (int i = 0; i <= _segments; i++)
@@ -45,7 +44,5 @@ namespace LineRenderer
                 _lineRenderer.SetPosition(i, point);
             }
         }
-
-        private Color GetColorLine() => new(Random.value, Random.value, Random.value, 0.3f);
     }
 }
