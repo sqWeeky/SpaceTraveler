@@ -1,13 +1,14 @@
-using Managers;
-
-public class GameModeWindow : BaseWindow
+namespace Windows
 {
-    public void OnOpenLevelsWindow() => UIManager.OpenWindow<LevelsMenuWindow>();
-
-    public void OnOpenEndlessGame()
+    public class GameModeWindow : BaseWindow
     {
+        public void OnOpenLevelsWindow() => UIManager.OpenWindow<LevelsMenuWindow>();
+
+        public void OnOpenEndlessGame()
+        {
         
-    }
+        }
     
-    public void OnBack() => UIManager.CloseWindow<GameModeWindow>();
+        public void OnBack() => UIManager.CloseWindow<GameModeWindow>();
+    }
 }

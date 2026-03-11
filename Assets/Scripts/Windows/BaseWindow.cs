@@ -1,8 +1,9 @@
+using Managers;
 using Reflex.Attributes;
 using StateMachine;
 using UnityEngine;
 
-namespace Managers
+namespace Windows
 {
     public abstract class BaseWindow : MonoBehaviour
     {

@@ -1,15 +1,17 @@
-using Managers;
 using StateMachine.States;
 
-public class PlayingWindow : BaseWindow
+namespace Windows
 {
-    public void OnOpen()
+    public class PlayingWindow : BaseWindow
     {
-        GameStateMachine.ChangeState<PausedState>();
-    }
+        public void OnOpen()
+        {
+            GameStateMachine.ChangeState<PausedState>();
+        }
 
-    public void UpdateGameTimer(float gameTime)
-    {
+        public void UpdateGameTimer(float gameTime)
+        {
         
+        }
     }
 }

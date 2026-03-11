@@ -1,21 +1,24 @@
-using Managers;
 using StateMachine.States;
 
-public class MainMenuWindow : BaseWindow
+namespace Windows
 {
-    public void OnStart()
+    public class MainMenuWindow : BaseWindow
     {
-        UIManager.OpenWindow<GameModeWindow>();
-    }
+        public void OnStart()
+        {
+            UIManager.OpenWindow<GameModeWindow>();
+        }
 
-    public void OnOpenSettingWindow()
-    {
-        UIManager.OpenWindow<SettingWindow>();
-    }
+        public void OnOpenSettingWindow()
+        {
+            UIManager.OpenWindow<SettingWindow>();
+        }
 
-    public void OnOpenLeaderboard()
-    {
-    }
+        public void OnOpenLeaderboard()
+        {
+            UIManager.OpenWindow<LeaderboardWindow>();
+        }
 
-    public void OnExit() => GameStateMachine.ChangeState<ExitState>();
+        public void OnExit() => GameStateMachine.ChangeState<ExitState>();
+    }
 }

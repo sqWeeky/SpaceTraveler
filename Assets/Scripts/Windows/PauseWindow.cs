@@ -1,22 +1,25 @@
-using Managers;
 using StateMachine.States;
 
-public class PauseWindow : BaseWindow
+namespace Windows
 {
-    public void OnClose()
+    public class PauseWindow : BaseWindow
     {
-        GameStateMachine.ChangeState<PlayingState>();
-    }
+        public void OnClose()
+        {
+            UIManager.CloseWindow<PauseWindow>();
+            GameStateMachine.ChangeState<PlayingState>();
+        }
 
-    public void OnOpenSettingWindow()
-    {
-        UIManager.CloseWindow<PauseWindow>();
-        UIManager.OpenWindow<SettingWindow>();
-    }
+        public void OnOpenSettingWindow()
+        {
+            //UIManager.CloseWindow<PauseWindow>();
+            UIManager.OpenWindow<SettingWindow>();
+        }
 
-    public void OnOpenMainMenu()
-    {
-        LevelManager.LoadMainMenu();
-        GameStateMachine.ChangeState<LoadingState>();
+        public void OnOpenMainMenu()
+        {
+            LevelManager.LoadMainMenu();
+            GameStateMachine.ChangeState<LoadingState>();
+        }
     }
 }
