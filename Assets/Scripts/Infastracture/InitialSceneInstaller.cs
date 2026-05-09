@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InitialSceneInstaller : MonoBehaviour
+namespace Infastracture
 {
-    private void Start()
+    public class InitialSceneInstaller : MonoBehaviour
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        private void Start()
+        {
+            SceneManager.LoadSceneAsync("MainMenu");
+        }
     }
 }

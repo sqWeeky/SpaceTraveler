@@ -3,27 +3,30 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour
+namespace __Test
 {
-    [SerializeField] private string _nameLevelScene;
-    [SerializeField] private TextMeshProUGUI _nameText;
-
-    private Button _button;
-
-    private void Awake()
+    public class LevelButton : MonoBehaviour
     {
-        _button = GetComponent<Button>();
-        _button.onClick.AddListener(LoadLevel);
-    }
+        [SerializeField] private string _nameLevelScene;
+        [SerializeField] private TextMeshProUGUI _nameText;
 
-    public void Init(string levelName)
-    {
-        _nameLevelScene = levelName;
-        _nameText.text = levelName;
-    }
+        private Button _button;
 
-    private void LoadLevel()
-    {
-        SceneManager.LoadScene(_nameLevelScene);
+        private void Awake()
+        {
+            _button = GetComponent<Button>();
+            _button.onClick.AddListener(LoadLevel);
+        }
+
+        public void Init(string levelName)
+        {
+            _nameLevelScene = levelName;
+            _nameText.text = levelName;
+        }
+
+        private void LoadLevel()
+        {
+            SceneManager.LoadScene(_nameLevelScene);
+        }
     }
 }

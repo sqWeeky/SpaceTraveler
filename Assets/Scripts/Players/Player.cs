@@ -1,26 +1,33 @@
 using System;
-using Managers;
-using Systems;
 using UnityEngine;
 
 namespace Players
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private HealthSystem _health;
+        [SerializeField] private int _health;
+        [SerializeField] private int _scoreStars;
         [SerializeField] private GameObject _skin;
-
-        private int _scoreStars;
+        [SerializeField] private Collider _collider;
 
         public int ScoreStars => _scoreStars;
 
         public event Action OnPlayerDied;
         public event Action OnLevelComplete;
 
-        public void Init(int scoreStars,int healthPoint, GameObject skin)
+        public void Init(int scoreStars, int healthPoint, GameObject skin)
         {
             _scoreStars = scoreStars;
+            _health = healthPoint;
             _skin = skin;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            if (damage < 0)
+                damage = 0;
+
+            _health -= damage;
         }
 
         public void AddStars(int amount)
@@ -35,19 +42,5 @@ namespace Players
                 Debug.LogError("Amount < 0");
             }
         }
-
-        // public static Player Instance { get; private set; }
-        //
-        // private void Awake()
-        // {
-        //     if (Instance != null && Instance != this)
-        //     {
-        //         Destroy(gameObject);
-        //         return;
-        //     }
-        //
-        //     Instance = this;
-        //     DontDestroyOnLoad(gameObject);
-        // }
     }
 }

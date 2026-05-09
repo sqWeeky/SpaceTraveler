@@ -1,3 +1,4 @@
+using Windows;
 using Managers;
 using UnityEngine;
 
@@ -5,7 +6,8 @@ namespace StateMachine.States
 {
     public class PausedState : GameState
     {
-        public PausedState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
+        public PausedState(
+            GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
             InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
             inputManager, levelManager)
         {
@@ -15,7 +17,7 @@ namespace StateMachine.States
         {
             Time.timeScale = 0f;
             UIManager.OpenWindow<PauseWindow>();
-           AudioManager.PauseGameplayMusic();
+            AudioManager.PauseGameplayMusic();
             // Container.Resolve<GameConfig>().TriggerGamePause();
 
             Debug.Log("Entered Paused State");

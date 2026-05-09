@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore;
 
 namespace Systems
 {
@@ -19,7 +20,7 @@ namespace Systems
 
         private void Die()
         {
-            
+            gameObject.SetActive(false);
         }
     }
 }
