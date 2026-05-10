@@ -19,3 +19,5 @@ MonoBehaviour:
   - {fileID: -1500500262022867825, guid: 72dc4f7f63f4f484f99c7ec75dd94b41, type: 3}
   - {fileID: 1309018231025658227, guid: 848d068fd78caf24eacc82ca673b8d89, type: 3}
   - {fileID: 408105532329591128, guid: e6e36ac164b455c42b3172409fe52294, type: 3}
+  _speed: 8
+  _maxHealth: 3
