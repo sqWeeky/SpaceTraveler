@@ -7,8 +7,8 @@ namespace Configs.Skins
     [CreateAssetMenu(menuName = "Configs/" + nameof(PlayerSkinsConfig))]
     public class PlayerSkinsConfig : ScriptableObject
     {
-        [SerializeField] private List<ConfigurationSkinConfig> _playerSkins;
+        [SerializeField] private List<DataShipConfig> _playerSkins;
 
-        public List<ConfigurationSkinConfig> PlayerSkins => _playerSkins;
+        public List<DataShipConfig> PlayerSkins => _playerSkins;
     }
 }
