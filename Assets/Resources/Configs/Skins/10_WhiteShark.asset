@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 141477f1f601991458ca8d25b1083776, type: 3}
-  m_Name: 13_WhiteShark
+  m_Name: 10_WhiteShark
   m_EditorClassIdentifier: 
   _name: White Shark
   _materials:
