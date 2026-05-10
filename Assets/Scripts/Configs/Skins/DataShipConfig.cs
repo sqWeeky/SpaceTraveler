@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Configs.Skins
 {
-    [CreateAssetMenu(menuName = "Configs/Skin/" + nameof(ConfigurationSkinConfig))]
+    [CreateAssetMenu(menuName = "Configs/Data/" + nameof(ConfigurationSkinConfig))]
     public class ConfigurationSkinConfig : ScriptableObject
     {
         [SerializeField] private string _name;
