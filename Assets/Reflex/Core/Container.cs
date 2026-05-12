@@ -12,7 +12,7 @@ namespace Reflex.Core
 {
     public sealed class Container : IDisposable
     {
-        public static Container ProjectContainer { get; internal set; } 
+        public static Container RootContainer { get; internal set; }
         public string Name { get; }
         public Container Parent { get; }
         internal List<Container> Children { get; } = new();
@@ -67,7 +67,8 @@ namespace Reflex.Core
         {
             var builder = new ContainerBuilder().SetParent(this);
             extend?.Invoke(builder);
-            return builder.Build();
+            var scoped = builder.Build();
+            return scoped;
         }
         
         public T Construct<T>()
@@ -108,6 +109,23 @@ namespace Reflex.Core
         public TContract Single<TContract>()
         {
             return (TContract)Single(typeof(TContract));
+        }
+
+        public bool TryGetResolver(Type contract, out IResolver result)
+        {
+            if (ResolversByContract.TryGetValue(contract, out var resolvers))
+            {
+                result = resolvers.Single();
+                return true;
+            }
+
+            result = null;
+            return false;
+        }
+
+        public bool TryGetResolver<TContract>(out IResolver result)
+        {
+            return TryGetResolver(typeof(TContract), out result);
         }
 
         public IEnumerable<object> All(Type contract)

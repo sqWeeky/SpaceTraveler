@@ -24,15 +24,15 @@ namespace Reflex.Editor
             UnityEditorUtility.CreateScriptableObject<ReflexSettings>(desiredAssetPath);
         }
 
-        [MenuItem("Assets/Create/Reflex/ProjectScope")]
-        private static void CreateReflexProjectScope()
+        [MenuItem("Assets/Create/Reflex/RootScope")]
+        private static void CreateReflexRootScope()
         {
             var directory = UnityEditorUtility.GetSelectedPathInProjectWindow();
-            var desiredAssetPath = Path.Combine(directory, $"{nameof(ProjectScope)}.prefab");
+            var desiredAssetPath = Path.Combine(directory, "RootScope.prefab");
 
             void Edit(GameObject prefab)
             {
-                prefab.AddComponent<ProjectScope>();
+                prefab.AddComponent<ContainerScope>();
             }
 
             UnityEditorUtility.CreatePrefab(desiredAssetPath, Edit);
@@ -41,9 +41,9 @@ namespace Reflex.Editor
         [MenuItem("GameObject/Reflex/SceneScope")]
         private static void CreateReflexSceneScope()
         {
-            var sceneScope = new GameObject(nameof(SceneScope)).AddComponent<SceneScope>();
-            Selection.activeObject = sceneScope.gameObject;
-            EditorSceneManager.MarkSceneDirty(sceneScope.gameObject.scene);
+            var containerScope = new GameObject("SceneScope").AddComponent<ContainerScope>();
+            Selection.activeObject = containerScope.gameObject;
+            EditorSceneManager.MarkSceneDirty(containerScope.gameObject.scene);
         }
     }
 }

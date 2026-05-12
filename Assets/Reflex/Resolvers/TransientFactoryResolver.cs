@@ -1,6 +1,7 @@
 ﻿using System;
 using Reflex.Core;
 using Reflex.Enums;
+using Reflex.Injectors;
 
 namespace Reflex.Resolvers
 {
@@ -8,6 +9,8 @@ namespace Reflex.Resolvers
     {
         private readonly Func<Container, object> _factory;
         public Lifetime Lifetime => Lifetime.Transient;
+        public Container DeclaringContainer { get; set; }
+        public Resolution Resolution => Resolution.Lazy;
 
         public TransientFactoryResolver(Func<Container, object> factory)
         {
@@ -15,11 +18,12 @@ namespace Reflex.Resolvers
             _factory = factory;
         }
 
-        public object Resolve(Container container)
+        public object Resolve(Container resolvingContainer)
         {
             Diagnosis.IncrementResolutions(this);
-            var instance = _factory.Invoke(container);
-            container.Disposables.TryAdd(instance);
+            var instance = _factory.Invoke(resolvingContainer);
+            resolvingContainer.Disposables.TryAdd(instance);
+            AttributeInjector.Inject(instance, resolvingContainer);
             Diagnosis.RegisterInstance(this, instance);
             return instance;
         }
