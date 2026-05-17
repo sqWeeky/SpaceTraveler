@@ -12,15 +12,11 @@ namespace Reflex.Core
 {
     public sealed class Container : IDisposable
     {
-        public static Container RootContainer { get; internal set; }
         public string Name { get; }
-        public Container Parent { get; }
+        internal Container Parent { get; }
         internal List<Container> Children { get; } = new();
         internal Dictionary<Type, List<IResolver>> ResolversByContract { get; }
         internal DisposableCollection Disposables { get; }
-#if UNITY_EDITOR
-        internal static readonly List<Container> RootContainers = new();
-#endif
         
         internal Container(string name, Container parent, Dictionary<Type, List<IResolver>> resolversByContract, DisposableCollection disposables)
         {
@@ -31,13 +27,6 @@ namespace Reflex.Core
             ResolversByContract = resolversByContract;
             Disposables = disposables;
             OverrideSelfInjection();
-
-#if UNITY_EDITOR
-            if (parent == null)
-            {
-                RootContainers.Add(this);
-            }
-#endif
         }
 
         public bool HasBinding<T>()
@@ -67,8 +56,7 @@ namespace Reflex.Core
         {
             var builder = new ContainerBuilder().SetParent(this);
             extend?.Invoke(builder);
-            var scoped = builder.Build();
-            return scoped;
+            return builder.Build();
         }
         
         public T Construct<T>()
@@ -109,23 +97,6 @@ namespace Reflex.Core
         public TContract Single<TContract>()
         {
             return (TContract)Single(typeof(TContract));
-        }
-
-        public bool TryGetResolver(Type contract, out IResolver result)
-        {
-            if (ResolversByContract.TryGetValue(contract, out var resolvers))
-            {
-                result = resolvers.Single();
-                return true;
-            }
-
-            result = null;
-            return false;
-        }
-
-        public bool TryGetResolver<TContract>(out IResolver result)
-        {
-            return TryGetResolver(typeof(TContract), out result);
         }
 
         public IEnumerable<object> All(Type contract)

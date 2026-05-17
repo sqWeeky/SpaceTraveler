@@ -106,10 +106,8 @@ namespace Reflex.Editor.DebuggingWindow
 
             if (ReflexEditorSettings.ShowInternalBindings == false)
             {
-                if (container.TryGetResolver(typeof(Container), out var containerResolver))
-                {
-                    resolvers.Remove(containerResolver);                
-                }
+                var containerResolver = container.ResolversByContract[typeof(Container)].Single();
+                resolvers.Remove(containerResolver);
             }
 
             if (ReflexEditorSettings.ShowInheritedBindings == false && container.Parent != null)
@@ -196,10 +194,7 @@ namespace Reflex.Editor.DebuggingWindow
         private IList<MyTreeElement> GetData()
         {
             var root = new MyTreeElement("Root", -1, ++_id, ContainerIcon, () => string.Empty, Array.Empty<string>(), string.Empty, null, string.Empty);
-            foreach (var rootContainer in Container.RootContainers)
-            {
-                BuildDataRecursively(root, rootContainer);
-            }
+            BuildDataRecursively(root, UnityInjector.ProjectContainer);
 
             var list = new List<MyTreeElement>();
             TreeElementUtility.TreeToList(root, list);

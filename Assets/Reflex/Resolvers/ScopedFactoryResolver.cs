@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using Reflex.Core;
 using Reflex.Enums;
-using Reflex.Injectors;
 
 namespace Reflex.Resolvers
 {
@@ -11,26 +10,22 @@ namespace Reflex.Resolvers
         private readonly Func<Container, object> _factory;
         private readonly ConditionalWeakTable<Container, object> _instances = new();
         public Lifetime Lifetime => Lifetime.Scoped;
-        public Container DeclaringContainer { get; set; }
-        public Resolution Resolution { get; }
 
-        public ScopedFactoryResolver(Func<Container, object> factory, Resolution resolution)
+        public ScopedFactoryResolver(Func<Container, object> factory)
         {
             Diagnosis.RegisterCallSite(this);
             _factory = factory;
-            Resolution = resolution;
         }
 
-        public object Resolve(Container resolvingContainer)
+        public object Resolve(Container container)
         {
             Diagnosis.IncrementResolutions(this);
 
-            if (!_instances.TryGetValue(resolvingContainer, out var instance))
+            if (!_instances.TryGetValue(container, out var instance))
             {
-                instance = _factory.Invoke(resolvingContainer);
-                _instances.Add(resolvingContainer, instance);
-                resolvingContainer.Disposables.TryAdd(instance);
-                AttributeInjector.Inject(instance, resolvingContainer);
+                instance = _factory.Invoke(container);
+                _instances.Add(container, instance);
+                container.Disposables.TryAdd(instance);
                 Diagnosis.RegisterInstance(this, instance);
             }
 

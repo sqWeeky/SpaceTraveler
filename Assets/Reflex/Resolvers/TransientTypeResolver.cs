@@ -8,8 +8,6 @@ namespace Reflex.Resolvers
     {
         private readonly Type _concreteType;
         public Lifetime Lifetime => Lifetime.Transient;
-        public Container DeclaringContainer { get; set; }
-        public Resolution Resolution => Resolution.Lazy;
 
         public TransientTypeResolver(Type concreteType)
         {
@@ -17,11 +15,11 @@ namespace Reflex.Resolvers
             _concreteType = concreteType;
         }
 
-        public object Resolve(Container resolvingContainer)
+        public object Resolve(Container container)
         {
             Diagnosis.IncrementResolutions(this);
-            var instance = DeclaringContainer.Construct(_concreteType);
-            resolvingContainer.Disposables.TryAdd(instance);
+            var instance = container.Construct(_concreteType);
+            container.Disposables.TryAdd(instance);
             Diagnosis.RegisterInstance(this, instance);
             return instance;
         }

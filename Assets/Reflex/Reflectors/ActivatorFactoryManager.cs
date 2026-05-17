@@ -9,12 +9,18 @@ namespace Reflex.Reflectors
 
         static ActivatorFactoryManager()
         {
-            Factory = ScriptingBackend.Current switch
+            Factory = GetFactory();
+        }
+
+        private static IActivatorFactory GetFactory()
+        {
+            switch (ScriptingBackend.Current)
             {
-                ScriptingBackend.Backend.Mono => new MonoActivatorFactory(),
-                ScriptingBackend.Backend.IL2CPP => new IL2CPPActivatorFactory(),
-                _ => throw new Exception($"UnhandledRuntimeScriptingBackend {ScriptingBackend.Current}")
-            };
+                case ScriptingBackend.Backend.Mono: return new MonoActivatorFactory();
+                case ScriptingBackend.Backend.IL2CPP: return new IL2CPPActivatorFactory();
+                case ScriptingBackend.Backend.Undefined: throw new Exception("UndefinedRuntimeScriptingBackend");
+                default: throw new Exception($"UnhandledRuntimeScriptingBackend {ScriptingBackend.Current}");
+            }
         }
     }
 }

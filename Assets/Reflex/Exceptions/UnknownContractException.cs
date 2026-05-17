@@ -5,16 +5,13 @@ namespace Reflex.Exceptions
 {
     public sealed class UnknownContractException : Exception
     {
-        public Type UnknownContract { get; }
-        
-        public UnknownContractException(Type unknownContract) : base(GenerateMessage(unknownContract))
+        public UnknownContractException(Type contract) : base(GenerateMessage(contract))
         {
-            UnknownContract = unknownContract;
         }
 
-        private static string GenerateMessage(Type unknownContract)
+        private static string GenerateMessage(Type contract)
         {
-            return $"Cannot resolve contract '{unknownContract.GetFullName()}'.";
+            return $"Cannot resolve contract '{contract.GetFullName()}'.";
         }
     }
 }

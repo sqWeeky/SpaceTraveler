@@ -21,24 +21,10 @@ namespace Reflex.Generics
         }
 
         public void Dispose()
-        {    
-            List<Exception> exceptions = null;
+        {
             while (_stack.TryPop(out var disposable))
             {
-                try
-                {
-                    disposable.Dispose();
-                }
-                catch (Exception e)
-                {
-                    exceptions ??= new();
-                    exceptions.Add(e);
-                }
-            }
-
-            if (exceptions is not null)
-            {
-                throw new AggregateException(exceptions);
+                disposable.Dispose();
             }
         }
     }

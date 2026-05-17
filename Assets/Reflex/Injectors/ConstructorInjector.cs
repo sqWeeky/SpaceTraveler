@@ -15,29 +15,15 @@ namespace Reflex.Injectors
         public static object Construct(Type concrete, Container container)
         {
             var info = TypeConstructionInfoCache.Get(concrete);
-            var constructorParameters = info.ConstructorParameterData;
-            var constructorParametersLength = info.ConstructorParameterData.Length;
+            var constructorParameters = info.ConstructorParameters;
+            var constructorParametersLength = info.ConstructorParameters.Length;
             var arguments = ArrayPool.Rent(constructorParametersLength);
 
             try
             {
                 for (var i = 0; i < constructorParametersLength; i++)
                 {
-                    try
-                    {
-                        arguments[i] = container.Resolve(constructorParameters[i].ParameterType);
-                    }
-                    catch (UnknownContractException)
-                    {
-                        if (constructorParameters[i].HasDefaultValue)
-                        {
-                            arguments[i] = constructorParameters[i].DefaultValue;
-                        }
-                        else
-                        {
-                            throw;
-                        }
-                    }
+                    arguments[i] = container.Resolve(constructorParameters[i]);
                 }
 
                 return info.ObjectActivator.Invoke(arguments);
@@ -51,7 +37,7 @@ namespace Reflex.Injectors
                 ArrayPool.Return(arguments);
             }
         }
-
+        
         public static object Construct(Type concrete, object[] arguments)
         {
             var info = TypeConstructionInfoCache.Get(concrete);
@@ -62,7 +48,7 @@ namespace Reflex.Injectors
             }
             catch (Exception exception)
             {
-                throw new ConstructorInjectorException(concrete, exception, info.ConstructorParameterData);
+                throw new ConstructorInjectorException(concrete, exception, info.ConstructorParameters);
             }
         }
     }
