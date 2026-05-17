@@ -1,7 +1,13 @@
 using System;
+using Enviroment;
+using Managers;
+using Reflex.Attributes;
 using Reflex.Core;
+using Reflex.Extensions;
 using StateMachine.States;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace StateMachine
 {
@@ -10,6 +16,11 @@ namespace StateMachine
         private Container _container;
         private GameState _currentState;
         private GameState _previousState;
+
+        [Inject] private UIManager _uiManager;
+        [Inject] private InputManager _inputManager;
+        [Inject] private LevelManager _levelManager;
+        [Inject] private AudioManager _audioManager;
 
         public Type CurrentStateType => _currentState?.GetType();
 
@@ -43,7 +54,7 @@ namespace StateMachine
         public void ChangeState<T>() where T : GameState
         {
             var state = Container.Resolve<T>();
-            
+
             ChangeState(state);
         }
 
@@ -75,8 +86,8 @@ namespace StateMachine
         private void CreateStates()
         {
             var fsmContainer = new ContainerBuilder();
-
-            fsmContainer.SetParent(Container.ProjectContainer);
+            var sceneContainer = SceneManager.GetActiveScene().GetSceneContainer();
+            fsmContainer.SetParent(sceneContainer);
 
             fsmContainer.AddSingleton(typeof(MenuState));
             fsmContainer.AddSingleton(typeof(PlayingState));

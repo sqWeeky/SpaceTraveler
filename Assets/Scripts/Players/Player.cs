@@ -1,4 +1,5 @@
 using System;
+using Skins;
 using UnityEngine;
 
 namespace Players
@@ -7,7 +8,7 @@ namespace Players
     {
         [SerializeField] private int _health;
         [SerializeField] private int _scoreStars;
-        [SerializeField] private GameObject _skin;
+        [SerializeField] private Skin _skin;
         [SerializeField] private Collider _collider;
 
         public int ScoreStars => _scoreStars;
@@ -15,7 +16,7 @@ namespace Players
         public event Action OnPlayerDied;
         public event Action OnLevelComplete;
 
-        public void Init(int scoreStars, int healthPoint, GameObject skin)
+        public void Init(int scoreStars, int healthPoint, Skin skin)
         {
             _scoreStars = scoreStars;
             _health = healthPoint;

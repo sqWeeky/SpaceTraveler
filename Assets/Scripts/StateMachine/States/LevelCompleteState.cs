@@ -5,12 +5,6 @@ namespace StateMachine.States
 {
     public class LevelCompleteState : GameState
     {
-        public LevelCompleteState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
-        {
-        }
-
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().ShowLevelCompleteScreen();

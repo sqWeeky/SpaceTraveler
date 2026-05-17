@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4835dda8a5e9463388573577e7666ffa, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _levels: []
-  _windows:
-  - {fileID: 869020046421623301, guid: 734608d5b2633c948a2ce0f501f8b44d, type: 3}
-  - {fileID: 6383976400207528775, guid: 6b04ec80dd3d42542b58800aacef2866, type: 3}
-  - {fileID: 3454370759968712823, guid: f54854f47b5576542a212d36077f7041, type: 3}
-  - {fileID: 976098073172966831, guid: 0f91d6bfabc38bf498c3dbf86a8b60b0, type: 3}
-  - {fileID: -4982865367608275336, guid: 17bba94f539bba443aa969ddc9c9ad52, type: 3}
-  - {fileID: 3099356924358862305, guid: 480a56247d9bcd0429723135457d93bc, type: 3}
+  _playerData: {fileID: 11400000, guid: 23376b6f1bb3ef141ae830d9920106c3, type: 2}
+  _levels: {fileID: 11400000, guid: f5b70cef7e8537049891e5c59003b4da, type: 2}
+  _dataShips:
+  - {fileID: 11400000, guid: 26f20a823dd264c439b4fbc10ba3e220, type: 2}
+  - {fileID: 11400000, guid: 6fcf35a1cd5f3364f8fdccc3d9aa7dfd, type: 2}
+  - {fileID: 11400000, guid: 6785696c464f1d442aa171949b858130, type: 2}
+  - {fileID: 11400000, guid: 4a875d5f86ea64148b6e68b1dbb8c46d, type: 2}
+  - {fileID: 11400000, guid: 0c392dcbbef6baf44a58a36059f13284, type: 2}
+  - {fileID: 11400000, guid: 7bdccc93bee19c94a9055bf1b3e2565a, type: 2}
+  - {fileID: 11400000, guid: 55b0c247b70a6364c9ac8e22d18cd503, type: 2}
+  - {fileID: 11400000, guid: 59c6668311e0e714387f133f1ce3d576, type: 2}
+  - {fileID: 11400000, guid: b68fe971f5cb8fe4cbb8255325e217b0, type: 2}
+  - {fileID: 11400000, guid: adb543150e7023f498de67160158b9a3, type: 2}

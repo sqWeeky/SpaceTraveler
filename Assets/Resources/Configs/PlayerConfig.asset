@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50e4916e4924f2788a73057a16764c0, type: 3}
-  m_Name: ReflexSettings
+  m_Script: {fileID: 11500000, guid: 6d63d9946e6cc6540829a438e72b0dba, type: 3}
+  m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  <LogLevel>k__BackingField: 0
-  <ProjectScopes>k__BackingField:
-  - {fileID: 366993120819355504, guid: e94f0afd687bfb240b75be12cf1de0f5, type: 3}
+  _shipData: {fileID: 11400000, guid: 26f20a823dd264c439b4fbc10ba3e220, type: 2}
+  _currentSkinShip: {fileID: 8282330399409749230, guid: a086ec1eb3b77a842acf8337b9e73d0e, type: 3}

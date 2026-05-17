@@ -1,12 +1,19 @@
 using StateMachine.States;
+using UnityEngine;
 
 namespace Windows
 {
     public class MainMenuWindow : BaseWindow
     {
-        public void OnStart()
+        public override void OnStart()
         {
+            base.OnStart();
             UIManager.OpenWindow<GameModeWindow>();
+        }
+
+        public void OnOpenShop()
+        {
+            UIManager.OpenWindow<ShopWindow>();
         }
 
         public void OnOpenSettingWindow()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Infastracture
+namespace Infrastructure
 {
     public class InitialSceneInstaller : MonoBehaviour
     {

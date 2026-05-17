@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Configs.Skins;
 using UnityEngine;
 
 namespace Configs
@@ -7,9 +8,13 @@ namespace Configs
     [CreateAssetMenu(menuName = nameof(GameConfig))]
     public class GameConfig : ScriptableObject
     {
-        [SerializeField] private List<LevelsConfig> _levels;
+        [SerializeField] private PlayerConfig _playerData;
+        [SerializeField] private LevelsConfig _levels;
+        [SerializeField] private List<DataShipConfig> _dataShips;
         
-        public List<LevelsConfig> Levels => _levels;
+        public PlayerConfig PlayerData => _playerData;
+        public LevelsConfig Levels => _levels;
+        public List<DataShipConfig> DataShips => _dataShips;
         
         public event Action OnGameStarted;
         public event Action OnGamePaused;

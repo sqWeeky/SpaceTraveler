@@ -1,5 +1,6 @@
 using Windows;
 using Managers;
+using Players;
 using UnityEngine;
 
 namespace StateMachine.States
@@ -8,12 +9,6 @@ namespace StateMachine.States
     {
         private float _gameTime;
         private PlayingWindow _playingWindow;
-
-        public PlayingState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
-        {
-        }
 
         public override void Enter()
         {
@@ -45,8 +40,8 @@ namespace StateMachine.States
         {
             UIManager.CloseWindow<PlayingWindow>();
             // Container.Resolve<InputManager>().DisableGameplayInput();
-            // Player.OnPlayerDied -= OnPlayerDied;
-            // Player.OnLevelComplete -= OnLevelComplete;
+             // Player.OnPlayerDied -= OnPlayerDied;
+             // Player.OnLevelComplete -= OnLevelComplete;
 
             Debug.Log("Exited Playing State");
         }

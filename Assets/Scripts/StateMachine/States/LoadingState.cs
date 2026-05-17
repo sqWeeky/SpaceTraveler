@@ -10,16 +10,8 @@ namespace StateMachine.States
     {
         private bool _isLoading;
         private string _sceneToLoad;
-        private LoadingWindow _loadingWindow;
 
-        public LoadingState(
-            GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
-        {
-        }
-
-        public override void Enter()
+       public override void Enter()
         {
             Debug.Log("Entered Loading State");
             _isLoading = true;

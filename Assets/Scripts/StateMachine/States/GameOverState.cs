@@ -7,12 +7,6 @@ namespace StateMachine.States
     {
         private float _timer;
 
-        public GameOverState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
-        {
-        }
-
         public override void Enter()
         {
             //GameRoot.Instance.GetManager<UIManager>().ShowGameOverScreen();

@@ -11915,7 +11915,7 @@ GameObject:
   - component: {fileID: 474227192007578687}
   - component: {fileID: 8752484300168323993}
   m_Layer: 0
-  m_Name: MenuLevelsWindow
+  m_Name: LevelsMenuWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

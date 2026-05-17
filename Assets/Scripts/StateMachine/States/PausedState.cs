@@ -6,13 +6,6 @@ namespace StateMachine.States
 {
     public class PausedState : GameState
     {
-        public PausedState(
-            GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
-        {
-        }
-
         public override void Enter()
         {
             Time.timeScale = 0f;

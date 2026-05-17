@@ -12,17 +12,28 @@ namespace Windows
         protected AudioManager AudioManager { get; private set; }
         protected LevelManager LevelManager { get; private set; }
 
+
         [Inject]
-        public void Inject(
+        private void Inject(
             GameStateMachine stateMachine,
             UIManager uiManager,
-            AudioManager audioManager, 
-            LevelManager levelManager)
+            AudioManager audioManager)
         {
+            Debug.LogError("В БАЗОВОМ ОКНЕ ПРОИЗОШЕЛ ИНЖЕКТ");
             GameStateMachine = stateMachine;
             UIManager = uiManager;
             AudioManager = audioManager;
-            LevelManager = levelManager;
+
+            Debug.Log("BaseWindow INJECT");
+        }
+
+        public virtual void OnStart()
+        {
+            Debug.Log("OnStart()");
+            Debug.Log(GameStateMachine != null);
+            Debug.Log(UIManager != null);
+            Debug.Log(AudioManager != null);
+            Debug.Log(LevelManager != null);
         }
 
         public virtual void CloseWindow()

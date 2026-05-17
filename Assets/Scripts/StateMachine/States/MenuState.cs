@@ -6,20 +6,15 @@ namespace StateMachine.States
 {
     public class MenuState : GameState
     {
-        public MenuState(GameStateMachine gameStateMachine, UIManager uiManager, AudioManager audioManager,
-            InputManager inputManager, LevelManager levelManager) : base(gameStateMachine, uiManager, audioManager,
-            inputManager, levelManager)
+       public override void Enter()
         {
-        }
-
-        public override void Enter()
-        {
+            base.Enter();
             UIManager.CloseAllWindows();
             UIManager.OpenWindow<MainMenuWindow>();
-            
+
             //AudioManager.PlayMusic(AudioType.MenuMusic);
 
-            
+
             Debug.Log("Entered Menu State");
         }
 
