@@ -17,7 +17,7 @@ namespace Infrastructure
 
         private void Start()
         {
-            //_uiManager.Init(_uiManagerConfig);
+            _uiManager.Init(_uiManagerConfig);
             _levelManager.Init(_levelsConfig);
 
             _stateMachine.ChangeState<MenuState>();

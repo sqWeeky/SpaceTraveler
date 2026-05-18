@@ -1,30 +1,35 @@
+using Reflex.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Windows;
 using Configs;
-using Reflex.Core;
 using Reflex.Extensions;
 using Reflex.Injectors;
-using UnityEngine.SceneManagement;
 
 namespace Managers
 {
     public class UIManager : BaseManager<UIManager>
     {
-        private readonly List<BaseWindow> _openedWindows = new();
-        private readonly Dictionary<Type, BaseWindow> _cachedWindows = new();
-        private List<BaseWindow> _windows = new();
+        private List<BaseWindow> _openedWindows;
+        private Dictionary<Type, BaseWindow> _cachedWindows;
 
         private Canvas _mainCanvas;
+        private List<BaseWindow> _windows;
 
-        // public void Init(UIManagerConfig config)
-        // {
-        //     _windows = new List<BaseWindow>();
-        //
-        //     foreach (BaseWindow window in config.BaseWindows)
-        //         _windows.Add(window);
-        // }
+        private void Awake()
+        {
+            _openedWindows = new List<BaseWindow>();
+            _cachedWindows = new Dictionary<Type, BaseWindow>();
+        }
+
+        public void Init(UIManagerConfig config)
+        {
+            _windows = new List<BaseWindow>();
+
+            foreach (BaseWindow window in config.BaseWindows)
+                _windows.Add(window);
+        }
 
         public BaseWindow OpenWindow<T>() where T : BaseWindow
         {
@@ -94,10 +99,9 @@ namespace Managers
         private T CreateWindow<T>() where T : BaseWindow
         {
             Debug.Log($"IUManager create => {typeof(T).Name}");
-            //GameObject prefab = FindWindowPrefab<T>();
+            GameObject prefab = FindWindowPrefab<T>();
 
-            Debug.Log($"Type: {typeof(T).Name}");
-            GameObject prefab = Resources.Load<GameObject>($"Windows/{typeof(T).Name}");
+            // GameObject prefab = Resources.Load<GameObject>($"Windows/{typeof(T).Name}");
 
             if (prefab == null)
             {
@@ -113,7 +117,7 @@ namespace Managers
                 windowComponent.gameObject.SetActive(false);
                 RegisterWindow(windowComponent);
 
-                AttributeInjector.Inject(windowComponent, SceneManager.GetActiveScene().GetSceneContainer());
+                AttributeInjector.Inject(windowComponent, gameObject.scene.GetSceneContainer());
             }
 
             return windowComponent;
@@ -138,7 +142,8 @@ namespace Managers
             }
 
             BaseWindow newWindow = Instantiate(windowPrefab, _mainCanvas.transform);
-            //AttributeInjector.Inject(newWindow, gameObject.scene.GetSceneContainer());
+            AttributeInjector.Inject(newWindow,
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetSceneContainer());
             newWindow.gameObject.SetActive(false);
             _cachedWindows[type] = newWindow;
 
