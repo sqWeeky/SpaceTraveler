@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   _shipData: {fileID: 11400000, guid: 26f20a823dd264c439b4fbc10ba3e220, type: 2}
-  _currentSkinShip: {fileID: 8282330399409749230, guid: a086ec1eb3b77a842acf8337b9e73d0e, type: 3}
+  _currentSkinShip: {fileID: -4609177390025678158, guid: 713bd277a73233041b5a74db3c82aca0, type: 3}
