@@ -4,13 +4,15 @@ using UnityEngine;
 using System;
 using Windows;
 using Configs;
-using Reflex.Extensions;
+using Reflex.Attributes;
 using Reflex.Injectors;
 
 namespace Managers
 {
     public class UIManager : BaseManager<UIManager>
     {
+        [Inject] private UIManagerConfig _config;
+        
         private List<BaseWindow> _openedWindows;
         private Dictionary<Type, BaseWindow> _cachedWindows;
 
@@ -23,11 +25,19 @@ namespace Managers
             _cachedWindows = new Dictionary<Type, BaseWindow>();
         }
 
-        public void Init(UIManagerConfig config)
+        // public void Init(UIManagerConfig config)
+        // {
+        //     _windows = new List<BaseWindow>();
+        //
+        //     foreach (BaseWindow window in config.BaseWindows)
+        //         _windows.Add(window);
+        // }
+
+        private void Start()
         {
             _windows = new List<BaseWindow>();
-
-            foreach (BaseWindow window in config.BaseWindows)
+            
+            foreach (BaseWindow window in _config.BaseWindows)
                 _windows.Add(window);
         }
 
@@ -114,10 +124,10 @@ namespace Managers
 
             if (windowComponent != null)
             {
+                AttributeInjector.Inject(windowComponent, gameObject.scene.GetSceneContainer());
                 windowComponent.gameObject.SetActive(false);
                 RegisterWindow(windowComponent);
 
-                AttributeInjector.Inject(windowComponent, gameObject.scene.GetSceneContainer());
             }
 
             return windowComponent;

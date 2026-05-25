@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using Windows;
-using Configs.Skins;
 using Managers;
-using Skins;
 using UnityEngine;
 
 public class ShopWindow : BaseWindow
 {
     [SerializeField] private SkinManager _skinManager;
-    
+
     public void OnEnable()
     {
-        _skinManager.VisualizerSkinShop.InitVisualize();
+       // _skinManager.Init(GameConfig);
+        _skinManager.Activate();
     }
     
     public void OnCloseShopWindow() => 

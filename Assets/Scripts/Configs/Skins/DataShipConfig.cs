@@ -11,10 +11,12 @@ namespace Configs.Skins
         [SerializeField] private List<Skin> _materials;
         [SerializeField] private int _speed;
         [SerializeField] private int _maxHealth;
+        [SerializeField] private bool _isBuy;
         
         public List<Skin> ShipColors => _materials;
         public string Name => _name;
         public int Speed => _speed;
         public int MaxHealth => _maxHealth;
+        public bool IsBuy => _isBuy;
     }
 }

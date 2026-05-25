@@ -11,26 +11,27 @@ namespace UI
     {
         [SerializeField] private Transform _placement;
         
-        [Inject] private GameConfig _config;
+        //[Inject] private GameConfig _config;
 
         private Skin _currentSkin;
         private string _currentShipName;
 
-        public void InitVisualize()
+        public void InitVisualize(GameConfig config)
         {
-            Debug.LogError(_config == null);
             _currentSkin =
                 Resources.Load<Skin>(
-                    $"Player/{_config.PlayerData.ShipData.Name}/{_config.PlayerData.CurrentSkinShip.Name}");
+                    $"Player/SkinPrefabs/{config.PlayerData.ShipData.Name}/{config.PlayerData.CurrentSkinShip.Name}");
 
             Instantiate(_currentSkin.gameObject, _placement);
         }
 
-        public void VisualizeSkin(string nameSkin)
+        public void VisualizeSkin(string nameSkin,  string colorSkin = "Blue_Black")
         {
-            _currentShipName = _config.PlayerData.ShipData.Name;
+            _currentSkin = null;
+            Debug.LogError(nameSkin);
+            //_currentShipName = _config.PlayerData.ShipData.Name;
             //_currentShipName = Container.ProjectContainer.Resolve<GameConfig>().PlayerData.ShipData.Name;
-            _currentSkin = Resources.Load<Skin>($"Player/PlayerPrefab");
+            _currentSkin = Resources.Load<Skin>($"Player/SkinPrefabs/{nameSkin}/{colorSkin}");
 
             Instantiate(_currentSkin.gameObject, _placement);
         }

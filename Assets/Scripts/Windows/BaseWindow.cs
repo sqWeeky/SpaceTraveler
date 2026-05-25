@@ -1,3 +1,4 @@
+using Configs;
 using Managers;
 using Reflex.Attributes;
 using StateMachine;
@@ -9,6 +10,7 @@ namespace Windows
     {
         protected GameStateMachine GameStateMachine { get; private set; }
         protected UIManager UIManager { get; private set; }
+        protected GameConfig GameConfig { get; private set; }
         protected AudioManager AudioManager { get; private set; }
         protected LevelManager LevelManager { get; private set; }
 
@@ -17,11 +19,12 @@ namespace Windows
         private void Inject(
             GameStateMachine stateMachine,
             UIManager uiManager,
+            GameConfig gameConfig,
             AudioManager audioManager)
         {
-            Debug.LogError("В БАЗОВОМ ОКНЕ ПРОИЗОШЕЛ ИНЖЕКТ");
             GameStateMachine = stateMachine;
             UIManager = uiManager;
+            GameConfig = gameConfig;
             AudioManager = audioManager;
 
             Debug.Log("BaseWindow INJECT");
@@ -29,11 +32,6 @@ namespace Windows
 
         public virtual void OnStart()
         {
-            Debug.Log("OnStart()");
-            Debug.Log(GameStateMachine != null);
-            Debug.Log(UIManager != null);
-            Debug.Log(AudioManager != null);
-            Debug.Log(LevelManager != null);
         }
 
         public virtual void CloseWindow()
