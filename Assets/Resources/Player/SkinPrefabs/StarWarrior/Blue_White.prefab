@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8388058dc9354321b4afe83434fca8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Blue_White
+  _colorName: Blue_White
 --- !u!1001 &8354198565614532993
 PrefabInstance:
   m_ObjectHideFlags: 0

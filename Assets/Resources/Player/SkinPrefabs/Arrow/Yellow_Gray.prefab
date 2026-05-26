@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6407335193773115459}
   - component: {fileID: 8282330399409749230}
   m_Layer: 0
-  m_Name: Yellow_Grey
+  m_Name: Yellow_Gray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8388058dc9354321b4afe83434fca8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Yellow_Grey
+  _colorName: Yellow_Gray
 --- !u!1001 &3379395366418993857
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8388058dc9354321b4afe83434fca8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Red_Black
+  _colorName: Red_Black
 --- !u!1001 &579621321818522152
 PrefabInstance:
   m_ObjectHideFlags: 0
