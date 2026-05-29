@@ -15,7 +15,7 @@ namespace MenuLevels
         [SerializeField] private int _buttonsCount = 20;
         [SerializeField] private bool _placeOnAllKnots = true;
 
-        private bool _initialized = false;
+        [SerializeField] private bool _initialized = false;
 
         [Button]
         public void Init()
