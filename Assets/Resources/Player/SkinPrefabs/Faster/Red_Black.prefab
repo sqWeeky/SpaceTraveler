@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6675621504782886488}
   - component: {fileID: 1278748139181639184}
   m_Layer: 0
-  m_Name: Red_Blak
+  m_Name: Red_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

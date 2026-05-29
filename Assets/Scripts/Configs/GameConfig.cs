@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Configs.Skins;
+using Infrastructure;
+using Skins;
 using UnityEngine;
 
 namespace Configs
@@ -10,11 +12,13 @@ namespace Configs
     {
         [SerializeField] private PlayerConfig _playerData;
         [SerializeField] private LevelsConfig _levels;
-        [SerializeField] private List<DataShipConfig> _dataShips;
+        
+        [Header("List ships")]
+        [SerializeField] private SerializableDictionary<DataShipConfig, List<Skin>> _shipConfigs;
         
         public PlayerConfig PlayerData => _playerData;
         public LevelsConfig Levels => _levels;
-        public List<DataShipConfig> DataShips => _dataShips;
+        public SerializableDictionary<DataShipConfig, List<Skin>> ShipConfigs => _shipConfigs;
         
         public event Action OnGameStarted;
         public event Action OnGamePaused;

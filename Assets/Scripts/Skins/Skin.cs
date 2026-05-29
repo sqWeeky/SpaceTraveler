@@ -4,8 +4,8 @@ namespace Skins
 {
     public class Skin : MonoBehaviour
     {
-        [SerializeField] private string _name;
+        [SerializeField] private string _colorName;
 
-        public string Name => _name;
+        public string ColorName => _colorName;
     }
 }

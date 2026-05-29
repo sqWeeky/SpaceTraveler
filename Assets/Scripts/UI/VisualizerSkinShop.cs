@@ -1,39 +1,30 @@
-using Configs;
+using Configs.Skins;
 using Infrastructure;
-using Reflex.Attributes;
-using Reflex.Core;
-using Skins;
 using UnityEngine;
 
 namespace UI
 {
     public class VisualizerSkinShop : MonoBehaviour
     {
-        [SerializeField] private Transform _placement;
-        
-        //[Inject] private GameConfig _config;
+        [SerializeField] private SerializableDictionary<string, GameObject> _parentSkinsColor;
 
-        private Skin _currentSkin;
-        private string _currentShipName;
+        private DataShipConfig _currentSkin;
+        private string _currentShipColorName;
+        private Transform _newColorShip;
 
-        public void InitVisualize(GameConfig config)
+        public void VisualizeSkin(string nameSkin, string colorSkin = "Red_White")
         {
-            _currentSkin =
-                Resources.Load<Skin>(
-                    $"Player/SkinPrefabs/{config.PlayerData.ShipData.Name}/{config.PlayerData.CurrentSkinShip.Name}");
+            if (_newColorShip != null)
+                _newColorShip.gameObject.SetActive(false);
 
-            Instantiate(_currentSkin.gameObject, _placement);
-        }
+            if (!_parentSkinsColor.ContainsKey(nameSkin))
+                return;
 
-        public void VisualizeSkin(string nameSkin,  string colorSkin = "Blue_Black")
-        {
-            _currentSkin = null;
-            Debug.LogError(nameSkin);
-            //_currentShipName = _config.PlayerData.ShipData.Name;
-            //_currentShipName = Container.ProjectContainer.Resolve<GameConfig>().PlayerData.ShipData.Name;
-            _currentSkin = Resources.Load<Skin>($"Player/SkinPrefabs/{nameSkin}/{colorSkin}");
+            var newShip = _parentSkinsColor[nameSkin];
+            _newColorShip = newShip.transform.Find(colorSkin);
 
-            Instantiate(_currentSkin.gameObject, _placement);
+            if (_newColorShip != null)
+                _newColorShip.gameObject.SetActive(true);
         }
     }
 }

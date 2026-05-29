@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141477f1f601991458ca8d25b1083776, type: 3}
   m_Name: 6_StarWarrior
   m_EditorClassIdentifier: 
-  _name: Star Wars
+  _name: Star Warrior
   _materials:
   - {fileID: -2449781026769054425, guid: a672ad5b71c8cc44ca985cfc35b6dbaf, type: 3}
   - {fileID: 2317997639606446652, guid: db11e951d5871974b8b250cb92a6838e, type: 3}
@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 408105532329591128, guid: e6e36ac164b455c42b3172409fe52294, type: 3}
   _speed: 8
   _maxHealth: 3
+  _isBuy: 0

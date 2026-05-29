@@ -6,12 +6,13 @@ using Windows;
 using Configs;
 using Reflex.Attributes;
 using Reflex.Injectors;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
     public class UIManager : BaseManager<UIManager>
     {
-        [Inject] private UIManagerConfig _config;
+        [Inject] private UIManagerConfig _uiConfig;
         
         private List<BaseWindow> _openedWindows;
         private Dictionary<Type, BaseWindow> _cachedWindows;
@@ -35,9 +36,10 @@ namespace Managers
 
         private void Start()
         {
+            GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
             _windows = new List<BaseWindow>();
             
-            foreach (BaseWindow window in _config.BaseWindows)
+            foreach (BaseWindow window in _uiConfig.BaseWindows)
                 _windows.Add(window);
         }
 
