@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1224982309499703371}
   - component: {fileID: 2597099780391809624}
   - component: {fileID: 1259301346046175690}
+  - component: {fileID: 9054997814311861948}
   m_Layer: 5
   m_Name: ButtonLevel
   m_TagString: Untagged
@@ -270,3 +271,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nameLevelScene: TestLevel
   _nameText: {fileID: 1598508563366744139}
+--- !u!210 &9054997814311861948
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8861117464785574138}
+  m_Enabled: 1
+  m_SortingLayerID: 1550554053
+  m_SortingLayer: 2
+  m_SortingOrder: 2
+  m_SortAtRoot: 0

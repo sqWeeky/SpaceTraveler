@@ -1,19 +1,28 @@
 using Configs;
+using Reflex.Attributes;
+using Reflex.Extensions;
+using Reflex.Injectors;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
     public class LevelManager : BaseManager<LevelManager>
     {
+        [Inject] private LevelsConfig _levelConfig;
+        
         private string _currentLevelId;
         private string _nextLevelId;
 
-        private LevelsConfig _levelConfig;
-
-        public void Init(LevelsConfig config)
+        private void Start()
         {
-            _levelConfig = config;
+            GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
         }
+
+        // public void Init(LevelsConfig config)
+        // {
+        //     _levelConfig = config;
+        // }
 
         public void LoadLevel(string levelId)
         {

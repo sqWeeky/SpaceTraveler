@@ -7,7 +7,7 @@ namespace Windows
     {
         private void OnEnable()
         {
-            UIManager.CloseWindow<GameModeWindow>();
+            UIManager.CloseAllWindows();
         }
 
         public void OnStartGame(string sceneName)

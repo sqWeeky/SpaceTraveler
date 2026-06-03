@@ -1,65 +1,47 @@
 using NaughtyAttributes;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
 namespace LineRenderer
 {
     [RequireComponent(typeof(UnityEngine.LineRenderer))]
-    public class LineOnSpline : MonoBehaviour
+    public class SplineToLineRenderer : MonoBehaviour
     {
         [SerializeField] private SplineContainer _splineContainer;
-        [SerializeField] private int _segmentsPerKnot = 10;
-        [SerializeField] private bool _updateInTime = false;
+        [SerializeField] private int _resolution = 50; // Количество сегментов
 
         private UnityEngine.LineRenderer _lineRenderer;
-        private Spline _spline;
 
         private void Awake()
         {
             _lineRenderer = GetComponent<UnityEngine.LineRenderer>();
-
-            if (_splineContainer == null)
-                return;
-
+            _lineRenderer.startWidth = 1.0f;  // Толстая в начале
+            _lineRenderer.endWidth = 1.0f; 
             DrawLine();
-        }
-
-        private void Update()
-        {
-            if (_updateInTime)
-                DrawLine();
         }
 
         private void DrawLine()
         {
-            if (_splineContainer == null || _splineContainer.Spline == null) return;
-
-            _spline = _splineContainer.Spline;
-
-            if (_spline.Count < 2) return;
-
-            int totalPoints = (_spline.Count - 1) * _segmentsPerKnot + 1;
-            _lineRenderer.positionCount = totalPoints;
-            int pointIndex = 0;
-
-            for (int i = 0; i < _spline.Count - 1; i++)
+            if (_splineContainer == null) return;
+        
+            Spline spline = _splineContainer.Spline;
+        
+            // Получаем все узлы сплайна в локальных координатах
+            Vector3[] points = new Vector3[spline.Count];
+            for (int i = 0; i < spline.Count; i++)
             {
-                for (int j = 0; j < _segmentsPerKnot; j++)
-                {
-                    float t = j / (float)_segmentsPerKnot;
-                    Vector3 point = _splineContainer.EvaluatePosition(i + t);
-                    _lineRenderer.SetPosition(pointIndex++, point);
-                }
+                points[i] = spline[i].Position; // Уже локальные координаты сплайна
             }
-
-            Vector3 lastPos = _splineContainer.transform.TransformPoint(_spline[^1].Position);
-            _lineRenderer.SetPosition(pointIndex, lastPos);
+        
+            _lineRenderer.positionCount = points.Length;
+            _lineRenderer.SetPositions(points);
         }
 
         [Button]
         private void OnLineDraw()
         {
-            if (_lineRenderer == null) 
+            if (_lineRenderer == null)
                 _lineRenderer = GetComponent<UnityEngine.LineRenderer>();
 
             DrawLine();

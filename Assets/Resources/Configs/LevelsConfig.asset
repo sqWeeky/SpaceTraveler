@@ -21,11 +21,3 @@ MonoBehaviour:
     SceneName: Level_1
     IsLocked: 1
     RequiredStars: 1
-  - LevelId: Level_1
-    SceneName: Level_1
-    IsLocked: 1
-    RequiredStars: 1
-  - LevelId: Levels Menu
-    SceneName: LevelsMenu
-    IsLocked: 1
-    RequiredStars: 1
