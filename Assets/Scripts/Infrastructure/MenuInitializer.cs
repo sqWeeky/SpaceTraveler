@@ -9,16 +9,15 @@ namespace Infrastructure
 {
     public class MenuInitializer : MonoBehaviour
     {
-        [Inject] private UIManager _uiManager;
-        [Inject] private LevelManager _levelManager;
-        [Inject] private UIManagerConfig _uiManagerConfig;
-        [Inject] private LevelsConfig _levelsConfig;
+        // [Inject] private UIManager _uiManager;
+        // [Inject] private LevelManager _levelManager;
+        // [Inject] private UIManagerConfig _uiManagerConfig;
+        // [Inject] private LevelsConfig _levelsConfig;
         [Inject] private GameStateMachine _stateMachine;
 
         private void Start()
         {
-            //_uiManager.Init(_uiManagerConfig);
-            _levelManager.Init(_levelsConfig);
+           // _levelManager.Init(_levelsConfig);
 
             _stateMachine.ChangeState<MenuState>();
         }

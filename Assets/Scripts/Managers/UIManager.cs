@@ -26,14 +26,6 @@ namespace Managers
             _cachedWindows = new Dictionary<Type, BaseWindow>();
         }
 
-        // public void Init(UIManagerConfig config)
-        // {
-        //     _windows = new List<BaseWindow>();
-        //
-        //     foreach (BaseWindow window in config.BaseWindows)
-        //         _windows.Add(window);
-        // }
-
         private void Start()
         {
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
