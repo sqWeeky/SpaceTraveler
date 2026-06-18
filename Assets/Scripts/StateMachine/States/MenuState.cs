@@ -9,6 +9,15 @@ namespace StateMachine.States
        public override void Enter()
         {
             base.Enter();
+            
+            // === ПРИМЕР ИСПОЛЬЗОВАНИЯ SaveManager ===
+            // 1. Загружаем сохранённые данные при входе в меню
+            //SaveManager.Load();
+            
+            // 2. Если нужно, можем получить снимок для отправки в SDK
+            // var snapshot = SaveManager.GetSnapshot();
+            // Debug.Log($"Current Score: {snapshot.Score}, Lives: {snapshot.Lives}");
+            
             UIManager.CloseAllWindows();
             UIManager.OpenWindow<MainMenuWindow>();
 

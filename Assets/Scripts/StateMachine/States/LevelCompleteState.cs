@@ -14,6 +14,27 @@ namespace StateMachine.States
             var starsEarned = CalculateStars();
             //_context.Player.Progress.AddStars(starsEarned);
 
+            // === ПРИМЕР ИСПОЛЬЗОВАНИЯ SaveManager ===
+            // 1. Получаем текущий уровень из LevelManager
+            var currentLevel = LevelManager.GetCurrentLevelData();
+            if (currentLevel != null)
+            {
+                // 2. Добавляем уровень в список пройденных
+                //SaveManager.AddCompletedLevel(currentLevel.LevelId);
+                
+                // 3. Можем добавить звёзды, если нужна система рейтинга
+                // SaveManager.AddStars(currentLevel.LevelId, starsEarned);
+                
+                Debug.Log($"[LevelCompleteState] Level completed: {currentLevel.LevelId}, Stars: {starsEarned}");
+            }
+            
+            // 4. Сохраняем игру (записываем в файл)
+           // SaveManager.Save();
+            
+            // 5. Опционально: отправляем снимок в SDK или аналитику
+            // var saveSnapshot = SaveManager.GetSnapshot();
+            // Analytics.LogLevelComplete(saveSnapshot);
+
             Debug.Log("Entered LevelComplete State");
         }
 
