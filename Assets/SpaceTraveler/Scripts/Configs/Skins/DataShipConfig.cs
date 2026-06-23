@@ -1,0 +1,25 @@
+using System.Collections.Generic;
+using SpaceTraveler.Scripts.Skins;
+using UnityEngine;
+
+namespace SpaceTraveler.Scripts.Configs.Skins
+{
+    [CreateAssetMenu(menuName = "Configs/Data/" + nameof(DataShipConfig))]
+    public class DataShipConfig : ScriptableObject
+    {
+        [SerializeField] private string _name;
+        [SerializeField] private List<Skin> _materials;
+        [SerializeField] private int _speed;
+        [SerializeField] private int _maxHealth;
+        [Header("Shop")]
+        [SerializeField] private int _price;
+        [SerializeField] private bool _isBuy;
+
+        public List<Skin> ShipColors => _materials;
+        public string Name => _name;
+        public int Speed => _speed;
+        public int MaxHealth => _maxHealth;
+        public int Price => _price;
+        public bool IsBuy => _isBuy;
+    }
+}
