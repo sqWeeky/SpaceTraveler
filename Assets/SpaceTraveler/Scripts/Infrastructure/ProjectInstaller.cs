@@ -23,7 +23,6 @@ namespace SpaceTraveler.Scripts.Infrastructure
             builder.AddSingleton(AudioManager.Create());
             builder.AddSingleton(LevelManager.Create());
             builder.AddSingleton(InputManager.Create());
-            builder.AddSingleton(SaveManager.Create());
             
             builder.AddSingleton(GameStateMachine.Create());
             

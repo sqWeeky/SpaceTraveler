@@ -1,11 +1,13 @@
 using SpaceTraveler.Scripts.StateMachine.States;
-
 namespace SpaceTraveler.Scripts.Windows
 {
     public class LevelsMenuWindow : BaseWindow
     {
         private void OnEnable()
         {
+            if (UIManager == null)
+                return;
+            
             UIManager.CloseAllWindows();
         }
 

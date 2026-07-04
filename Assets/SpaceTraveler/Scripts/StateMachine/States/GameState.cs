@@ -10,7 +10,7 @@ namespace SpaceTraveler.Scripts.StateMachine.States
         [Inject] protected AudioManager AudioManager { get; private set; }
         [Inject] protected InputManager InputManager { get; private set; }
         [Inject] protected LevelManager LevelManager { get; private set; }
-        [Inject] protected SaveManager SaveManager { get; private set; }
+        
 
         public virtual void Enter()
         {

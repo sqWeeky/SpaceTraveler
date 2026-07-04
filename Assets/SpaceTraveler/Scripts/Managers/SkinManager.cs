@@ -15,7 +15,7 @@ namespace SpaceTraveler.Scripts.Managers
     public class SkinManager : BaseManager<SkinManager>
     {
         [Inject] private GameConfig _config;
-        [Inject] private SaveManager _saveManager;
+        
 
         [Header("Main Settings")]
         [SerializeField] private VisualizerSkinShop _visualizerSkinShop;

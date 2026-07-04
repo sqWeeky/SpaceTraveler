@@ -13,8 +13,6 @@ namespace SpaceTraveler.Scripts.Players
 {
     public class Player : MonoBehaviour
     {
-        [Inject] private SaveManager _saveManager;
-
         [SerializeField] private int _health;
         [SerializeField] private DataShipConfig _shipConfig;
         [SerializeField] private Collider _collider;
@@ -27,7 +25,6 @@ namespace SpaceTraveler.Scripts.Players
         public void Init()
         {
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
-            _playerData = _saveManager.Load().PlayerData;
             _shipConfig = _playerData.UnlockedPlayerShips[0];
             _health = _shipConfig.MaxHealth;
         }
@@ -44,7 +41,7 @@ namespace SpaceTraveler.Scripts.Players
         {
             if (amount > 0)
             {
-               _saveManager.AddStar(amount);
+               
                 Debug.Log($"Added {amount} stars");
             }
             else
