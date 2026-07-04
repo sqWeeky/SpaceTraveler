@@ -1,4 +1,3 @@
-using System;
 using StateMachine.States;
 
 namespace Windows
@@ -7,6 +6,9 @@ namespace Windows
     {
         private void OnEnable()
         {
+            if (UIManager == null)
+                return;
+            
             UIManager.CloseAllWindows();
         }
 
