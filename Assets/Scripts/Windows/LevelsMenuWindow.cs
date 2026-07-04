@@ -1,14 +1,11 @@
-using StateMachine.States;
+using SpaceTraveler.Scripts.StateMachine.States;
 
-namespace Windows
+namespace SpaceTraveler.Scripts.Windows
 {
     public class LevelsMenuWindow : BaseWindow
     {
         private void OnEnable()
         {
-            if (UIManager == null)
-                return;
-            
             UIManager.CloseAllWindows();
         }
 
