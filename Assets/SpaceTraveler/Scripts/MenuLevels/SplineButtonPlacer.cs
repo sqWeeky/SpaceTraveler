@@ -1,5 +1,6 @@
+using System;
+using System.Collections.Generic;
 using NaughtyAttributes;
-using SpaceTraveler.Scripts.__Test;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -14,8 +15,13 @@ namespace SpaceTraveler.Scripts.MenuLevels
         [Space]
         [SerializeField] private int _buttonsCount = 20;
         [SerializeField] private bool _placeOnAllKnots = true;
-
+        
+        [Space]
         [SerializeField] private bool _initialized = false;
+        [SerializeField] private List<Transform> _buttons;
+
+        public List<Transform> LevelButtons => _buttons;
+        public bool Initialized => _initialized;
 
         [Button]
         public void Init()
@@ -66,7 +72,9 @@ namespace SpaceTraveler.Scripts.MenuLevels
             GameObject button = Instantiate(_buttonPrefab, _transformParent);
             button.transform.position = worldPosition;
             button.name = $"Level {index + 1}";
-            button.GetComponent<LevelButton>().Init(button.name);
+            LevelButton levelButton = button.GetComponent<LevelButton>();
+            levelButton.Init(button.name);
+            _buttons.Add(levelButton.gameObject.transform);
 
             // if (UnityEngine.Camera.main != null)
             // {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SpaceTraveler.Scripts.Configs;
 using SpaceTraveler.Scripts.Configs.Skins;
+using SpaceTraveler.Scripts.Skins;
 
 namespace SpaceTraveler.Scripts.Save
 {
@@ -19,6 +20,7 @@ namespace SpaceTraveler.Scripts.Save
         public int PlayerScore;
         public int PlayerStarScore;
         public DataShipConfig CurrentShip;
+        public Skin CurrentColorShip;
         public List<DataShipConfig> UnlockedPlayerShips;
     }
 

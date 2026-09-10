@@ -35,14 +35,14 @@ namespace SpaceTraveler.Scripts.Managers
                 _windows.Add(window);
         }
 
-        public BaseWindow OpenWindow<T>() where T : BaseWindow
+        public T OpenWindow<T>() where T : BaseWindow
         {
             if (_mainCanvas == null)
                 _mainCanvas = GameObject.FindGameObjectWithTag(Constants.GameTags.MainCanvasTag).GetComponent<Canvas>();
 
             DontDestroyOnLoad(_mainCanvas.gameObject);
 
-            BaseWindow window = GetOrCreateWindow<T>();
+            T window = GetOrCreateWindow<T>();
 
             if (window == null) return null;
 
@@ -90,7 +90,7 @@ namespace SpaceTraveler.Scripts.Managers
             _cachedWindows[window.GetType()] = window;
         }
 
-        public BaseWindow GetOrCreateWindow<T>() where T : BaseWindow
+        public T GetOrCreateWindow<T>() where T : BaseWindow
         {
             T window = GetWindowByType<T>();
 

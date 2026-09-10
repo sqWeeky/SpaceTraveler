@@ -5,56 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ffedb16-485c-48be-89de-c12911bff639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/!_Test/LevelButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Players/PlayerLabel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Players/PlayerLabel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/LevelPopup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/LevelPopup.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceTraveler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceTraveler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/FlexUnit/UFO_Battleship/Built-In/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Coin.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Coin.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-4.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Resources/Obstacles/Rock-4.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Space Adventure/Textures/Rocks/rock-4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/Treys/Spaceships/Prefabs/1.4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Download/Treys/Spaceships/Prefabs/1.4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Road.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleSystem/FreeQuickEffectsVol1/Materials/Flare00_AB_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleSystem/FreeQuickEffectsVol1/Materials/Flare00_AB_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleSystem/FreeQuickEffectsVol1/Prefabs/vfx_LootDrop_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleSystem/FreeQuickEffectsVol1/Prefabs/vfx_LootDrop_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enviroment/RoadLine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enviroment/RoadLine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level 2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Level.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Windows/LevelsMenuWindow 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Windows/LevelsMenuWindow 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScena.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScena.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/!_Test/TestButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/!_Test/TestButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/!_Test/LevelButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LineRenderer/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LineRenderer/StraightLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LineRenderer/Line.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LineRenderer/StraightLine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Players/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Players/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ModulesListYG2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/ServerInfoYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Materials/Hyper casual mobile GUI/Sprites/buttons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Materials/Hyper casual mobile GUI/Sprites/buttons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Prefabs/Leaderbord/PlayerLable.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Prefabs/Leaderbord/PlayerLable.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Prefabs/UI/ButtonLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Prefabs/UI/ButtonLevel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/10_WhiteShark.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/10_WhiteShark.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/1_Arrow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/1_Arrow.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/2_BigStan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/2_BigStan.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/3_IronCliff.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/3_IronCliff.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/4_Faster.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/4_Faster.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/5_Spark.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/5_Spark.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/6_StarWarrior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/6_StarWarrior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/7_Alpha 2000.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/7_Alpha 2000.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/8_EmeraldBeetle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/8_EmeraldBeetle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/9_Clover.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/DataShips/9_Clover.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/GameConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/GameConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/PlayerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/PlayerConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/UIManagerConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Configs/UIManagerConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/GameModeWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/GameModeWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LeaderboardWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LeaderboardWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LevelsMenuWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LevelsMenuWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LoadingWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LoadingWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LossWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/LossWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/MainMenuWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/MainMenuWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/PauseWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/PauseWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/PlayingWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/PlayingWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/SettingWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/SettingWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/ShopWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/ShopWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/WinWindow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Resources/Windows/WinWindow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scenes/Initial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scenes/TestLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scenes/TestLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/!_Test/LevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/MenuLevels/LevelButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/!_Test/LevelButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/MenuLevels/LevelButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Camera/CameraDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Camera/CameraDragHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Configs/PlayerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Configs/PlayerConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Configs/Skins/DataShipConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Configs/Skins/DataShipConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Infrastructure/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Infrastructure/ProjectInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/SkinManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/SkinManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/MenuLevels/SplineButtonPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/MenuLevels/SplineButtonPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Save/GameSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Save/GameSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/BaseWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/BaseWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/LevelsMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/LevelsMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/ShopWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Windows/ShopWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +83,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/ef/b73d5cbe/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/01/d7b665c3/AudioType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/ec/a510b6e6/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/!_Test/LevelButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configs/UIManagerConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infastracture/InitialSceneInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LineRenderer/LineOnSpline.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MapLevels/DragMap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/GameModeWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/PauseWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Windows/SettingWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SpaceTraveler/Scripts/Managers/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../SteeveOnArena/Assets/DevotionSDK/Scripts/Managers/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -102,7 +109,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SaveManager&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -198,6 +205,14 @@
       <workItem from="1771674729459" duration="623000" />
       <workItem from="1771740039648" duration="5351000" />
       <workItem from="1771823992380" duration="2380000" />
+      <workItem from="1783438988421" duration="5135000" />
+      <workItem from="1783587424488" duration="5781000" />
+      <workItem from="1783616369314" duration="649000" />
+      <workItem from="1783966794845" duration="1490000" />
+      <workItem from="1784305043781" duration="2673000" />
+      <workItem from="1788861497163" duration="7932000" />
+      <workItem from="1788956111145" duration="3565000" />
+      <workItem from="1789023818429" duration="4775000" />
     </task>
     <servers />
   </component>

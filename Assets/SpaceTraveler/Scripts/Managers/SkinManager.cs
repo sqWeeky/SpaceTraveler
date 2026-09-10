@@ -3,12 +3,12 @@ using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
 using SpaceTraveler.Scripts.Configs.Skins;
+using SpaceTraveler.Scripts.Save;
 using SpaceTraveler.Scripts.Skins;
 using SpaceTraveler.Scripts.UI;
-using TMPro;
+using SpaceTraveler.Scripts.Windows;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace SpaceTraveler.Scripts.Managers
 {
@@ -19,95 +19,75 @@ namespace SpaceTraveler.Scripts.Managers
 
         [Header("Main Settings")]
         [SerializeField] private VisualizerSkinShop _visualizerSkinShop;
-        [SerializeField] private TextMeshProUGUI _skinNameText;
-        [SerializeField] private TextMeshProUGUI _speedStat;
-        [SerializeField] private TextMeshProUGUI _healthStat;
-        [SerializeField] private TextMeshProUGUI _priceStat;
-
-        [Header("Text")]
-        [SerializeField] private string _statSpeedText;
-        [SerializeField] private string _statHealthText;
-        [SerializeField] private string _priceText;
-
-        [Header("Buttons")]
-        [SerializeField] private Button _rightButton;
-        [SerializeField] private Button _leftButton;
-        [SerializeField] private Button _byeButton;
-        [SerializeField] private Button _selectButton;
+        [SerializeField] private ShopWindow _shopWindow;
 
         private Skin _currentSkin;
         private DataShipConfig _currentShip;
         private int _index;
-
-        // public void Activate()
-        // {
-        //     GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
-        //
-        //     _currentShip = _config.PlayerData.ShipData;
-        //     _currentSkin = _config.PlayerData.CurrentSkinShip;
-        //
-        //     UpdateInformation();
-        //
-        //     _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _currentSkin.ColorName);
-        //
-        //     _rightButton.onClick.AddListener(SwitchRight);
-        //     _leftButton.onClick.AddListener(SwitchLeft);
-        //
-        //     _index = 0;
-        // }
+        private GameSaveData _data;
 
         private void OnEnable()
         {
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
 
-            _currentShip = _config.PlayerConfig.DefaultDataShip;
-            _currentSkin = _config.PlayerConfig.DefaultSkinShip;
-
-            _rightButton.onClick.AddListener(SwitchRight);
-            _leftButton.onClick.AddListener(SwitchLeft);
-            _byeButton.onClick.AddListener(ByeSkin);
-            _selectButton.onClick.AddListener(SelectSkin);
-
-            UpdateInformation();
-
-            _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _currentSkin.ColorName);
-            SwitchButtons(false, true);
-            
+            _data = _saveManager.Load();
+            _currentShip = _data.PlayerData.CurrentShip;
+            _currentSkin = _data.PlayerData.CurrentColorShip;
             _index = 0;
+            _shopWindow.UpdateInformation(_currentShip, _data);
+            _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _currentSkin.ColorName);
+            _shopWindow.ActivationPopup(false);
+
+            if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+                if (_data.PlayerData.CurrentShip == _currentShip)
+                    _shopWindow.SwitchButtons(false, false);
+                else
+                    _shopWindow.SwitchButtons(false, true);
+
+            foreach (DataShipConfig key in _config.ShipConfigs.Keys)
+            {
+                if (key != _currentShip)
+                    _index++;
+                else
+                    break;
+            }
         }
 
-        private void OnDisable()
-        {
-            _rightButton.onClick.RemoveListener(SwitchRight);
-            _leftButton.onClick.RemoveListener(SwitchLeft);
-            _byeButton.onClick.RemoveListener(ByeSkin);
-            _selectButton.onClick.RemoveListener(SelectSkin);
-        }
-
-        public void ChangeSkin(string colorSkin)
+        public void ChangeColorSkin(string colorSkin)
         {
             _visualizerSkinShop.VisualizeSkin(_currentShip.Name, colorSkin);
+            _saveManager.SaveColorShip(_currentShip, colorSkin);
         }
 
-        private void UpdateInformation()
+        public void ByeAndSelectShip(bool isNewShip)
         {
-            _skinNameText.text = _currentShip.Name;
-            _speedStat.text = $"{_statSpeedText}{_currentShip.Speed.ToString()}";
-            _healthStat.text = $"{_statHealthText}{_currentShip.MaxHealth.ToString()}";
-            _priceStat.text = $"{_priceText}{_currentShip.Price.ToString()}";
+            if (isNewShip)
+            {
+                if (_data.PlayerData.PlayerStarScore >= _currentShip.Price)
+                {
+                    if (!_data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+                    {
+                        _data.PlayerData.PlayerStarScore -= _currentShip.Price;
+                        _saveManager.Save(_currentShip, true);
+                        _shopWindow.SwitchButtons(false, false);
+                        _shopWindow.UpdateInformation(_currentShip, _data);
+                    }
+                }
+                else
+                {
+                    _shopWindow.ActivationPopup(true);
+                }
+            }
+            else
+            {
+                if (_data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+                {
+                    _saveManager.Save(_currentShip, false);
+                }
+            }
         }
 
-        private void ByeSkin()
-        {
-            
-        }
-
-        private void SelectSkin()
-        {
-            
-        }
-        
-        private void SwitchRight()
+        public void SwitchRight()
         {
             _index++;
 
@@ -117,18 +97,10 @@ namespace SpaceTraveler.Scripts.Managers
                 return;
             }
 
-            _currentShip = _config.ShipConfigs.Keys[_index];
-            
-            if (_currentShip != null && _currentShip.IsBuy)
-                SwitchButtons(false, true);
-            else
-                SwitchButtons(true, false);
-
-            UpdateInformation();
-            _visualizerSkinShop.VisualizeSkin(_currentShip.Name);
+            Switch();
         }
 
-        private void SwitchLeft()
+        public void SwitchLeft()
         {
             _index--;
 
@@ -138,21 +110,31 @@ namespace SpaceTraveler.Scripts.Managers
                 return;
             }
 
-            _currentShip = _config.ShipConfigs.Keys[_index];
-            
-            if (_currentShip != null && _currentShip.IsBuy)
-                SwitchButtons(false, true);
-            else
-                SwitchButtons(true, false);
-            
-            UpdateInformation();
-            _visualizerSkinShop.VisualizeSkin(_currentShip.Name);
+            Switch();
         }
         
-        private void SwitchButtons(bool isBye, bool isSelect)
+        private void Switch()
         {
-            _byeButton.gameObject.SetActive(isBye);
-            _selectButton.gameObject.SetActive(isSelect);
+            _currentShip = _config.ShipConfigs.Keys[_index];
+
+            if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+            {
+                if (_data.PlayerData.CurrentShip == _currentShip)
+                    _shopWindow.SwitchButtons(false, false);
+                else
+                    _shopWindow.SwitchButtons(false, true);
+            }
+            else
+            {
+                _shopWindow.SwitchButtons(true, false);
+            }
+
+            _shopWindow.UpdateInformation(_currentShip, _data);
+
+            if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+                _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _data.PlayerData.CurrentColorShip.ColorName);
+            else
+                _visualizerSkinShop.VisualizeSkin(_currentShip.Name);
         }
     }
 }

@@ -1,10 +1,10 @@
-using System;
 using Reflex.Attributes;
 using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
 using SpaceTraveler.Scripts.Configs.Skins;
 using SpaceTraveler.Scripts.Save;
+using SpaceTraveler.Scripts.Skins;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,33 +31,120 @@ namespace SpaceTraveler.Scripts.Managers
 
         private GameSaveData _gameSaveData;
 
+        public GameSaveData GameSaveData => _gameSaveData;
+
         private void Start()
         {
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
 
-            _gameSaveData ??= new GameSaveData
-            {
-                PlayerData = new PlayerData
-                {
-                    PlayerName = "Player",
-                    PlayerScore = 0,
-                    PlayerStarScore = 0,
-                    CurrentShip = _gameConfig.PlayerConfig.DefaultDataShip,
-                    UnlockedPlayerShips = new System.Collections.Generic.List<DataShipConfig>
-                    {
-                        _gameConfig.PlayerConfig.DefaultDataShip
-                    }
-                },
+            _gameSaveData = Load();
 
-                LevelsData = new LevelsData
+            Debug.LogError($"_gameSaveData - {_gameSaveData != null}");
+
+            if (_gameSaveData == null)
+            {
+                _gameSaveData = new GameSaveData
                 {
-                    UnlockedLevels = new System.Collections.Generic.List<LevelsConfig.LevelData>
-                        { _gameConfig.Levels.Levels[0] }
-                }
-            };
+                    PlayerData = new PlayerData
+                    {
+                        PlayerName = _gameConfig.PlayerConfig.PlayerName,
+                        PlayerScore = _gameConfig.PlayerConfig.CrystalsScore,
+                        PlayerStarScore = _gameConfig.PlayerConfig.StarScore,
+                        CurrentShip = _gameConfig.PlayerConfig.DefaultDataShip,
+                        CurrentColorShip = _gameConfig.PlayerConfig.DefaultSkinShip,
+                        UnlockedPlayerShips = new System.Collections.Generic.List<DataShipConfig>
+                        {
+                            _gameConfig.PlayerConfig.DefaultDataShip
+                        }
+                    },
+
+                    LevelsData = new LevelsData
+                    {
+                        UnlockedLevels = new System.Collections.Generic.List<LevelsConfig.LevelData>
+                            { _gameConfig.Levels.Levels[0] }
+                    }
+                };
+            }
+
+            Save();
         }
 
-        public void Save()
+        public void ChangePlayerName(string name)
+        {
+            _gameSaveData.PlayerData.PlayerName = name;
+            Save();
+        }
+
+        public void AddSkinPurchase(DataShipConfig skin)
+        {
+            if (!_gameSaveData.PlayerData.UnlockedPlayerShips.Contains(skin))
+            {
+                _gameSaveData.PlayerData.UnlockedPlayerShips.Add(skin);
+                Save();
+            }
+        }
+
+        public void AddStar(int stars)
+        {
+            _gameSaveData.PlayerData.PlayerStarScore += stars;
+            Save();
+        }
+
+        public void SavePlayerScore(int score)
+        {
+            _gameSaveData.PlayerData.PlayerScore = score;
+        }
+
+        public void AddUnlockLevel(LevelsConfig.LevelData levelData)
+        {
+            if (!_gameSaveData.LevelsData.UnlockedLevels.Contains(levelData))
+                _gameSaveData.LevelsData.UnlockedLevels.Add(levelData);
+            else
+                Debug.LogError($"Exception: An already opened level has been added");
+        }
+
+        public void SaveColorShip(DataShipConfig shipConfig, string colorShip)
+        {
+            if (_gameSaveData.PlayerData.CurrentShip != shipConfig)
+                _gameSaveData.PlayerData.CurrentShip = shipConfig;
+
+            foreach (Skin skin in _gameSaveData.PlayerData.CurrentShip.ShipColors)
+            {
+                if (skin.ColorName == colorShip)
+                {
+                    _gameSaveData.PlayerData.CurrentColorShip = skin;
+                    break;
+                }
+            }
+
+            Save();
+        }
+
+        public void Save(DataShipConfig shipConfig, bool isNewShip)
+        {
+            if (isNewShip)
+            {
+                _gameSaveData.PlayerData.UnlockedPlayerShips.Add(shipConfig);
+            }
+
+            _gameSaveData.PlayerData.CurrentShip = shipConfig;
+            Save();
+        }
+
+        public GameSaveData Load()
+        {
+            if (PlayerPrefs.HasKey(Constants.GameSave.PP_Key))
+            {
+                //string json = LocalStorage.GetKey(Constants.GameSave.YG_Key);
+                string json = PlayerPrefs.GetString(Constants.GameSave.PP_Key);
+                _gameSaveData = JsonUtility.FromJson<GameSaveData>(json);
+                return _gameSaveData;
+            }
+
+            return null;
+        }
+
+        private void Save()
         {
             // var saveData = saveService.GetCurrentSave();
             //
@@ -74,25 +161,8 @@ namespace SpaceTraveler.Scripts.Managers
             // Отправляем в локальное хранилище YG
             //LocalStorage.SetKey(Constants.GameSave.YG_Key, json);
 
-            Debug.Log("YgSaveAdapter: Save data sent to YG SDK");
-        }
-
-        public void Save(GameSaveData saveData)
-        {
-            _gameSaveData = saveData;
-            Save();
-        }
-
-        public GameSaveData Load()
-        {
-            if (PlayerPrefs.HasKey(Constants.GameSave.PP_Key))
-            {
-                //string json = LocalStorage.GetKey(Constants.GameSave.YG_Key);
-                string json = PlayerPrefs.GetString(Constants.GameSave.PP_Key);
-                _gameSaveData = JsonUtility.FromJson<GameSaveData>(json);
-            }
-
-            return _gameSaveData;
+            //Debug.Log("YgSaveAdapter: Save data sent to YG SDK");
+            Debug.Log("Save data to PlayerPrefs");
         }
 
 #if UNITY_EDITOR
@@ -115,21 +185,6 @@ namespace SpaceTraveler.Scripts.Managers
                 _gameSaveData.LevelsData.UnlockedLevels.Add(level);
                 Save();
             }
-        }
-
-        public void AddSkinPurchase(DataShipConfig skin)
-        {
-            if (!_gameSaveData.PlayerData.UnlockedPlayerShips.Contains(skin))
-            {
-                _gameSaveData.PlayerData.UnlockedPlayerShips.Add(skin);
-                Save();
-            }
-        }
-
-        public void AddStar(int stars)
-        {
-            _gameSaveData.PlayerData.PlayerStarScore += stars;
-            Save();
         }
     }
 }
