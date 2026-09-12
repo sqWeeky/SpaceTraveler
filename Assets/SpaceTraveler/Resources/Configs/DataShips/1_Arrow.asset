@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: 1_Arrow
   m_EditorClassIdentifier: 
   _name: Arrow
-  _materials:
-  - {fileID: -7546383319358111027, guid: c484e9ee88e6f4942ad5c8a0461c6493, type: 3}
-  - {fileID: -2886988258320490526, guid: edf23adcd828e9045a3f60167c62f2f3, type: 3}
-  - {fileID: -4124507453676172544, guid: 3d9ce70bd167b71469f5ab332d2c2f26, type: 3}
-  - {fileID: 8282330399409749230, guid: a086ec1eb3b77a842acf8337b9e73d0e, type: 3}
+  _colorsShip:
   - {fileID: -4609177390025678158, guid: 713bd277a73233041b5a74db3c82aca0, type: 3}
+  - {fileID: -7546383319358111027, guid: c484e9ee88e6f4942ad5c8a0461c6493, type: 3}
+  - {fileID: -4124507453676172544, guid: 3d9ce70bd167b71469f5ab332d2c2f26, type: 3}
+  - {fileID: -2886988258320490526, guid: edf23adcd828e9045a3f60167c62f2f3, type: 3}
+  - {fileID: 8282330399409749230, guid: a086ec1eb3b77a842acf8337b9e73d0e, type: 3}
   _speed: 5
   _maxHealth: 3
+  _price: 0
   _isBuy: 1

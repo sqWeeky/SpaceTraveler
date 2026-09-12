@@ -1,13 +1,16 @@
+using Reflex.Attributes;
+using SpaceTraveler.Scripts.Managers;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace SpaceTraveler.Scripts.Infrastructure
 {
     public class InitialSceneInstaller : MonoBehaviour
     {
+        [Inject] private LevelManager _levelManager;
+
         private void Start()
         {
-            SceneManager.LoadSceneAsync("MainMenu");
+            _levelManager.LoadMainMenu();
         }
     }
 }

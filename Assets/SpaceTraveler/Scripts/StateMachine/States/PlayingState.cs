@@ -10,16 +10,16 @@ namespace SpaceTraveler.Scripts.StateMachine.States
 
         public override void Enter()
         {
-             UIManager.CloseAllWindows();
-            _playingWindow = (PlayingWindow)UIManager.OpenWindow<PlayingWindow>();
+            Debug.Log("Entered Playing State");
+
+            UIManager.CloseAllWindows();
+            _playingWindow = UIManager.OpenWindow<PlayingWindow>();
             //AudioManager.PlayMusic(AudioType.GameplayMusic);
 
             // Player.OnPlayerDied += OnPlayerDied;
             // Player.OnLevelComplete += OnLevelComplete;
 
             _gameTime = 0f;
-            
-            Debug.Log("Entered Playing State");
         }
 
         public override void Update()
@@ -37,9 +37,9 @@ namespace SpaceTraveler.Scripts.StateMachine.States
         public override void Exit()
         {
             UIManager.CloseWindow<PlayingWindow>();
-            // Container.Resolve<InputManager>().DisableGameplayInput();
-             // Player.OnPlayerDied -= OnPlayerDied;
-             // Player.OnLevelComplete -= OnLevelComplete;
+
+            // Player.OnPlayerDied -= OnPlayerDied;
+            // Player.OnLevelComplete -= OnLevelComplete;
 
             Debug.Log("Exited Playing State");
         }

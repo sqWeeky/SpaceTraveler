@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4835dda8a5e9463388573577e7666ffa, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _playerData: {fileID: 11400000, guid: 23376b6f1bb3ef141ae830d9920106c3, type: 2}
+  _playerConfig: {fileID: 11400000, guid: 23376b6f1bb3ef141ae830d9920106c3, type: 2}
   _levels: {fileID: 11400000, guid: f5b70cef7e8537049891e5c59003b4da, type: 2}
   _shipConfigs:
     items:

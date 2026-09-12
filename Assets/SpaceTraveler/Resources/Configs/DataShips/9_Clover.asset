@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 9_Clover
   m_EditorClassIdentifier: 
   _name: Clover
-  _materials:
-  - {fileID: 4085490192853984625, guid: 3c74431e6d08b7243827e4b9d320fa7e, type: 3}
+  _colorsShip:
+  - {fileID: 5314973375951706068, guid: 8123007ec7af9a341b1beb86b7dea76a, type: 3}
+  - {fileID: -3253413461432377832, guid: 745a77cdc3b71b24cbf3595622c5d198, type: 3}
   - {fileID: 5280829828391378333, guid: e215d4550353d0948be4d3f890efed0e, type: 3}
   - {fileID: -7488440432604987375, guid: 3376ecc940ab6e548a76a56a5b6c48ce, type: 3}
-  - {fileID: -3253413461432377832, guid: 745a77cdc3b71b24cbf3595622c5d198, type: 3}
-  - {fileID: 5314973375951706068, guid: 8123007ec7af9a341b1beb86b7dea76a, type: 3}
+  - {fileID: 4085490192853984625, guid: 3c74431e6d08b7243827e4b9d320fa7e, type: 3}
   _speed: 6
   _maxHealth: 3
   _price: 5

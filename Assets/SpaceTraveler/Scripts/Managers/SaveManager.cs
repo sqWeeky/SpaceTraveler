@@ -39,7 +39,7 @@ namespace SpaceTraveler.Scripts.Managers
 
             _gameSaveData = Load();
 
-            Debug.LogError($"_gameSaveData - {_gameSaveData != null}");
+            Debug.Log($"_gameSaveData - {_gameSaveData != null}");
 
             if (_gameSaveData == null)
             {

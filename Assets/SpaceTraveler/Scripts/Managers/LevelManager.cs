@@ -2,6 +2,8 @@ using Reflex.Attributes;
 using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
+using SpaceTraveler.Scripts.StateMachine;
+using SpaceTraveler.Scripts.StateMachine.States;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +12,7 @@ namespace SpaceTraveler.Scripts.Managers
     public class LevelManager : BaseManager<LevelManager>
     {
         [Inject] private LevelsConfig _levelConfig;
-        
+
         private string _currentLevelId;
         private string _nextLevelId;
 
@@ -19,20 +21,18 @@ namespace SpaceTraveler.Scripts.Managers
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
         }
 
-        // public void Init(LevelsConfig config)
-        // {
-        //     _levelConfig = config;
-        // }
-
         public void LoadLevel(string levelId)
         {
             _nextLevelId = levelId;
+            SceneManager.LoadSceneAsync(GetSceneToLoad()); //TODO: сделать через LoadingState
+            Debug.LogError($"_nextLevelId - {_nextLevelId}");
         }
-        
+
         public void LoadMainMenu()
         {
             _nextLevelId = null;
             _currentLevelId = null;
+            SceneManager.LoadSceneAsync("MainMenu");
             Debug.Log("LevelManager: Loading main menu");
         }
 
@@ -41,7 +41,7 @@ namespace SpaceTraveler.Scripts.Managers
             if (!string.IsNullOrEmpty(_nextLevelId))
             {
                 var levelData = GetLevelData(_nextLevelId);
-                
+
                 if (levelData != null)
                 {
                     _currentLevelId = _nextLevelId;

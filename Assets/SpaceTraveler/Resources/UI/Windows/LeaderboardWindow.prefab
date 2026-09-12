@@ -1700,10 +1700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8127660942694949953}
     m_Modifications:
-    - target: {fileID: 2101825423196015418, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
-      propertyPath: m_text
-      value: Back
-      objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1788,9 +1788,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Back
       objectReference: {fileID: 0}
-    - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
-      propertyPath: m_Transition
-      value: 0
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1798,11 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 8222326136608290525}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBack
-      objectReference: {fileID: 0}
-    - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LeaderboardWindow, Assembly-CSharp
+      value: CloseWindow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

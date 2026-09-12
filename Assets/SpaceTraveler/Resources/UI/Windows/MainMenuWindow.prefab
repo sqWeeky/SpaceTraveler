@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -521,6 +525,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: bt_Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -547,6 +559,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974019184981439798}
     m_Modifications:
+    - target: {fileID: 2101825423196015418, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_text
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -631,10 +651,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: bt_Start
       objectReference: {fileID: 0}
+    - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3454370759968712823}
+    - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpaceTraveler.Scripts.Windows.MainMenuWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -665,6 +701,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -749,6 +789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: bt_Leaderboard
       objectReference: {fileID: 0}
+    - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -779,6 +827,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -875,6 +927,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: bt_Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -909,6 +969,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1957500794, guid: 156ec492e516ccb4099add479601d65e, type: 3}
     - target: {fileID: 3931997172447875688, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -992,6 +1056,14 @@ PrefabInstance:
     - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Name
       value: bt_Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258100009448610927, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

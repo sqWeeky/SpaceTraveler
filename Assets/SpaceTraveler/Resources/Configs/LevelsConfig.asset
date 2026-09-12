@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: LevelsConfig
   m_EditorClassIdentifier: 
   Levels:
-  - LevelId: TestLevel
-    SceneName: TestLevel
+  - LevelId: Level 1
+    SceneName: Level 1
     IsLocked: 0
     RequiredStars: 1
-  - LevelId: Level_1
-    SceneName: Level_1
+  - LevelId: Level 2
+    SceneName: Level 2
     IsLocked: 1
     RequiredStars: 1

@@ -22,7 +22,7 @@ namespace SpaceTraveler.Scripts.UI
 
             var newShip = _parentSkinsColor[nameSkin];
             _newColorShip = newShip.transform.Find(colorSkin);
-
+            
             if (_newColorShip != null)
                 _newColorShip.gameObject.SetActive(true);
         }

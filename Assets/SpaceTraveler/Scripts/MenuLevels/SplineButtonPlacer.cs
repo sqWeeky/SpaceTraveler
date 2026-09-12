@@ -1,7 +1,9 @@
-using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using Reflex.Extensions;
+using Reflex.Injectors;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Splines;
 
 namespace SpaceTraveler.Scripts.MenuLevels
@@ -15,7 +17,7 @@ namespace SpaceTraveler.Scripts.MenuLevels
         [Space]
         [SerializeField] private int _buttonsCount = 20;
         [SerializeField] private bool _placeOnAllKnots = true;
-        
+
         [Space]
         [SerializeField] private bool _initialized = false;
         [SerializeField] private List<Transform> _buttons;
@@ -74,16 +76,8 @@ namespace SpaceTraveler.Scripts.MenuLevels
             button.name = $"Level {index + 1}";
             LevelButton levelButton = button.GetComponent<LevelButton>();
             levelButton.Init(button.name);
+            AttributeInjector.Inject(levelButton, SceneManager.GetActiveScene().GetSceneContainer());
             _buttons.Add(levelButton.gameObject.transform);
-
-            // if (UnityEngine.Camera.main != null)
-            // {
-            //     Vector2 screenPoint = UnityEngine.Camera.main.WorldToScreenPoint(worldPosition);
-            //     RectTransform rectTransform = button.GetComponent<RectTransform>();
-            //
-            //     if (rectTransform != null)
-            //         rectTransform.position = screenPoint;
-            // }
         }
     }
 }
