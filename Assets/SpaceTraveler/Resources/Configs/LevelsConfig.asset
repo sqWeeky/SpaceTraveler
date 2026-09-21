@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Levels:
   - LevelId: Level 1
-    SceneName: Level 1
+    SceneName: {fileID: 102900000, guid: 0eb41fb5bc5e72d4cbf8f112021604f9, type: 3}
     IsLocked: 0
     RequiredStars: 1
   - LevelId: Level 2
-    SceneName: Level 2
+    SceneName: {fileID: 102900000, guid: 8ba81850d8603ef4091e2236c1643c52, type: 3}
     IsLocked: 1
     RequiredStars: 1
