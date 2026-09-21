@@ -10,7 +10,7 @@ namespace SpaceTraveler.Scripts.Infrastructure
 
         private void Start()
         {
-            _levelManager.LoadMainMenu();
+            _ = _levelManager.Load(Constants.Levels.MainMenuID);
         }
     }
 }

@@ -7,13 +7,13 @@ namespace SpaceTraveler.Scripts.StateMachine.States
     {
         public override void Enter()
         {
+            Time.timeScale = 1f;
             Debug.Log("Entered Menu State");
             
             UIManager.CloseAllWindows();
             UIManager.OpenWindow<MainMenuWindow>();
 
             //AudioManager.PlayMusic(AudioType.MenuMusic);
-
         }
         
         public override void Exit()

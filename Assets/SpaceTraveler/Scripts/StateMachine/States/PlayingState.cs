@@ -10,6 +10,7 @@ namespace SpaceTraveler.Scripts.StateMachine.States
 
         public override void Enter()
         {
+            Time.timeScale = 1f;
             Debug.Log("Entered Playing State");
 
             UIManager.CloseAllWindows();

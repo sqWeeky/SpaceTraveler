@@ -1,6 +1,6 @@
 namespace SpaceTraveler.Scripts.StateMachine.States
 {
-    public interface IGameState 
+    public interface IGameState
     {
         void Enter();
         void Update();

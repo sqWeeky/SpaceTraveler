@@ -26,7 +26,8 @@ namespace SpaceTraveler.Scripts.Windows
 
         public void LoadLevel()
         {
-            LevelManager.LoadLevel(_levelName); // Загружаем конкретный уровень
+            Debug.Log($"LevelPopup: {_levelName}");
+            _ = LevelManager.Load(_levelName); // Загружаем конкретный уровень
             //GameStateMachine.ChangeState<LoadingState>();
         }
 
