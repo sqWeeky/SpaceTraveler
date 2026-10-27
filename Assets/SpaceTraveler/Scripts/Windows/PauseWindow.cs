@@ -1,25 +1,24 @@
 using SpaceTraveler.Scripts.StateMachine.States;
+using UnityEngine;
 
 namespace SpaceTraveler.Scripts.Windows
 {
     public class PauseWindow : BaseWindow
     {
-        public void OnClose()
+        public void Continue()
         {
-            UIManager.CloseWindow<PauseWindow>();
             GameStateMachine.ChangeState<PlayingState>();
         }
 
-        public void OnOpenSettingWindow()
+        public void OpenSettingWindow()
         {
-            //UIManager.CloseWindow<PauseWindow>();
             UIManager.OpenWindow<SettingWindow>();
         }
 
-        public void OnOpenMainMenu()
+        public void OpenMainMenu()
         {
-            LevelManager.LoadMainMenu();
-            GameStateMachine.ChangeState<LoadingState>();
+            GameStateMachine.ExitState<PausedState>();
+            _ = LevelManager.Load(Constants.Levels.MainMenuID);
         }
     }
 }

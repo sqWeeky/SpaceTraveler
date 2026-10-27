@@ -1,7 +1,11 @@
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Reflex.Attributes;
 using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
+using SpaceTraveler.Scripts.Data;
+using SpaceTraveler.Scripts.Windows;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +14,7 @@ namespace SpaceTraveler.Scripts.Managers
     public class LevelManager : BaseManager<LevelManager>
     {
         [Inject] private LevelsConfig _levelConfig;
+        [Inject] private UIManager _uiManager;
         
         private string _currentLevelId;
         private string _nextLevelId;
@@ -19,21 +24,25 @@ namespace SpaceTraveler.Scripts.Managers
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
         }
 
-        // public void Init(LevelsConfig config)
-        // {
-        //     _levelConfig = config;
-        // }
-
-        public void LoadLevel(string levelId)
+        public async Task Load(string levelId)
         {
             _nextLevelId = levelId;
-        }
-        
-        public void LoadMainMenu()
-        {
-            _nextLevelId = null;
-            _currentLevelId = null;
-            Debug.Log("LevelManager: Loading main menu");
+            //SceneManager.LoadSceneAsync(GetSceneToLoad()); //TODO: сделать через LoadingState
+            AsyncOperation loadOperation = SceneManager.LoadSceneAsync(GetSceneToLoad());
+                
+            if (loadOperation != null)
+            {
+                _uiManager.CloseAllWindows();
+                _uiManager.OpenWindow<LoadingWindow>();
+                
+                loadOperation.allowSceneActivation = false;
+                await UniTask.Delay(1200);
+                loadOperation.allowSceneActivation = true;
+                _uiManager.CloseWindow<LoadingWindow>();
+                await UniTask.WaitUntil(() => loadOperation.isDone);
+
+                Debug.Log($"LevelManager: Scene {GetSceneToLoad()} loaded successfully");
+            }
         }
 
         public string GetSceneToLoad()
@@ -41,20 +50,19 @@ namespace SpaceTraveler.Scripts.Managers
             if (!string.IsNullOrEmpty(_nextLevelId))
             {
                 var levelData = GetLevelData(_nextLevelId);
-                
+
                 if (levelData != null)
                 {
                     _currentLevelId = _nextLevelId;
                     _nextLevelId = null;
-                    return levelData.SceneName;
+                    return levelData.SceneName.name;
                 }
             }
 
-            // Если нет следующего уровня, возвращаем главное меню
-            return "MainMenu";
+            return Constants.Levels.MainMenuID;
         }
 
-        public LevelsConfig.LevelData GetLevelData(string levelId)
+        private LevelData GetLevelData(string levelId)
         {
             foreach (var level in _levelConfig.Levels)
             {
@@ -65,7 +73,7 @@ namespace SpaceTraveler.Scripts.Managers
             return null;
         }
 
-        public LevelsConfig.LevelData GetCurrentLevelData()
+        public LevelData GetCurrentLevelData()
         {
             return GetLevelData(_currentLevelId);
         }

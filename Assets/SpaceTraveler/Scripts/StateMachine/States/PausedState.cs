@@ -9,9 +9,8 @@ namespace SpaceTraveler.Scripts.StateMachine.States
         {
             Time.timeScale = 0f;
             UIManager.OpenWindow<PauseWindow>();
-            AudioManager.PauseGameplayMusic();
-            // Container.Resolve<GameConfig>().TriggerGamePause();
-
+            //AudioManager.PauseGameplayMusic();
+           
             Debug.Log("Entered Paused State");
         }
 
@@ -32,7 +31,7 @@ namespace SpaceTraveler.Scripts.StateMachine.States
         {
             Time.timeScale = 1f;
             UIManager.CloseWindow<PauseWindow>();
-            AudioManager.ResumeGameplayMusic();
+            //AudioManager.ResumeGameplayMusic();
             // Container.Resolve<GameConfig>().TriggerGameResume();
 
             Debug.Log("Exited Paused State");

@@ -13,7 +13,7 @@ namespace SpaceTraveler.Scripts.Managers
     public class UIManager : BaseManager<UIManager>
     {
         [Inject] private UIManagerConfig _uiConfig;
-        
+
         private List<BaseWindow> _openedWindows;
         private Dictionary<Type, BaseWindow> _cachedWindows;
 
@@ -30,19 +30,19 @@ namespace SpaceTraveler.Scripts.Managers
         {
             GameObjectInjector.InjectSingle(gameObject, SceneManager.GetActiveScene().GetSceneContainer());
             _windows = new List<BaseWindow>();
-            
+
             foreach (BaseWindow window in _uiConfig.BaseWindows)
                 _windows.Add(window);
         }
 
-        public BaseWindow OpenWindow<T>() where T : BaseWindow
+        public T OpenWindow<T>() where T : BaseWindow
         {
             if (_mainCanvas == null)
                 _mainCanvas = GameObject.FindGameObjectWithTag(Constants.GameTags.MainCanvasTag).GetComponent<Canvas>();
 
             DontDestroyOnLoad(_mainCanvas.gameObject);
 
-            BaseWindow window = GetOrCreateWindow<T>();
+            T window = GetOrCreateWindow<T>();
 
             if (window == null) return null;
 
@@ -90,7 +90,7 @@ namespace SpaceTraveler.Scripts.Managers
             _cachedWindows[window.GetType()] = window;
         }
 
-        public BaseWindow GetOrCreateWindow<T>() where T : BaseWindow
+        public T GetOrCreateWindow<T>() where T : BaseWindow
         {
             T window = GetWindowByType<T>();
 
@@ -104,8 +104,6 @@ namespace SpaceTraveler.Scripts.Managers
         {
             Debug.Log($"IUManager create => {typeof(T).Name}");
             GameObject prefab = FindWindowPrefab<T>();
-
-            // GameObject prefab = Resources.Load<GameObject>($"Windows/{typeof(T).Name}");
 
             if (prefab == null)
             {
@@ -121,7 +119,6 @@ namespace SpaceTraveler.Scripts.Managers
                 AttributeInjector.Inject(windowComponent, gameObject.scene.GetSceneContainer());
                 windowComponent.gameObject.SetActive(false);
                 RegisterWindow(windowComponent);
-
             }
 
             return windowComponent;
@@ -146,8 +143,7 @@ namespace SpaceTraveler.Scripts.Managers
             }
 
             BaseWindow newWindow = Instantiate(windowPrefab, _mainCanvas.transform);
-            AttributeInjector.Inject(newWindow,
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetSceneContainer());
+            AttributeInjector.Inject(newWindow, SceneManager.GetActiveScene().GetSceneContainer());
             newWindow.gameObject.SetActive(false);
             _cachedWindows[type] = newWindow;
 

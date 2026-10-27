@@ -1,25 +1,25 @@
-using SpaceTraveler.Scripts.StateMachine.States;
+using SpaceTraveler.Scripts.Camera;
+using SpaceTraveler.Scripts.MenuLevels;
+using UnityEngine;
+
 namespace SpaceTraveler.Scripts.Windows
 {
     public class LevelsMenuWindow : BaseWindow
     {
-        private void OnEnable()
+        [SerializeField] private SplineButtonPlacer _splineButtonPlacer;
+        [SerializeField] private CameraDragHandler _cameraDragHandler;
+        
+        private void Start()
         {
-            if (UIManager == null)
-                return;
-            
-            UIManager.CloseAllWindows();
+            if (!_splineButtonPlacer.Initialized && !_cameraDragHandler.Initialized)
+            {
+                _splineButtonPlacer.Init();
+                _cameraDragHandler.Init(_splineButtonPlacer.LevelButtons);
+            }
         }
 
-        public void OnStartGame(string sceneName)
+        public override void CloseWindow()
         {
-            GameStateMachine.ChangeState<LoadingState>(); // Переходим в состояние загрузки
-            LevelManager.LoadLevel(sceneName); // Загружаем конкретный уровень
-        }
-
-        public void OnBack()
-        {
-            UIManager.OpenWindow<GameModeWindow>();
             UIManager.CloseWindow<LevelsMenuWindow>();
         }
     }

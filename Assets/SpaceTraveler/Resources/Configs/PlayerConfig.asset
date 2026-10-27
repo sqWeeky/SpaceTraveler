@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d63d9946e6cc6540829a438e72b0dba, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  _shipData: {fileID: 11400000, guid: 26f20a823dd264c439b4fbc10ba3e220, type: 2}
-  _currentSkinShip: {fileID: -4609177390025678158, guid: 713bd277a73233041b5a74db3c82aca0, type: 3}
+  _playerName: Player
+  _playerScore: 0
+  _playerStarScore: 15
+  _defaultDataShip: {fileID: 11400000, guid: 26f20a823dd264c439b4fbc10ba3e220, type: 2}
+  _defaultSkinShip: {fileID: -4609177390025678158, guid: 713bd277a73233041b5a74db3c82aca0, type: 3}

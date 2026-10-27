@@ -1,3 +1,5 @@
+using SpaceTraveler.Scripts.Managers;
+
 namespace SpaceTraveler.Scripts.Windows
 {
     public class GameModeWindow : BaseWindow

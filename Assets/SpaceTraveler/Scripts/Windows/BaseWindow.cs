@@ -13,19 +13,20 @@ namespace SpaceTraveler.Scripts.Windows
         protected GameConfig GameConfig { get; private set; }
         protected AudioManager AudioManager { get; private set; }
         protected LevelManager LevelManager { get; private set; }
-
-
+        
         [Inject]
         private void Inject(
             GameStateMachine stateMachine,
             UIManager uiManager,
             GameConfig gameConfig,
-            AudioManager audioManager)
+            AudioManager audioManager,
+            LevelManager levelManager)
         {
             GameStateMachine = stateMachine;
             UIManager = uiManager;
             GameConfig = gameConfig;
             AudioManager = audioManager;
+            LevelManager = levelManager;
 
             Debug.Log("BaseWindow INJECT");
         }

@@ -10,7 +10,7 @@ namespace SpaceTraveler.Scripts.StateMachine.States
         private bool _isLoading;
         private string _sceneToLoad;
 
-       public override void Enter()
+        public override void Enter()
         {
             Debug.Log("Entered Loading State");
             _isLoading = true;
@@ -39,14 +39,16 @@ namespace SpaceTraveler.Scripts.StateMachine.States
 
             if (loadOperation != null)
             {
-                loadOperation.allowSceneActivation = false;
-
-                await UniTask.Delay(1200);
-
-                loadOperation.allowSceneActivation = true;
+                // loadOperation.allowSceneActivation = false;
+                //
+                // await UniTask.Delay(1200);
+                //
+                // loadOperation.allowSceneActivation = true;
                 await UniTask.WaitUntil(() => loadOperation.isDone);
 
                 Debug.Log($"LoadingState: Scene {sceneToLoad} loaded successfully");
+                //DetermineNextState(sceneToLoad);
+                //Exit();
             }
 
             if (_isLoading)

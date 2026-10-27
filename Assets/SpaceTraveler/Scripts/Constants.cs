@@ -2,10 +2,16 @@ namespace SpaceTraveler.Scripts
 {
     public static class Constants
     {
+        public static class Levels
+        {
+            public static string MainMenuID = "MainMenu";
+        }
+        
         public static class GameTags
         {
             public static string MainCanvasTag = "MainCanvas";
             public static string PlayerTag = "Player";
+            public static string ShipPlacement = "Placement";
         }
 
         public static class GameSave
