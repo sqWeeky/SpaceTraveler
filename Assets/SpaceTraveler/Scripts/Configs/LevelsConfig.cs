@@ -1,5 +1,4 @@
-using System;
-using UnityEditor;
+using SpaceTraveler.Scripts.Data;
 using UnityEngine;
 
 namespace SpaceTraveler.Scripts.Configs
@@ -8,15 +7,5 @@ namespace SpaceTraveler.Scripts.Configs
     public class LevelsConfig : ScriptableObject
     {
         public LevelData[] Levels;
-        
-        [Serializable]
-        public class LevelData
-        {
-            public string LevelId;
-            public SceneAsset SceneName;
-            public bool IsLocked;
-            public int RequiredStars;
-            public float BestTime;
-        }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SpaceTraveler.Scripts.Configs;
 using SpaceTraveler.Scripts.Configs.Skins;
+using SpaceTraveler.Scripts.Data;
 using SpaceTraveler.Scripts.Skins;
 
 namespace SpaceTraveler.Scripts.Save
@@ -27,6 +28,6 @@ namespace SpaceTraveler.Scripts.Save
     [Serializable]
     public class LevelsData
     {
-        public List<LevelsConfig.LevelData> UnlockedLevels;
+        public List<LevelData> UnlockedLevels;
     }
 }

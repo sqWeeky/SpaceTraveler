@@ -4,6 +4,7 @@ using Reflex.Attributes;
 using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
+using SpaceTraveler.Scripts.Data;
 using SpaceTraveler.Scripts.Windows;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -61,7 +62,7 @@ namespace SpaceTraveler.Scripts.Managers
             return Constants.Levels.MainMenuID;
         }
 
-        private LevelsConfig.LevelData GetLevelData(string levelId)
+        private LevelData GetLevelData(string levelId)
         {
             foreach (var level in _levelConfig.Levels)
             {
@@ -72,7 +73,7 @@ namespace SpaceTraveler.Scripts.Managers
             return null;
         }
 
-        public LevelsConfig.LevelData GetCurrentLevelData()
+        public LevelData GetCurrentLevelData()
         {
             return GetLevelData(_currentLevelId);
         }

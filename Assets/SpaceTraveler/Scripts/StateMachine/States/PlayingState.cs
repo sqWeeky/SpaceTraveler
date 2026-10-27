@@ -15,17 +15,15 @@ namespace SpaceTraveler.Scripts.StateMachine.States
 
             UIManager.CloseAllWindows();
             _playingWindow = UIManager.OpenWindow<PlayingWindow>();
+            _playingWindow.Timer.StartTimer();
             //AudioManager.PlayMusic(AudioType.GameplayMusic);
 
             // Player.OnPlayerDied += OnPlayerDied;
             // Player.OnLevelComplete += OnLevelComplete;
-
-            _gameTime = 0f;
         }
 
         public override void Update()
         {
-            _gameTime += Time.deltaTime;
             //_playingWindow.UpdateGameTimer(_gameTime);
 
             // Проверка паузы
@@ -37,6 +35,8 @@ namespace SpaceTraveler.Scripts.StateMachine.States
 
         public override void Exit()
         {
+           // _playingWindow.Timer.StopTimer();
+            
             UIManager.CloseWindow<PlayingWindow>();
 
             // Player.OnPlayerDied -= OnPlayerDied;

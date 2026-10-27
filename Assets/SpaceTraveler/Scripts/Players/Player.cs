@@ -5,7 +5,6 @@ using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs.Skins;
 using SpaceTraveler.Scripts.Managers;
 using SpaceTraveler.Scripts.Save;
-using SpaceTraveler.Scripts.Skins;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

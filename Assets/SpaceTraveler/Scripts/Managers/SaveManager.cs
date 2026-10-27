@@ -3,6 +3,7 @@ using Reflex.Extensions;
 using Reflex.Injectors;
 using SpaceTraveler.Scripts.Configs;
 using SpaceTraveler.Scripts.Configs.Skins;
+using SpaceTraveler.Scripts.Data;
 using SpaceTraveler.Scripts.Save;
 using SpaceTraveler.Scripts.Skins;
 using UnityEditor;
@@ -60,7 +61,7 @@ namespace SpaceTraveler.Scripts.Managers
 
                     LevelsData = new LevelsData
                     {
-                        UnlockedLevels = new System.Collections.Generic.List<LevelsConfig.LevelData>
+                        UnlockedLevels = new System.Collections.Generic.List<LevelData>
                             { _gameConfig.Levels.Levels[0] }
                     }
                 };
@@ -90,12 +91,20 @@ namespace SpaceTraveler.Scripts.Managers
             Save();
         }
 
+        public void SavePlayerTime(float time, LevelData levelData)
+        {
+            if (_gameSaveData.LevelsData.UnlockedLevels.Contains(levelData)) 
+                _gameSaveData.LevelsData.UnlockedLevels.Find(l => l == levelData).BestTime = time;
+            
+            Save();
+        }
+
         public void SavePlayerScore(int score)
         {
             _gameSaveData.PlayerData.PlayerScore = score;
         }
 
-        public void AddUnlockLevel(LevelsConfig.LevelData levelData)
+        public void AddUnlockLevel(LevelData levelData)
         {
             if (!_gameSaveData.LevelsData.UnlockedLevels.Contains(levelData))
                 _gameSaveData.LevelsData.UnlockedLevels.Add(levelData);
@@ -178,7 +187,7 @@ namespace SpaceTraveler.Scripts.Managers
             PlayerPrefs.DeleteKey(Constants.GameSave.PP_Key);
         }
 
-        public void AddCompletedLevel(LevelsConfig.LevelData level)
+        public void AddCompletedLevel(LevelData level)
         {
             if (!_gameSaveData.LevelsData.UnlockedLevels.Contains(level))
             {
