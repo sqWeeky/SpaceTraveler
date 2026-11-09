@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 869020046421623301}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBack
+      value: CloseWindow
       objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

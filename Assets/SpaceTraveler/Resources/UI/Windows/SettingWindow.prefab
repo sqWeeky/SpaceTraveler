@@ -978,7 +978,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 900}
+  m_SizeDelta: {x: 800, y: 940}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3016558951956767970
 CanvasRenderer:
@@ -3011,11 +3011,11 @@ PrefabInstance:
       objectReference: {fileID: 3099356924358862305}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnCloseSettingWindow
+      value: CloseWindow
       objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SettingWindow, Assembly-CSharp
+      value: SpaceTraveler.Scripts.Windows.SettingWindow, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

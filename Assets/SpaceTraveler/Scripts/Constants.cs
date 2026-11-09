@@ -11,7 +11,7 @@ namespace SpaceTraveler.Scripts
         {
             public static string MainCanvasTag = "MainCanvas";
             public static string PlayerTag = "Player";
-            public static string ShipPlacement = "Placement";
+            public static string ShipPlacement = "ShipPlacement";
         }
 
         public static class GameSave

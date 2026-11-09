@@ -51,7 +51,12 @@ namespace SpaceTraveler.Scripts.Windows
             _popupUnbye.gameObject.SetActive(isActive);
         }
 
-        public void OnCloseShopWindow() =>
+        public override void CloseWindow()
+        {
+            UIManager.OpenWindow<MainMenuWindow>();
             UIManager.CloseWindow<ShopWindow>();
+        }
+        
+        
     }
 }

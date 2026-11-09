@@ -563,7 +563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2101825423196015418, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_text
-      value: Continue
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 3581674171314275045, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Sprite
@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_Name
-      value: Button_Continue
+      value: Button_RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 5909209169674570811, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_IsActive

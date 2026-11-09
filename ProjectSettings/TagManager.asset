@@ -6,7 +6,7 @@ TagManager:
   tags:
   - MainCanvas
   - Map
-  - ShipsPlacement
+  - ShipPlacement
   layers:
   - Default
   - TransparentFX
@@ -38,7 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - ShopPreview
   - 
   m_SortingLayers:
   - name: Default

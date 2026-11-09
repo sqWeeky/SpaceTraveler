@@ -20,6 +20,7 @@ namespace SpaceTraveler.Scripts.Windows
 
         public override void CloseWindow()
         {
+            UIManager.OpenWindow<MainMenuWindow>();
             UIManager.CloseWindow<LevelsMenuWindow>();
         }
     }

@@ -4,13 +4,21 @@ namespace SpaceTraveler.Scripts.Windows
 {
     public class GameModeWindow : BaseWindow
     {
-        public void OnOpenLevelsWindow() => UIManager.OpenWindow<LevelsMenuWindow>();
+        public void OnOpenLevelsWindow()
+        {
+            UIManager.OpenWindow<LevelsMenuWindow>();
+            UIManager.CloseWindow<GameModeWindow>();
+        }
 
         public void OnOpenEndlessGame()
         {
         
         }
     
-        public void OnBack() => UIManager.CloseWindow<GameModeWindow>();
+        public override void CloseWindow()
+        {
+            UIManager.OpenWindow<MainMenuWindow>();
+            UIManager.CloseWindow<GameModeWindow>();
+        }
     }
 }

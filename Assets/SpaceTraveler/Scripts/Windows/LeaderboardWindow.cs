@@ -2,6 +2,10 @@ namespace SpaceTraveler.Scripts.Windows
 {
     public class LeaderboardWindow : BaseWindow
     {
-        public override void CloseWindow() => UIManager.CloseWindow<LeaderboardWindow>();
+        public override void CloseWindow()
+        {
+            UIManager.OpenWindow<MainMenuWindow>();
+            UIManager.CloseWindow<LeaderboardWindow>();
+        }
     }
 }

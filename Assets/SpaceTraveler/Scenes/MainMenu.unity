@@ -507,8 +507,12 @@ PrefabInstance:
       value: Placement
       objectReference: {fileID: 0}
     - target: {fileID: 8983502603168573657, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983502603168573657, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
       propertyPath: m_TagString
-      value: ShipsPlacement
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -731,7 +735,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3221225471
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

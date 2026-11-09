@@ -4148,6 +4148,11 @@ MonoBehaviour:
       value: {fileID: 8279239410611239523}
     - key: White Shark
       value: {fileID: 4132739334438204838}
+  _shipPlacement: {fileID: 5250095513295702781}
+  _textureSize: 1000
+  _framePadding: 1.0434783
+  _previewCenter: {x: 0.5, y: 0.6}
+  _previewSize: {x: 0.8, y: 0.65}
 --- !u!1001 &1408293742612239811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5610,6 +5615,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4481749591111180723, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4492760066953643235, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -6927,6 +6936,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 949615824091289474, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
   m_PrefabInstance: {fileID: 3780708153192358436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5250095513295702781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8983502603168573657, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
+  m_PrefabInstance: {fileID: 3780708153192358436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6111872302310061038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6964391805941535178, guid: ab77c59abb078674aabdde67da2c21dc, type: 3}
@@ -7201,7 +7215,7 @@ PrefabInstance:
       objectReference: {fileID: 1397327167276132632}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnCloseShopWindow
+      value: CloseWindow
       objectReference: {fileID: 0}
     - target: {fileID: 9171596029176541512, guid: 36dea59a0a6a9f64c8d4a790196d73d6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

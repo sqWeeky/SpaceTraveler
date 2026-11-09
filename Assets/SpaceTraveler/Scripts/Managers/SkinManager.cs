@@ -34,8 +34,8 @@ namespace SpaceTraveler.Scripts.Managers
             _currentShip = _data.PlayerData.CurrentShip;
             _currentSkin = _data.PlayerData.CurrentColorShip;
             _index = 0;
-            _shopWindow.UpdateInformation(_currentShip, _data);
             _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _currentSkin.ColorName);
+            _shopWindow.UpdateInformation(_currentShip, _data);
             _shopWindow.ActivationPopup(false);
 
             if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
