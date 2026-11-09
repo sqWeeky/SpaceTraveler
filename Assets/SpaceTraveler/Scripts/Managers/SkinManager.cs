@@ -56,7 +56,8 @@ namespace SpaceTraveler.Scripts.Managers
         public void ChangeColorSkin(string colorSkin)
         {
             _visualizerSkinShop.VisualizeSkin(_currentShip.Name, colorSkin);
-            _saveManager.SaveColorShip(_currentShip, colorSkin);
+            Debug.Log($"Skin {_currentShip.Name} changed to {colorSkin}");
+            _saveManager.SaveColorShip(_data.PlayerData.CurrentShip, colorSkin);
         }
 
         public void ByeAndSelectShip(bool isNewShip)
@@ -130,11 +131,12 @@ namespace SpaceTraveler.Scripts.Managers
             }
 
             _shopWindow.UpdateInformation(_currentShip, _data);
-
-            if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
-                _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _data.PlayerData.CurrentColorShip.ColorName);
-            else
-                _visualizerSkinShop.VisualizeSkin(_currentShip.Name);
+            _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _data.PlayerData.CurrentColorShip.ColorName);
+            
+            // if (_currentShip != null && _data.PlayerData.UnlockedPlayerShips.Contains(_currentShip))
+            //     _visualizerSkinShop.VisualizeSkin(_currentShip.Name, _data.PlayerData.CurrentColorShip.ColorName);
+            // else
+            //     _visualizerSkinShop.VisualizeSkin(_currentShip.Name);
         }
     }
 }

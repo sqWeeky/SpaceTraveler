@@ -1,3 +1,4 @@
+using System.Linq;
 using Reflex.Attributes;
 using Reflex.Extensions;
 using Reflex.Injectors;
@@ -117,13 +118,10 @@ namespace SpaceTraveler.Scripts.Managers
             if (_gameSaveData.PlayerData.CurrentShip != shipConfig)
                 _gameSaveData.PlayerData.CurrentShip = shipConfig;
 
-            foreach (Skin skin in _gameSaveData.PlayerData.CurrentShip.ShipColors)
+            foreach (var skin in _gameSaveData.PlayerData.CurrentShip.ShipColors.Where(skin => skin.ColorName == colorShip))
             {
-                if (skin.ColorName == colorShip)
-                {
-                    _gameSaveData.PlayerData.CurrentColorShip = skin;
-                    break;
-                }
+                _gameSaveData.PlayerData.CurrentColorShip = skin;
+                break;
             }
 
             Save();

@@ -102,7 +102,6 @@ namespace SpaceTraveler.Scripts.StateMachine
 
                 _previousState = _currentState;
                 _currentState.Exit();
-                Debug.LogError($"State - exit");
             }
 
             _currentState = state;
